@@ -233,9 +233,9 @@ abstract class AbstractTrustService {
 						final DSSNotETSICompliantException exception = new DSSNotETSICompliantException(DSSNotETSICompliantException.MSG.UNRECOGNIZED_TAG,
 							  namespaceUri + ":" + localName);
 						if (extension.isCritical()) {
-							LOG.warn(exception.getMessage());
-						} else {
 							throw exception;
+						} else {
+							LOG.warn(exception.getMessage());
 						}
 					}
 				} else {
