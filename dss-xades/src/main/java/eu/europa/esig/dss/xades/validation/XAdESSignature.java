@@ -1301,7 +1301,7 @@ public class XAdESSignature extends DefaultAdvancedSignature {
 			}
 
 			// 1 reference for SignedProperties + 1 reference / signed object
-//			referenceDataFound = referenceDataFound && foundSignedProperties;
+			referenceDataFound = referenceDataFound && foundSignedProperties;
 
 			signatureCryptographicVerification.setReferenceDataFound(referenceDataFound);
 			signatureCryptographicVerification.setReferenceDataIntact(referenceDataHashValid);

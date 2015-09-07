@@ -26,7 +26,6 @@ public class NDesignTrustedListsCertificateSource extends TrustedListsCertificat
 
 	public void loadTSL(final String url, final List<CertificateToken> signingCertList) {
 
-		diagnosticInfo.clear();
 		super.loadTSL(url, "N-DESIGN", signingCertList);
 		logger.info("Loading completed: {} certificates", certPool.getNumberOfCertificates());
 	}
