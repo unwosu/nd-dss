@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -22,7 +22,7 @@ package eu.europa.esig.dss;
 
 public interface TSLConstant {
 
-	public static final String CA_QC = "http://uri.etsi.org/TrstSvc/Svctype/CA/QC";
+	String CA_QC = "http://uri.etsi.org/TrstSvc/Svctype/CA/QC";
 
 	/**
 	 * QCStatement
@@ -37,8 +37,8 @@ public interface TSLConstant {
 	 * This value shall not be used as an extension, if the service type is not
 	 * http://uri.etsi.org/TrstSvc/Svctype/CA/QC
 	 */
-	public static final String QC_STATEMENT = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCStatement";
-	public static final String QC_STATEMENT_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement";
+	String QC_STATEMENT = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCStatement";
+	String QC_STATEMENT_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement";
 
 	/**
 	 * It is ensured by the certification service provider and controlled (supervision model) or audited (accreditation
@@ -51,8 +51,8 @@ public interface TSLConstant {
 	 * conformant with annex III of Directive 1999/93/EC [1]); Only to be used as an extension, if the servicetype is
 	 * http://uri.etsi.org/TrstSvc/Svctype/CA/QC
 	 */
-	public static final String QC_WITH_SSCD = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCWithSSCD";
-	public static final String QC_WITH_SSCD_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD";
+	String QC_WITH_SSCD = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCWithSSCD";
+	String QC_WITH_SSCD_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD";
 
 	/**
 	 * It is ensured by the certification service provider and controlled (supervision model) or audited (accreditation
@@ -65,8 +65,8 @@ public interface TSLConstant {
 	 * Creation Device conformant with annex III of the Directive 1999/93/EC [1]). Only to be used as an extension, if
 	 * the servicetype is http://uri.etsi.org/TrstSvc/Svctype/CA/QC
 	 */
-	public static final String QC_NO_SSCD = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCNoSSCD";
-	public static final String QC_NO_SSCD_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD";
+	String QC_NO_SSCD = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCNoSSCD";
+	String QC_NO_SSCD_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD";
 
 	/**
 	 * It is ensured by the certification service provider and controlled (supervision model) or audited (accreditation
@@ -78,8 +78,8 @@ public interface TSLConstant {
 	 * information indicating whether or not the Qualified Certificate is supported by an SSCD. Only to be used as an
 	 * extension, if the servicetype is http://uri.etsi.org/TrstSvc/Svctype/CA/QC.
 	 */
-	public static final String QCSSCD_STATUS_AS_IN_CERT = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCSSCDStatusAsInCert";
-	public static final String QCSSCD_STATUS_AS_IN_CERT_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert";
+	String QCSSCD_STATUS_AS_IN_CERT = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCSSCDStatusAsInCert";
+	String QCSSCD_STATUS_AS_IN_CERT_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert";
 
 	/**
 	 * It is ensured by the certification service provider and controlled (supervision model) or audited (accreditation
@@ -90,8 +90,8 @@ public interface TSLConstant {
 	 * issuance to Legal Person ARE issued to Legal Persons. Only to be used as an extension, if the servicetype is
 	 * http://uri.etsi.org/TrstSvc/Svctype/CA/QC
 	 */
-	public static final String QC_FOR_LEGAL_PERSON = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCForLegalPerson";
-	public static final String QC_FOR_LEGAL_PERSON_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson";
+	String QC_FOR_LEGAL_PERSON = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/SvcInfoExt/QCForLegalPerson";
+	String QC_FOR_LEGAL_PERSON_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson";
 
 	/**
 	 * <b>Supervision of Service in Cessation</b><br>
@@ -104,8 +104,8 @@ public interface TSLConstant {
 	 * This status means that there is only the revocation check. Example: https://www.eett.gr/tsl/EL-TSL.xml (ADACOM
 	 * Qualified Certificate Services CA)
 	 */
-	public static final String SERVICE_STATUS_SUPERVISIONINCESSATION = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/supervisionincessation";
-	public static final String SERVICE_STATUS_SUPERVISIONINCESSATION_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation";
+	String SERVICE_STATUS_SUPERVISIONINCESSATION = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/supervisionincessation";
+	String SERVICE_STATUS_SUPERVISIONINCESSATION_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation";
 
 	/**
 	 * Under Supervision<b><br>
@@ -114,8 +114,8 @@ public interface TSLConstant {
 	 * provisions laid down in Directive 1999/93/EC [1], by the Member State identified in the "Scheme territory" (see
 	 * clause 5.3.10) in which the CSP is established.
 	 */
-	public static final String SERVICE_STATUS_UNDERSUPERVISION = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/undersupervision";
-	public static final String SERVICE_STATUS_UNDERSUPERVISION_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision";
+	String SERVICE_STATUS_UNDERSUPERVISION = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/undersupervision";
+	String SERVICE_STATUS_UNDERSUPERVISION_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision";
 
 	/**
 	 * Accredited<br>
@@ -127,11 +127,12 @@ public interface TSLConstant {
 	 * "Scheme territory" (see clause 5.3.10) of the trusted list or in a non-EU country (see article 7.1(a) of Directive
 	 * 1999/93/EC [i.3]).
 	 */
-	public static final String SERVICE_STATUS_ACCREDITED = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/accredited";
-	public static final String SERVICE_STATUS_ACCREDITED_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited";
+	String SERVICE_STATUS_ACCREDITED = "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/Svcstatus/accredited";
+	String SERVICE_STATUS_ACCREDITED_119612 = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited";
+	// The subject service is in accordance with the scheme's specific status determination criteria (only for use in positive approval schemes).
+	String SERVICE_STATUS_INACCORD_102231 = "http://uri.etsi.org/TrstSvc/Svcstatus/inaccord";
 
+	String TSL = "http://uri.etsi.org/02231/v2#";
 
-	public static final String TSL = "http://uri.etsi.org/02231/v2#";
-
-	public static final String TSLX = "http://uri.etsi.org/02231/v2/additionaltypes#";
+	String TSLX = "http://uri.etsi.org/02231/v2/additionaltypes#";
 }

@@ -601,7 +601,7 @@ public class X509CertificateValidation {
 	 * @return false if the check failed and the process should stop, true otherwise.
 	 */
 	private boolean checkRevocationFreshnessConstraint(final Conclusion conclusion, final String certificateId, final boolean revocationFresh, final String revocationNextUpdate,
-			final String revocationIssuingTimeString, String subContext) {
+	                                                   final String revocationIssuingTimeString, String subContext) {
 
 		// If the revocation data does not exist then this check is ignored.
 		if (StringUtils.isBlank(revocationIssuingTimeString)) {
@@ -664,7 +664,7 @@ public class X509CertificateValidation {
 	 * @param subContext
 	 */
 	private boolean checkSigningCertificateRevokedConstraint(final Conclusion conclusion, final String certificateId, boolean revocationStatus, final String revocationReason,
-			final String revocationDatetime, String subContext) {
+	                                                         final String revocationDatetime, String subContext) {
 
 		final Constraint constraint = constraintData.getSigningCertificateRevokedConstraint(contextName, subContext);
 		if (constraint == null) {
@@ -704,7 +704,7 @@ public class X509CertificateValidation {
 	 * @return
 	 */
 	private boolean checkSigningCertificateOnHoldConstraint(final Conclusion conclusion, final String certificateId, final boolean revocationStatus, final String revocationReason,
-			final String revocationDatetime, final String revocationNextUpdate, String subContext) {
+	                                                        final String revocationDatetime, final String revocationNextUpdate, String subContext) {
 
 		final Constraint constraint = constraintData.getSigningCertificateOnHoldConstraint(contextName, subContext);
 		if (constraint == null) {
@@ -798,9 +798,10 @@ public class X509CertificateValidation {
 		for (final XmlDom trustedServiceProviderXmlDom : tspList) {
 
 			status = trustedServiceProviderXmlDom == null ? "" : trustedServiceProviderXmlDom.getValue("./Status/text()");
-			acceptableStatus = TSLConstant.SERVICE_STATUS_UNDERSUPERVISION.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED
-					.equals(status) || TSLConstant.SERVICE_STATUS_UNDERSUPERVISION_119612.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION_119612
-					.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED_119612.equals(status);
+			acceptableStatus = TSLConstant.SERVICE_STATUS_UNDERSUPERVISION.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION
+				  .equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED.equals(status) || TSLConstant.SERVICE_STATUS_UNDERSUPERVISION_119612
+				  .equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION_119612.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED_119612
+				  .equals(status) || TSLConstant.SERVICE_STATUS_INACCORD_102231.equals(status);
 			if (acceptableStatus) {
 				break;
 			}
@@ -851,9 +852,10 @@ public class X509CertificateValidation {
 			if (certificateValidFrom.after(statusStartDate) && ((statusEndDate == null) || certificateValidFrom.before(statusEndDate))) {
 
 				final String status = trustedServiceProviderXmlDom == null ? "" : trustedServiceProviderXmlDom.getValue("./Status/text()");
-				found = TSLConstant.SERVICE_STATUS_UNDERSUPERVISION.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED
-						.equals(status) || TSLConstant.SERVICE_STATUS_UNDERSUPERVISION_119612.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION_119612
-						.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED_119612.equals(status);
+				found = TSLConstant.SERVICE_STATUS_UNDERSUPERVISION.equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION
+					  .equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED.equals(status) || TSLConstant.SERVICE_STATUS_UNDERSUPERVISION_119612
+					  .equals(status) || TSLConstant.SERVICE_STATUS_SUPERVISIONINCESSATION_119612.equals(status) || TSLConstant.SERVICE_STATUS_ACCREDITED_119612
+					  .equals(status) || TSLConstant.SERVICE_STATUS_INACCORD_102231.equals(status);
 				if (found) {
 					break;
 				}
@@ -882,7 +884,7 @@ public class X509CertificateValidation {
 	 * @param subContext
 	 */
 	private boolean checkIntermediateCertificateRevokedConstraint(final Conclusion conclusion, final String certificateId, final boolean revocationStatus,
-			final String revocationReason, final String revocationDatetime, String subContext) {
+	                                                              final String revocationReason, final String revocationDatetime, String subContext) {
 
 		final Constraint constraint = constraintData.getIntermediateCertificateRevokedConstraint(contextName);
 		if (constraint == null) {
