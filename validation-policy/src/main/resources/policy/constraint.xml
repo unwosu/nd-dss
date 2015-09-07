@@ -6,6 +6,7 @@
 		to validate certificate validity status services - CRLs, OCSP, and time-stamps).
 	</Description>
 	<MainSignature>
+		<!--<StructuralValidation Level="FAIL"/>-->
 		<AcceptablePolicies Level="FAIL">
 			<Id>ANY_POLICY</Id>
 			<Id>NO_POLICY</Id>
