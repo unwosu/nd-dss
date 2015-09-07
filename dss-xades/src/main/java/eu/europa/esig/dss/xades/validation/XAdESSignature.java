@@ -596,7 +596,7 @@ public class XAdESSignature extends DefaultAdvancedSignature {
 				final SignaturePolicy signaturePolicy = new SignaturePolicy(policyIdString);
 				final Node policyDigestMethod = DSSXMLUtils.getNode(policyIdentifier, xPathQueryHolder.XPATH__POLICY_DIGEST_METHOD);
 				final String policyDigestMethodString = policyDigestMethod.getTextContent();
-				final DigestAlgorithm digestAlgorithm = DigestAlgorithm.forXML(policyDigestMethodString);
+				final DigestAlgorithm digestAlgorithm = DigestAlgorithm.forXML(policyDigestMethodString,null);
 				signaturePolicy.setDigestAlgorithm(digestAlgorithm);
 				final Element policyDigestValue = DSSXMLUtils.getElement(policyIdentifier, xPathQueryHolder.XPATH__POLICY_DIGEST_VALUE);
 				final String digestValue = policyDigestValue.getTextContent().trim();
