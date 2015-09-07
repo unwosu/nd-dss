@@ -70,7 +70,7 @@ abstract class AbstractTrustService {
 
 	private Date expiredCertsRevocationInfo;
 
-	List<String> criticalExtensionOIDList = new ArrayList<String>();
+	//	List<String> criticalExtensionOIDList = new ArrayList<String>();
 
 	/**
 	 * @return
@@ -219,20 +219,24 @@ abstract class AbstractTrustService {
 					} else if (TAKEN_OVER_BY.equals(localName) && TSLConstant.TSLX.equals(namespaceUri)) {
 
 						// Do nothing
-					} else if (("ExtensionOID".equals(localName) || "ExtensionValue".equals(localName)) && TSLConstant.TSL.equals(namespaceUri)) {
-
-						final String textContent = element.getTextContent().trim();
-						criticalExtensionOIDList.add(textContent);
+						//					} else if (("ExtensionOID".equals(localName) || "ExtensionValue".equals(localName)) && TSLConstant.TSL.equals(namespaceUri)) {
+						//
+						//						final String textContent = element.getTextContent().trim();
+						//						criticalExtensionOIDList.add(textContent);
 					} else {
 
 						if (TSLConstant.TSLX.equals(namespaceUri)) {
-
 							namespaceUri = TSLX;
 						} else if (TSLConstant.TSL.equals(namespaceUri)) {
-
 							namespaceUri = TSL;
 						}
-						throw new DSSNotETSICompliantException(DSSNotETSICompliantException.MSG.UNRECOGNIZED_TAG, namespaceUri + ":" + localName);
+						final DSSNotETSICompliantException exception = new DSSNotETSICompliantException(DSSNotETSICompliantException.MSG.UNRECOGNIZED_TAG,
+							  namespaceUri + ":" + localName);
+						if (extension.isCritical()) {
+							LOG.warn(exception.getMessage());
+						} else {
+							throw exception;
+						}
 					}
 				} else {
 					throw new DSSException("Unknown extension " + object.getClass());
