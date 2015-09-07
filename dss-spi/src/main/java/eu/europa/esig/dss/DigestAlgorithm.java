@@ -185,7 +185,7 @@ public enum DigestAlgorithm {
 		return algorithm;
 	}
 
-	private DigestAlgorithm(final String name, final String oid, final String xmlId) {
+	DigestAlgorithm(final String name, final String oid, final String xmlId) {
 
 		this.name = name;
 		this.oid = new ASN1ObjectIdentifier(oid);

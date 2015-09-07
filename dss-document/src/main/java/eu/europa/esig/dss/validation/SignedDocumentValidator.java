@@ -199,7 +199,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 			@SuppressWarnings("unchecked")
 			Class<SignedDocumentValidator> documentValidator = (Class<SignedDocumentValidator>) Class.forName(clazzToFind);
 			registredDocumentValidators.add(documentValidator);
-			LOG.info("Validator '" + documentValidator.getName() + "' is registred");
+			LOG.info("Validator '" + documentValidator.getName() + "' is registered");
 		} catch (ClassNotFoundException e) {
 			LOG.warn("Validator not found for signature type " + type);
 		}
@@ -217,7 +217,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 	 */
 	public static SignedDocumentValidator fromDocument(final DSSDocument dssDocument) {
 		if (CollectionUtils.isEmpty(registredDocumentValidators)) {
-			throw new DSSException("No validator registred");
+			throw new DSSException("No validator registered");
 		}
 
 		for (Class<SignedDocumentValidator> clazz : registredDocumentValidators) {
@@ -230,7 +230,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 					return constructor.newInstance(dssDocument);
 				}
 			} catch (Exception e) {
-				LOG.error("Cannot instanciate class '" + clazz.getName() + "' : " + e.getMessage(), e);
+				LOG.error("Cannot instantiate class '" + clazz.getName() + "' : " + e.getMessage(), e);
 			}
 		}
 		throw new DSSException("Document format not recognized/handled");
