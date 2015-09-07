@@ -22,6 +22,15 @@ package eu.europa.esig.dss;
 
 public interface TSLConstant {
 
+	/**
+	 * certificate generation service creating and signing end-entity non-qualified certificates
+	 */
+	String CA_PKC = "http://uri.etsi.org/TrstSvc/Svctype/CA/PKC";
+
+	/**
+	 * certificate generation service creating and signing qualified certificates based on the identity and
+	 * other attributes verified by the relevant registration services
+	 */
 	String CA_QC = "http://uri.etsi.org/TrstSvc/Svctype/CA/QC";
 
 	/**
@@ -100,7 +109,7 @@ public interface TSLConstant {
 	 * until supervision is ceased or revoked. In the event a different legal person than the one identified in
 	 * "TSP name" has taken over the responsibility of ensuring this cessation phase, the identification of this new or
 	 * fallback legal person (fallback CSP) shall be provided in clause 5.5.6 of the service entry
-	 *
+	 * <p/>
 	 * This status means that there is only the revocation check. Example: https://www.eett.gr/tsl/EL-TSL.xml (ADACOM
 	 * Qualified Certificate Services CA)
 	 */
