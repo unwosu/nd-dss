@@ -100,7 +100,7 @@
 	            <Algo Size="128">DSA</Algo>
 				<Algo Size="1024">RSA</Algo>
 				<Algo Size="192">ECDSA</Algo>
-				<Algo Size="1024">RSASSA_PSS</Algo>
+				<Algo Size="2048">RSASSA_PSS</Algo>
 			</MiniPublicKeySize>
 			<AcceptableDigestAlgo>
 				<Algo>SHA1</Algo>

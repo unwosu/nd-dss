@@ -22,7 +22,7 @@ public class NDesignTrustedListsCertificateSource extends TrustedListsCertificat
 		dataLoader = new CommonsDataLoader();
 	}
 
-	protected void loadTSL(final String url, final List<CertificateToken> signingCertList) {
+	public void loadTSL(final String url, final List<CertificateToken> signingCertList) {
 
 		diagnosticInfo.clear();
 		super.loadTSL(url, "N-DESIGN", signingCertList);

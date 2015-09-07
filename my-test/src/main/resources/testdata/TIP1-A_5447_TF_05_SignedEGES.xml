@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><p:anlage_hvv xmlns:p="urn::kvno-org/kvabrechnung" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gesamtaufstellung-typ="arzt" version="1.00" xsi:schemaLocation="urn::kvno-org/kvabrechnung gesamtaufstellung_arzt.xsd ">
+  <p:header>
+    <p:empfaenger V="Kassenärztliche Vereinigung Nordrhein, Bezirksstelle"/>
+    <p:absender>
+      <p:bsnr V="247110815"/>
+      <p:praxisinhaber>
+        <p:arzt>
+          <p:vorname V="Hans"/>
+          <p:nachname V="Häusler"/>
+        </p:arzt>
+      </p:praxisinhaber>
+      <p:praxisadresse>
+        <p:strasse V="Suchweg 5"/>
+        <p:plz V="12345"/>
+        <p:ort V="Nirgendwo"/>
+      </p:praxisadresse>
+    </p:absender>
+    <p:abrechnungsquartal V="2015-1"/>
+    <p:erstellungsdatum V="2015-04-01"/>
+  </p:header>
+  <p:body>
+    <p:anzahl_faelle>
+      <p:arbeitsgebiet_b V="0"/>
+      <p:arbeitsgebiet_h V="0"/>
+      <p:arbeitsgebiet_i V="0"/>
+      <p:gesamt V="0"/>
+    </p:anzahl_faelle>
+    <p:assistenten>
+      <p:assistent>
+        <p:anrede V="Frau"/>
+        <p:name V="Assistentin"/>
+        <p:datum_von V="2013-01-01"/>
+        <p:datum_bis V="2016-09-01"/>
+      </p:assistent>
+    </p:assistenten>
+    <p:vertreter>
+      <p:vertretung>
+        <p:anrede V="Frau"/>
+        <p:name V="Helferlein"/>
+        <p:datum_von V="2009-01-01"/>
+        <p:datum_bis V="2015-04-01"/>
+      </p:vertretung>
+    </p:vertreter>
+    <p:notfalldienst>
+      <p:datum V="2015-03-30"/>
+    </p:notfalldienst>
+    <p:ankreuzfeld_2 V="true">
+      <p:datentraegerabr Anzahl="0" V="true"/>
+    </p:ankreuzfeld_2>
+    <p:ankreuzfeld_3 V="true"/>
+    <p:ankreuzfeld_4 V="true"/>
+    <p:ankreuzfeld_5 V="true"/>
+    <p:ankreuzfeld_6 V="true"/>
+    <p:ankreuzfeld_9 V="true"/>
+    <p:ankreuzfeld_10 V="true"/>
+    <p:ankreuzfeld_11 V="true"/>
+    <p:ankreuzfeld_12 V="true"/>
+  </p:body>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-493a658b-0bce-44c5-8c88-7a437f4a42a6">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-d3080ad8-d583-4520-9f0e-4d9e5037b3b1" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>iug/7V6AdfLC1jRUiCvU8EFkIJhNRWp5vJr6z7UAC9o=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-6e93e93b-a67b-4cb6-ae5f-5a39f21f5398">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>GiErySl5ShELXLgjiimB5S69XVL6R64XELp0M5k4fT8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+rZZjs3eAB8j2AHVYgn9/rJ2BE2PeaoEaM76z71fL9sXl+44w9Ty79hoT5Prulro8y8SI8atOWAW6
+zzb62Hq4Sfjz7QtqeaQLyFvNH/Ch9SMcPfKTym7iPjqsdnU8PXuZGcyIV7kQPkHspUb2v65uk5N1
+dLgMEGphbVS5pVmW5l1QILQjIW0bifGbVkZoVqip6Rp4wG52HUcQBl7B53zcqQqmNW4i8zBKCg+i
+kQHfcKjNrj3PdLGef+dJbWIPr8N5gPSUNBaciuKThuEljs3C5CJA8k3MhWV1X2oU0GhCLniYHb94
+YFCzXMqwdw/TR79aHa8nXDsyalixQCFoV+cfdg==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIG6DCCBdCgAwIBAgICA/owDQYJKoZIhvcNAQELBQAwgbYxCzAJBgNVBAYTAkRFMTowOAYDVQQK
+DDFULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIC0gRzIgTG9zIDMgTk9ULVZBTElEMUgwRgYD
+VQQLDD9JbnN0aXR1dGlvbiBkZXMgR2VzdW5kaGVpdHN3ZXNlbnMtQ0EgZGVyIFRlbGVtYXRpa2lu
+ZnJhc3RydWt0dXIxITAfBgNVBAMMGFRTWVNJLlNNQ0ItQ0ExIFRFU1QtT05MWTAeFw0xNDEwMTUw
+OTEwMThaFw0xOTEwMTUyMzU5NTlaMH4xCzAJBgNVBAYTAkRFMScwJQYDVQQKDB5QcmF4aXMgR3Vz
+dGF2IEfDpG5zbGVOT1QtVkFMSUQxHTAbBgNVBAUTFDgwMjc2ODgzNTgwMDAwMDAwMDQ2MScwJQYD
+VQQDDB5QcmF4aXMgR3VzdGF2IEfDpG5zbGVURVNULU9OTFkwggEjMA0GCSqGSIb3DQEBAQUAA4IB
+EAAwggELAoIBAQD3RGvuD/40kmZdY2SB5kmZkxKDpJ5gF1GiNW+9n7RaEuYX56jsSYguEpjHDM4Y
+6yL2vvmycl6Pg8xPH2ch/5w4ppug1I6oT8XsKgHNB4CuDt1w5CtgRT5oo5pf/Yibp6rB3dZE91VK
+GvhFxsLyV6mFAu8hd+UfqHOl1IsvLO67iQtT0CSw/UaQfGxF3HkRK7ZMJE/6gWouhqxcnybOWnJe
+AFaDQBXsIjGq56jCO3V2O+jdVyhpWiy5KIdLuA9v3ukN4LDS+j86aOhQTg6LlWPKOEM5RJMonKsq
+Rv2+bBVxeTUm/63rXv3QYf1DdXXoGxQ8iem3PJCxuix2Fk/KuFZ7AgRAAACBo4IDNDCCAzAwHwYD
+VR0jBBgwFoAUq1TIvDguR3KLJxaPD0QzM3TdkGAwHQYDVR0OBBYEFE0ayavptvu2N76vRzpuX79F
+Xa+UMA4GA1UdDwEB/wQEAwIGQDByBgNVHSAEazBpMFAGCCqCFABMBIEjMEQwQgYIKwYBBQUHAgEW
+Nmh0dHA6Ly93d3cuaGJhLXRlc3QudGVsZXNlYy5kZS9wb2xpY2llcy9FRV9wb2xpY3kuaHRtbDAJ
+BgcqghQATAROMAoGCCqCFABMBIEqMAwGA1UdEwEB/wQCMAAwggGwBgNVHR8EggGnMIIBozCBuqCB
+t6CBtIaBsWxkYXA6Ly9sZGFwLWhiYS10ZXN0LnRlbGVzZWMuZGUvQ049VC1TeXN0ZW1zJTIwU01D
+JTIwVGVzdC1DQSUyMDEsT1U9VHJ1c3QlMjBDZW50ZXIlMjBEZXV0c2NoZSUyMFRlbGVrb20sTz1U
+LVN5c3RlbXMlMjBFbnRlcnByaXNlJTIwU2VydmljZXMlMjBHbWJILEM9REU/Q2VydGlmaWNhdGVS
+ZXZvY2F0aW9uTGlzdDCB46CB4KCB3YaB2mh0dHA6Ly9oYmEtdGVzdC50ZWxlc2VjLmRlL2hiYS9k
+b3dubG9hZC9kb3dubG9hZC5jcmw/cGF0aD1DTiUzRFQtU3lzdGVtcyUyMFNNQyUyMFRlc3QtQ0El
+MjAxJTJDT1UlM0RUcnVzdCUyMENlbnRlciUyMERldXRzY2hlJTIwVGVsZWtvbSUyQ08lM0RULVN5
+c3RlbXMlMjBFbnRlcnByaXNlJTIwU2VydmljZXMlMjBHbWJIJTJDQyUzRERFJTNGQ2VydGZpY2F0
+ZVJldm9jYXRpb25MaXN0MEIGCCsGAQUFBwEBBDYwNDAyBggrBgEFBQcwAYYmaHR0cDovL29jc3Au
+c21jYi50ZXN0LnRlbGVzZWMuZGUvb2NzcHIwZAYFKyQIAwMEWzBZMFcwVTBTMFEwIQwfQmV0cmll
+YnNzdMOkdHRlIFBzeWNob3RoZXJhcGV1dDAJBgcqghQATAQ0EyE0LVNNQy1CLVRlc3RrYXJ0ZS04
+ODM1ODAwMDAwMDAwNDYwDQYJKoZIhvcNAQELBQADggEBAELqn3+65mlhkIEgxUeRR+KfaOZHE6c/
+aNfYKsq1YhzIovg4k9l8Uaf3mWTvkzxMYYDPHOgmP3b57MVXNfDTTdVYuyLY7YJFpCZ/VVAp4afW
+u0SN1fDFBne2jbDdOeC/7fahp8N4zfba+SQRk2cfsRccAUGodfgrcQAwOuH3VfCfnCGYUQY+AvBe
+H/RFl6wxC2kG4Tew6S4kV+U9y828T5X+diCJ0gjXR6cHPjS6Yd98Ps8GS6H0XmJBPKP5QZX1Yinf
+5Rx9ZwDWKqwCRI4KeAPLOUZlrLlzZro7UGDjsNBitSFi8sv/5Pp6dVpBCorwaDmT3wUvVo9pbR0M
+Gq3W46k=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-493a658b-0bce-44c5-8c88-7a437f4a42a6" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-6e93e93b-a67b-4cb6-ae5f-5a39f21f5398"><xades:SignedSignatureProperties><xades:SigningTime>2015-08-19T11:05:03.576+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>Es6CgHwHRdFTKP4gvUIqIFhjqD0k+RdFGrJcAsl8n0o=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.SMCB-CA1 TEST-ONLY,OU=Institution des Gesundheitswesens-CA der Telematikinfrastruktur,O=T-Systems International GmbH - G2 Los 3 NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>1018</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>urn:gematik:fa:sak:eges:r1:v1</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm=""/><ds:DigestValue/></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-d3080ad8-d583-4520-9f0e-4d9e5037b3b1"><xades:Description>SignDoc</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></p:anlage_hvv>

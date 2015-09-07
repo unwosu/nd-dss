@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><p:anlage_hvv xmlns:p="urn::kvno-org/kvabrechnung" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gesamtaufstellung-typ="arzt" version="1.00" xsi:schemaLocation="urn::kvno-org/kvabrechnung gesamtaufstellung_arzt.xsd ">
+  <p:header>
+    <p:empfaenger V="Kassenärztliche Vereinigung Nordrhein, Bezirksstelle"/>
+    <p:absender>
+      <p:bsnr V="212312345"/>
+      <p:praxisinhaber>
+        <p:arzt>
+		 <p:vorname V="Hubert"/>
+          <p:nachname V="Haeusler"/>
+        </p:arzt>
+      </p:praxisinhaber>
+      <p:praxisadresse>
+        <p:strasse V="Maar Str. 134a"/>
+        <p:plz V="51469"/>
+        <p:ort V="Bergisch Gladbach"/>
+      </p:praxisadresse>
+    </p:absender>
+    <p:abrechnungsquartal V="2015-1"/>
+    <p:erstellungsdatum V="2015-09-01"/>
+  </p:header>
+  <p:body>
+    <p:anzahl_faelle>
+      <p:arbeitsgebiet_b V="12000000"/>
+      <p:arbeitsgebiet_h V="1200"/>
+      <p:arbeitsgebiet_i V="1400"/>
+      <p:gesamt V="1202800"/>
+    </p:anzahl_faelle>
+    <p:assistenten><xenc:EncryptedData xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" Type="http://www.w3.org/2001/04/xmlenc#Content"><xenc:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/><ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<xenc:EncryptedKey><xenc:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><xenc11:MGF xmlns:xenc11="http://www.w3.org/2009/xmlenc11#" Algorithm="http://www.w3.org/2009/xmlenc11#mgf1sha256"/></xenc:EncryptionMethod><ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFBTCCA+2gAwIBAgICA1EwDQYJKoZIhvcNAQELBQAwgaUxCzAJBgNVBAYTAkRFMTowOAYDVQQK
+DDFULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIC0gRzIgTG9zIDMgTk9ULVZBTElEMTgwNgYD
+VQQLDC9IZWlsYmVydWZzYXVzd2Vpcy1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEgMB4G
+A1UEAwwXVFNZU0kuSEJBLUNBMSBURVNULU9OTFkwHhcNMTQxMDE1MDkxOTI4WhcNMTkxMDE1MjM1
+OTU5WjBmMQswCQYDVQQGEwJERTFXMAsGA1UEBAwEUm90aDALBgNVBCoMBFJvc2EwGwYDVQQFExQ4
+MDI3Njg4MzU4MDAwMDAwMDYyNTAeBgNVBAMMF0hlcnIgUm9zYSBSb3RoVEVTVC1PTkxZMIIBIzAN
+BgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQEAmBw20JXF0EYg4QrKkGRQqzc590Xxo3NQYpYXWHQh
+xqB6uFDVUUy71lrhhKsFICWJ9qannQQwPm7C6Pr0P6QaAmA3gM+/1oqY87URN8DYPD1izoIGz7yr
+CqbnptaWJ5UPHY+162gJ+4gy6F+X8DNw4VqGxyMYsIwe9TMCe0T1aQ7zuAKG1Q6PR6syFG3dJy2C
+jMT9/cEInxJ75KCoBCiUj+TT0xiDAWD8waoprnHT89neQG32ezF5Zaxn9CBLi67bjQ6D9AfZLtNa
+aDzthiSNZAiI7eJCUmGH+oPlxyF8QBfW6UniqWGxlUl+mA388UviSNcE08jmHr8cVTJ8HGTmHQIE
+QAAAgaOCAXowggF2MB8GA1UdIwQYMBaAFCnPi3NZUuobhA4LF7mW0Yr1DSzYMB0GA1UdDgQWBBRC
+y10v2wc0mscHAR3pmglJZbCTqTAOBgNVHQ8BAf8EBAMCBDAwcQYDVR0gBGowaDBNBggqghQATASB
+ETBBMD8GCCsGAQUFBwIBFjNodHRwOi8vd3d3LmUtYXJ6dGF1c3dlaXMuZGUvcG9saWNpZXMvRUVf
+cG9saWN5Lmh0bWwwCQYHKoIUAEwESjAMBgorBgEEAYLNMwEBMAwGA1UdEwEB/wQCMAAwYAYFKyQI
+AwMEVzBVpA8wDTELMAkGA1UEBhMCREUwQjBAMD4wPDAODAzDhHJ6dGluL0FyenQwCQYHKoIUAEwE
+HhMfMS1IQkEtVGVzdGthcnRlLTg4MzU4MDAwMDAwMDYyNTBBBggrBgEFBQcBAQQ1MDMwMQYIKwYB
+BQUHMAGGJWh0dHA6Ly9vY3NwLmhiYS50ZXN0LnRlbGVzZWMuZGUvb2NzcHIwDQYJKoZIhvcNAQEL
+BQADggEBAGdpB7enkx+S++oVrMs2ybs7VwDv3iDnuATd8ddcRfGNtdH2/Rb3Vil4Fq7KWVHZznas
+Ye11xG2UfKGO/xdapmCebqkx6gt2fFthcudp3wpzpAt39qOC521NofllsBGn9fn3eHOwXFEVrqBe
+yszQe2bpSKaux4wn2zhbzt3IV522WBHKYpDkI6dqKxpg1o8EoGmIsOSUTHq5PoyYsC1c6ICgmZl8
+8nTz9N71vsbYw4BM5W9Y/WprrMZPjLnT5Iy2YBljIiq3gIWq2iBkTL2cLWK4OBa6Dse2dwTPCAhr
+6EnZEWCU86VHIKLC4NM0vb1QGzBSDL4siBm/D4qJkUb50I4=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo><xenc:CipherData><xenc:CipherValue>QZi+f+OpetYzQNMNmW5IYiQ8H90oAaswsD0TcKLPeiTbm8pSRsDJOxLuQHuu2lloOsqD3tZlPKrP
+uGT0btq5Bi3Djq6AkeeO/8ap1bfKdKgGM12vPPmh7TkTRZ872GpE6vvOPzOcOVrlZ3Vzd0DQ+L9B
+Z6mGe8cODLPtRrin+QqNFGSBm5E3qlUBPJGhZ1eoKpUxdriGx7KaNucKhqBuGH8qrzkaEpT6GDDI
+9/70ZLZ5WM+Nkgezwvpgj2r6QXzTv2WAwVyGfBL49nPIPjkBEJuldaUvdTaDay5r0pXe1FTAjcXQ
+gBWKEBZwBU4YLNGTOMBaT6IuxVpkOcE6AFJzKA==</xenc:CipherValue></xenc:CipherData></xenc:EncryptedKey></ds:KeyInfo><xenc:CipherData><xenc:CipherValue>6Al+w2v6qOeqs0yVmAhwKwxWbWE8Ad5dpp0xeaB9Di73D2C48iZcbccDZVDZH6D87dWCVTgtTW5n
+ofK2KzagMbTrxk7rfrJWS0J9knLP64SG2Rw4z3DgBhgJFENsQPQbul6YbbDlRay+cHIY6oD1yBEq
+AXetjK5zHGwPLtNoN9eb2Cv6+zcthLNEhRDXoAjAG51TGNmEcplZ2RRlDQucT9ua6u9Cvlv9PVxy
+bpBTkKc3Zt+oyhkoxhYOrtrd5zGFffPRDBuvKwlp2bBgvG3Iu8OI8w9J86jPvbYZWQLMkcXuwMqb
+qqRb9FitTSCjJqvWTnoKHlKsNqD/04cBPoJxQ6KkQ7W6RBgu9DMIMdjQ+PsyJ/JkYIqlGnZFHIlM
+TUha5zI/kX3L7zFwJHo3HYydKRsPpEyo/JQH8ZNyCjmvFLFhP5NFZklErbZKt5b4rZCgwCqGFWsd
+e8emZS/wf0Zfv4IkMUvmddgO3rHbr6PfiFo3L6JkWCuaKRM2QYPxkqjp902N29fARjw0UW+dFRkM
+cChr65c9W3lUS6soefpd3a3QFERUa5PaMTFL4H0i+C1OjKiisJ5dg0wmuzbbLXfcr6+/WqOa9e2C
+SG96WuVcYxkHg+71AlR0w4SLLA==</xenc:CipherValue></xenc:CipherData></xenc:EncryptedData></p:assistenten>
+    <p:vertreter>
+      <p:vertretung>
+        <p:anrede V="Frau"/>
+        <p:name V="Hipp"/>
+        <p:datum_von V="2015-01-01"/>
+        <p:datum_bis V="2015-01-10"/>
+      </p:vertretung>
+      <p:vertretung>
+        <p:anrede V="Frau"/>
+        <p:name V="Hipp"/>
+        <p:datum_von V="2015-01-01"/>
+        <p:datum_bis V="2015-01-10"/>
+      </p:vertretung>
+    </p:vertreter>
+    <p:notfalldienst>
+      <p:datum V="2014-01-07"/>
+    </p:notfalldienst>
+    <p:ankreuzfeld_2 V="true">
+      <p:datentraegerabr Anzahl="12000" V="true"/>
+    </p:ankreuzfeld_2>
+    <p:ankreuzfeld_3 V="true"/>
+    <p:ankreuzfeld_4 V="true"/>
+    <p:ankreuzfeld_5 V="true"/>
+    <p:ankreuzfeld_6 V="true"/>
+    <p:ankreuzfeld_9 V="true"/>
+    <p:ankreuzfeld_10 V="true" lag-nr=""/>
+    <p:ankreuzfeld_11 V="true"/>
+    <p:ankreuzfeld_12 V="true"/>
+  </p:body>
+</p:anlage_hvv>
