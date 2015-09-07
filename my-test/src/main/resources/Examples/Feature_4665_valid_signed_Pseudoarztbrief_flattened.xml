@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><arztbriefdaten xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="pseudo_arztbrief_flattened.xsd">
+	<addresses>
+		<address>
+			<name>Dudenh�</name>
+			<street>Kaufhausstrasse</street>
+		</address>
+	</addresses>
+	<befund>
+		<code>Code_0001</code>
+		<title>Erster Befund</title>
+		<text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</text>
+	</befund>
+	<befund>
+		<code>Code_0002</code>
+		<title>Zweiter Befund</title>
+		<text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</text>
+	</befund>
+	<befund>
+		<code>Code_0003</code>
+		<title>Dritter Befund</title>
+		<text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</text>
+	</befund>
+	<befund>
+		<code>Code_0004</code>
+		<title>Vierter Befund</title>
+		<text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</text>
+	</befund>
+	<befund>
+		<code>Code_0005</code>
+		<title>F� Befund</title>
+		<text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</text>
+	</befund>
+	<diagnose>
+		<icd_code>ICD_010101</icd_code>
+		<lokalisation>Podex</lokalisation>
+		<zusatz>erste Falte unten links</zusatz>
+	</diagnose>
+	<diagnose>
+		<icd_code>ICD_010102</icd_code>
+		<lokalisation>Knie</lokalisation>
+		<zusatz>am Innengelenk</zusatz>
+	</diagnose>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-60f10703-6530-4d74-a862-3bebe426faaf">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-0f3c8180-1823-4862-88b0-d47a756f4247" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>SIWtFs74mtRJDQM7HKQCqSPMu3ba5OPuz2/1U5FIx2U=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+ctiHn+UFRix3Ni6PaFwOMGg82cbe7PE3I94/tO4KTxe4dCdiIGmFrRQtpT2L9w+J6ybqcMFaS2/T
+WVnyfKzKFKiNfqppptySK1t69aMntSGnOQzVOScrgC9IuIuuZJOXVwm+f7fGq+Isn1a1RE/KFDzd
+/5PncHTn05qUhoUG8oOyUuFWrZipRyXKUMO7qmUibKkMSYEsRqa+6Gu/SmnvMuDmOTy8tPuXrjcU
+Hx63vi+w0cmxvXTiem1Ydf4hIqTmNpzksDA5NaSAEKcbzifHuzh5aAO7wxpbxNcYY8JrLWpZFxFA
+jGMHEbeAPlMokWHwIcaY2FL/2znvNDWxQVJobg==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFKzCCBBOgAwIBAgICAakwDQYJKoZIhvcNAQELBQAwgasxCzAJBgNVBAYTAkRFMS8wLQYDVQQK
+DCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFD
+QSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSQw
+IgYDVQQDDBtUU1lTSS5IQkEtcUNBMTpQTiBURVNULU9OTFkwHhcNMTQxMDE1MDkxOTI4WhcNMTkx
+MDE1MjM1OTU5WjBmMQswCQYDVQQGEwJERTFXMAsGA1UEBAwEUm90aDALBgNVBCoMBFJvc2EwGwYD
+VQQFExQ4MDI3Njg4MzU4MDAwMDAwMDYyNTAeBgNVBAMMF0hlcnIgUm9zYSBSb3RoVEVTVC1PTkxZ
+MIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQEAsArruw5PvpHY0XRKoquCUxO6ZYIziMVF
+5HM2U1H0Ysz1gtHb8c2C7xkq9Kgh9YtpPaSBRpcBr2LGGWsoPkfNZX3WicKpHAvjBY5KukOTIa7Q
+nax7kjBhl5N8VgK4cesBWrQl6V7LP+WBetmowOALIwMY8Kd1XZ+fgyQMHS1YsBy9gpnMDDBkKjta
+oMX9JC+Wf8l11YESbpwe/8mYSArTUwXrbuF9h9pSD8ZVMG/AWsBO5Dh/QUWJpxyzDP0lHLdCIN/m
+2QneypoeUpoQJhT2kYpmEOWRz8QZFmRI5qdiUY0yCEh9vtHzl3QZuJ3NsZPFFzcSeoBvqWcK44km
+Ni1CmwIEQAAAgaOCAZowggGWMB8GA1UdIwQYMBaAFOhEua9qWp1Q3v2S9WcAtOXFrcohMB0GA1Ud
+DgQWBBQJ0VftWRLT7xa0uwdFRzLJp7DVoDAOBgNVHQ8BAf8EBAMCBkAwegYDVR0gBHMwcTBNBggq
+ghQATASBETBBMD8GCCsGAQUFBwIBFjNodHRwOi8vd3d3LmUtYXJ6dGF1c3dlaXMuZGUvcG9saWNp
+ZXMvRUVfcG9saWN5Lmh0bWwwCQYHKoIUAEwESDAHBgUrJAgBATAMBgorBgEEAYLNMwEBMAwGA1Ud
+EwEB/wQCMAAwPwYFKyQIAwMENjA0pA8wDTELMAkGA1UEBhMCREUwITAfMB0wGzAODAzDhHJ6dGlu
+L0FyenQwCQYHKoIUAEwEHjAbBgkrBgEEAcBtAwUEDjAMBgorBgEEAcBtAwUBMEIGCCsGAQUFBwEB
+BDYwNDAyBggrBgEFBQcwAYYmaHR0cDovL3FvY3NwLmhiYS50ZXN0LnRlbGVzZWMuZGUvb2NzcHIw
+GAYIKwYBBQUHAQMEDDAKMAgGBgQAjkYBATANBgkqhkiG9w0BAQsFAAOCAQEAKzfihDiSfMmFb+nX
+f9Lzfa1peAQGYNYoVYO6mTIjjFNAXzFoGstA7kIbeAYl473h2waWyDgcw+XuS5rZRQ2Fpbt2HATr
+DUoks/sZIXSvBJ2hCV7SdS9ZTLfEPqGP0h+1fxjeqzEnVQlUZnd1PKKEsZSEAQNxoxsCl14Yq/on
+9yyKOQwvK7pAoKscXDR1V8Cbrm40lbfZWDSaxLsfKqjIM5tP9AMOAGn7hHflwCSuKfzljS8woSYc
+/fWbR1hjK6/coPvUgxXUMDlT04UoXFlm9nbQsOoVj+VUl9FhLUfKDNyzhn0ioFSGMPh5XtVAxv71
+jfYxOSSr0YaugWK70nMi9w==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+sArruw5PvpHY0XRKoquCUxO6ZYIziMVF5HM2U1H0Ysz1gtHb8c2C7xkq9Kgh9YtpPaSBRpcBr2LG
+GWsoPkfNZX3WicKpHAvjBY5KukOTIa7Qnax7kjBhl5N8VgK4cesBWrQl6V7LP+WBetmowOALIwMY
+8Kd1XZ+fgyQMHS1YsBy9gpnMDDBkKjtaoMX9JC+Wf8l11YESbpwe/8mYSArTUwXrbuF9h9pSD8ZV
+MG/AWsBO5Dh/QUWJpxyzDP0lHLdCIN/m2QneypoeUpoQJhT2kYpmEOWRz8QZFmRI5qdiUY0yCEh9
+vtHzl3QZuJ3NsZPFFzcSeoBvqWcK44kmNi1Cmw==
+</ds:Modulus>
+<ds:Exponent>QAAAgQ==</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-60f10703-6530-4d74-a862-3bebe426faaf" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-18d63787-d431-49ec-ace6-9e1c981b9071"><xades:SignedSignatureProperties><xades:SigningTime>2015-05-12T10:14:58.951+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>ecCzNchXm1EFWm2Ew5eNkuCpZX8Y1+C0toxgHYZF+JQ=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.HBA-qCA1:PN TEST-ONLY,OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung,O=T-Systems International GmbH NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>425</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-0f3c8180-1823-4862-88b0-d47a756f4247"><xades:Description>SUPER-SIGN-XML</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></arztbriefdaten>

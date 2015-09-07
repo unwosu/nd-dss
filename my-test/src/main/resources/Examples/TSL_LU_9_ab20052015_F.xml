@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ns3:TrustServiceStatusList xmlns:ns3="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" Id="TSL33dbcd68-4f90-452c-b3a5-1ade9d3e6383" TSLTag="http://uri.etsi.org/02231/TSLTag">
+	<ns3:SchemeInformation>
+		<ns3:TSLVersionIdentifier>3</ns3:TSLVersionIdentifier>
+		<ns3:TSLSequenceNumber>9</ns3:TSLSequenceNumber>
+		<ns3:TSLType>http://uri.etsi.org/TrstSvc/TSLtype/generic</ns3:TSLType>
+		<ns3:SchemeOperatorName>
+			<ns3:Name xml:lang="DE">TEST-ONLY gematik Scheme</ns3:Name>
+		</ns3:SchemeOperatorName>
+		<ns3:SchemeOperatorAddress>
+			<ns3:PostalAddresses>
+				<ns3:PostalAddress xml:lang="DE">
+					<ns3:StreetAddress>Maria Trost 21</ns3:StreetAddress>
+					<ns3:Locality>Koblenz</ns3:Locality>
+					<ns3:StateOrProvince>Rheinland-Pfalz</ns3:StateOrProvince>
+					<ns3:PostalCode>56070</ns3:PostalCode>
+					<ns3:CountryName>DE</ns3:CountryName>
+				</ns3:PostalAddress>
+			</ns3:PostalAddresses>
+			<ns3:ElectronicAddress>
+				<ns3:URI>test-pki@baron-it.com</ns3:URI>
+			</ns3:ElectronicAddress>
+		</ns3:SchemeOperatorAddress>
+		<ns3:SchemeName>
+			<ns3:Name xml:lang="DE">TEST-ONLY gematik TSL Scheme</ns3:Name>
+		</ns3:SchemeName>
+		<ns3:SchemeInformationURI>
+			<ns3:URI xml:lang="DE">http://www.gematik.de</ns3:URI>
+		</ns3:SchemeInformationURI>
+		<ns3:StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TSLType/StatusDetn/passive</ns3:StatusDeterminationApproach>
+		<ns3:PolicyOrLegalNotice>
+			<ns3:TSLLegalNotice xml:lang="DE">TEST-ONLY Certificate Policy der gematik, OID 1.2.276.0.76.4.163</ns3:TSLLegalNotice>
+		</ns3:PolicyOrLegalNotice>
+		<ns3:HistoricalInformationPeriod>0</ns3:HistoricalInformationPeriod>
+		<ns3:PointersToOtherTSL>
+			<ns3:OtherTSLPointer>
+				<ns3:TSLLocation>http://pki-test.ti-kern.telematik-lab:8080/tsl-service/TSL.xml</ns3:TSLLocation>
+				<ns3:AdditionalInformation>
+					<ns3:TextualInformation xml:lang="DE">1.2.276.0.76.4.120</ns3:TextualInformation>
+				</ns3:AdditionalInformation>
+			</ns3:OtherTSLPointer>
+			<ns3:OtherTSLPointer>
+				<ns3:TSLLocation>http://pki-test.ti-kern.telematik-lab:8080/tsl-service/TSL_B.xml</ns3:TSLLocation>
+				<ns3:AdditionalInformation>
+					<ns3:TextualInformation xml:lang="DE">1.2.276.0.76.4.121</ns3:TextualInformation>
+				</ns3:AdditionalInformation>
+			</ns3:OtherTSLPointer>
+		</ns3:PointersToOtherTSL>
+		<ns3:ListIssueDateTime>2015-05-20T13:21:44.969Z</ns3:ListIssueDateTime>
+		<ns3:NextUpdate>
+			<ns3:dateTime>2017-05-20T13:21:44.970Z</ns3:dateTime>
+		</ns3:NextUpdate>
+	</ns3:SchemeInformation>
+	<ns3:TrustServiceProviderList>
+		<ns3:TrustServiceProvider>
+			<ns3:TSPInformation>
+				<ns3:TSPName>
+					<ns3:Name xml:lang="DE">CGM Test-TSL TSL</ns3:Name>
+				</ns3:TSPName>
+				<ns3:TSPTradeName>
+					<ns3:Name xml:lang="DE">CGM AG</ns3:Name>
+				</ns3:TSPTradeName>
+				<ns3:TSPAddress>
+					<ns3:PostalAddresses>
+						<ns3:PostalAddress xml:lang="DE">
+							<ns3:StreetAddress>Maria Trost 21</ns3:StreetAddress>
+							<ns3:Locality>Koblenz</ns3:Locality>
+							<ns3:PostalCode>56070</ns3:PostalCode>
+							<ns3:CountryName>DE</ns3:CountryName>
+						</ns3:PostalAddress>
+					</ns3:PostalAddresses>
+					<ns3:ElectronicAddress>
+						<ns3:URI>test-pki@baron-it.com</ns3:URI>
+					</ns3:ElectronicAddress>
+				</ns3:TSPAddress>
+				<ns3:TSPInformationURI>
+					<ns3:URI xml:lang="DE">http://www.cgm.de</ns3:URI>
+				</ns3:TSPInformationURI>
+			</ns3:TSPInformation>
+			<ns3:TSPServices>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=de, O=CGM NOT-VALID, OU=TSL-Signer-CA der Telematikinfrastruktur, CN=C.CGM.TSL-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIID8DCCAtigAwIBAgIIUuJm5YanalEwDQYJKoZIhvcNAQELBQAwejEgMB4GA1UEAwwXQy5DR00uVFNMLUNBMSBURVNULU9OTFkxMTAvBgNVBAsMKFRTTC1TaWduZXItQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxFjAUBgNVBAoMDUNHTSBOT1QtVkFMSUQxCzAJBgNVBAYTAmRlMB4XDTE0MDcwNzE2MTMxMloXDTI0MDcwNjE2MTMxMlowejEgMB4GA1UEAwwXQy5DR00uVFNMLUNBMSBURVNULU9OTFkxMTAvBgNVBAsMKFRTTC1TaWduZXItQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxFjAUBgNVBAoMDUNHTSBOT1QtVkFMSUQxCzAJBgNVBAYTAmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArM0SD0lbQygHeZnEI0u6XUS4UpjTVDNwCY3tXWwrnUp6Qx5Z73Xf3qJkVIay1+h8dModSh536+mYrzwsJIn0mZAtjFfNn/R3a+JPyaX+k9pMQTzKAA1A8cMYHvdxkGiTrOoBM5vXdHKsKXMjRDVAgBcQRREcyyuPHdzaPzbC0N3nxw0KzJk2Dtx4FsImC/QbBqDhidOqEibcbFDeI8ZR+uYECmTS3X6SMf+cKQQs3HWHb3PSDLE2TpyTYdJdbc1beneWoicibfraircXg1tvmOq/NO0vGAEj3UKgowZMqiyNGvVlIzYkMUwe83YCwoYm/92m1hg9KxNP22Zi7PbFnwIDAQABo3oweDAdBgNVHQ4EFgQUl0aA+kn2hCdTn0BdSSpbUQV867QwDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSMEGDAWgBSXRoD6SfaEJ1OfQF1JKltRBXzrtDAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEAnGinDmu7gLExKmomSRlaVVCOhZ2qszEy97mW2cIQRtaTIJ89Gir591v6L9vgC46m4xhZwWAbjcyfHAxuFSKcwjp3SAmUCHddImpWYeAM4P9M+PXvcC80CDLIEgFmEYQX/6xvrh+AYbhmhiGt2X8UJi9J0FLIWYBDc+Nc7uUBrjdmN+iMKTlTSNueHWKlGldC5Dzoz1w8UCyMn894YRaIjJazwsseVNROH+HDY+3ieTGZD7qdO4z9jIYSl2Mc2IOHZFTKG9dkEBm1LhPgqqQdm3yNEQ9CH5omvIWhyQ+3u87UdR3hN9BKMDiiZQu1RGL7LQy2WU2L1JbHQxP/2yukfQ==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-05-20T13:21:44.365Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:2560/ocsp</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.124</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_tsl_placeholder</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=DE, O=CGM NOT-VALID, CN=OCSP Signing Unit 1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEZzCCA0+gAwIBAgIIRRA801VdJvwwDQYJKoZIhvcNAQELBQAwfDEhMB8GA1UEAwwYQy5DR00uS09NUC1DQTEgVEVTVC1PTkxZMTIwMAYDVQQLDClLb21wb25lbnRlbi1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEWMBQGA1UECgwNQ0dNIE5PVC1WQUxJRDELMAkGA1UEBhMCZGUwHhcNMTQwNzA3MTcxMTMzWhcNMTkwNzA3MTcxMTMzWjBNMSYwJAYDVQQDDB1PQ1NQIFNpZ25pbmcgVW5pdCAxIFRFU1QtT05MWTEWMBQGA1UECgwNQ0dNIE5PVC1WQUxJRDELMAkGA1UEBhMCREUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCI4lvJci8MvIDJHFDSnLU+P+Y/ZKfyE/vPOzTqlxzMFwF7qJ7AbXjXpr/+TecTtJh4e50DnJagFAd5Oh432bcYOjvDBOqD3WcHeq9ZYcVZneRCX0dmXnrZ3X6OGxHfpm1vFh7wRY1fEudNJwNixGwCxpbcDc4dVDNN7U1U8izKJUOdlu1YuAZ0Z7/PVVcOgsEDfWMFUbiMdzxsB+VCen0sxxp6rK6DZe5D9oCSxetZu/2AtIsErl2Mjp3JVSMtkVxIGZdr3PzElXuJtzU+CTVlokRRM/MjXz7gJUv3keSBd1ba77DWcBj1WVnB/MD0t9TTvZI3H2B9+5dwHugj+tuxAgMBAAGjggEaMIIBFjBQBggrBgEFBQcBAQREMEIwQAYIKwYBBQUHMAGGNGh0dHA6Ly9vY3NwLmVoZXguZGU6MjU2MC9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3AwHQYDVR0OBBYEFGFC8Zho9+FF8J2bK5bSet8ykYeRMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAU1iuVFRAPhFi5BJGg8hCP+96N9q4wTwYDVR0gBEgwRjBEBggqghQATASBIzA4MDYGCCsGAQUFBwICMCoeKABvAGkAZABfAHAAbwBsAGkAYwB5AF8AZwBlAG0AXwBvAHIAXwBjAHAwDgYDVR0PAQH/BAQDAgZAMBMGA1UdJQQMMAoGCCsGAQUFBwMJMA0GCSqGSIb3DQEBCwUAA4IBAQB6G7Upx6uqjDPGJYOwWh2feuhWbXhCjX/bx3YptbF1DW6uyGNwmmVbkHpNomMDeKSzErZ7oLjEFOx0PVC+Jo1cbTrVud6z0CXw92yKKs5iE2YhI7xHLd7hFKnrZVLp+VaCDnoK+OUqkLDj9zeS2t3NOLSJKKYN4ezG1stRE9djjxwm/RqDppCPVwdaHLoiUTNi/88XwOey2lAYpT19Dm8bu53pdZMha9Dr3CVQefowuTbbcCGIJlNd/QqUt/zDtX81HBX/rR01S88iXOsw7jDB2nQySMSAppgjX8/y53ravqy8I7RkXtyjdUxxYZJYD4q2JtLty+5ueBcBLwnvumgU</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-05-20T13:21:44.356Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://ocsp00.gematik.invalid/not-used</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.124</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_tsl_placeholder</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=de, O=CGM NOT-VALID, OU=Komponenten-CA der Telematikinfrastruktur, CN=C.CGM.KOMP-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIID9DCCAtygAwIBAgIIfQImcuKEQJ0wDQYJKoZIhvcNAQELBQAwfDEhMB8GA1UEAwwYQy5DR00uS09NUC1DQTEgVEVTVC1PTkxZMTIwMAYDVQQLDClLb21wb25lbnRlbi1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEWMBQGA1UECgwNQ0dNIE5PVC1WQUxJRDELMAkGA1UEBhMCZGUwHhcNMTQwNzA3MTUzNjU5WhcNMjQwNzA2MTUzNjU5WjB8MSEwHwYDVQQDDBhDLkNHTS5LT01QLUNBMSBURVNULU9OTFkxMjAwBgNVBAsMKUtvbXBvbmVudGVuLUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMRYwFAYDVQQKDA1DR00gTk9ULVZBTElEMQswCQYDVQQGEwJkZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMjRjheKtjhzFZldmBYcZMrJb0IDGY09ETgrk4CxjiVLf1GUZf6AYBWqtH/TYNfcucgFQB3m/BG4z0sdiNQ+zabjVp4vzl1XwTTC10l8PyIjjVdBz7YbE6Mlr3De2/4ukAjBh66GJrauYFio/yTz0Iw4vLIhOCTJGaAV6RHP4vQLW5vyrR66S5TWG1ddVd/7/VTSyIm/Qg3xOxGZBcyQuPRsqoOXv/zPTOzxFi0BbNSq3K4z1hRTJZnpsTaR3UZGTw8aPFnV5iitmlzxhtwMNnSTyK121FJAx3ClJTbyc8CjX6LtFto1JO5LuIwwtmfDrNWyl2zSdsiX82XT8QAagN0CAwEAAaN6MHgwHQYDVR0OBBYEFNYrlRUQD4RYuQSRoPIQj/vejfauMA8GA1UdEwEB/wQFMAMBAf8wHwYDVR0jBBgwFoAU1iuVFRAPhFi5BJGg8hCP+96N9q4wFQYDVR0gBA4wDDAKBggqghQATASBIzAOBgNVHQ8BAf8EBAMCAYYwDQYJKoZIhvcNAQELBQADggEBAI7dDwqUzLgeSexslGakg2RMiUifNkwJ2/fPBp7hI4OjCx2v7Z3wTVb97TM26f/IINb2NDB9buze5pd5LWWdBi2RmGw3PHZ9FZ2cms4OYTGkf+8gW444uKxg+ZmQCGL2uxN+pAj8iLu2XA+LGv6dzoVPIC2fDWlbkzVxC3rYIHLwJcFbCFHQAVQlXH3MpBvNLwMtkaTy8b10j8Jj97y5kOECDLm27EbBsfEEsh8vS65iy07BFxJumXA3Wzvv6jY43/6/4bic1uJmhHWEWqc07XK51jdPS5gRfw6fa1GolXqmsLfSxmof4Pp7oqUpnPKD47Wxzlx35HQD1c7Syi3f8AM=</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-05-20T13:21:44.367Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:2560/ocsp</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.79</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_ak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.80</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_nk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.81</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.82</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smkt_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.113</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_sak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.156</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_c</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.157</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.165</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn_sis</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.168</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_fd_tls_c</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.169</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_fd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=de, O=CGM NOT-VALID, OU=HUMAN-CA, CN=C.CGM.HUMAN-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIDtDCCApygAwIBAgIIG9c0cXokgK0wDQYJKoZIhvcNAQELBQAwXDEiMCAGA1UEAwwZQy5DR00uSFVNQU4tQ0ExIFRFU1QtT05MWTERMA8GA1UECwwISFVNQU4tQ0ExFjAUBgNVBAoMDUNHTSBOT1QtVkFMSUQxCzAJBgNVBAYTAmRlMB4XDTE0MDcwODEwMDgwOFoXDTI0MDcwNzEwMDgwOFowXDEiMCAGA1UEAwwZQy5DR00uSFVNQU4tQ0ExIFRFU1QtT05MWTERMA8GA1UECwwISFVNQU4tQ0ExFjAUBgNVBAoMDUNHTSBOT1QtVkFMSUQxCzAJBgNVBAYTAmRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApMACYBBG6dGqMNu5aVcUEiePcaUMBO4Q2x3EVgqGeopFYF/vwVi0IahFsUFTHG9tRnK3lXf2jG1CGRGDHTD8MC4WnDk3nOrCbqb0UVkd/ZGLBL4AXXaKn6nwSir1nNIBl14moYJbWmTvP92eTbbCYA1Ejg0j+JASlwHDRrsfF/uWzu08GmLHlFN/6krfyQ5+n60eukHaPpBR+96mIU4phyGbGAj+/wu3/r/P4yq9xM/Wux7CM4acpoNtuNHjEt/Xn9ONSWF+ok76KmDQvlhI+6ImfabxgeH5TuVibXYRgwpvYna6IhVhnyARJzc0hcjVacK8O9v9k8VTOFzwVCTmgQIDAQABo3oweDAdBgNVHQ4EFgQUALVt1gPFWXBamUoP38G7eMAlyZowDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSMEGDAWgBQAtW3WA8VZcFqZSg/fwbt4wCXJmjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEAHEebDPUJH2p5NOds6ofOmkNkANb6129YUpOnygQLYKMYGVFhExpnOAs+pUw7cxpC8ZIEjySN9t/1lbkqmIz2XT6KLFkx8P8lvSsuA53qEv/a84xHg6HTdy1wr20qSfeqvhe5i9eutkIfVyhe/sHejExQXAao3BUvXXToZxHT3s+3Mpt7kY9sGCh6DjDNt4vDTAv2KKSOARmbabMYTdXkaaCbvqbgqQ9QngpTh42gJYcAsj80qOt3PRFb+ASickgSfRAle1nzUCrxDekR0UmvPbjFTVXUvYufb+1JRN57SsLaAB2VKoKTMu0MfW8hwexny/O5e6ZGdQHZTjST2zaP7Q==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-05-20T13:21:44.366Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:2560/ocsp</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.68</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.69</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_encv</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.70</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.71</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_autn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.74</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_hba_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.75</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_hba_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.76</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.77</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.78</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_osig</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=DE, O=gematik GmbH NOT-VALID, OU=Komponenten-CA der Telematikinfrastruktur, CN=GEM.KOMP-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIESjCCAzKgAwIBAgIBBDANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDAyMjExNjM1MDBaFw0yMjAyMTkxNjM1MDBaMIGDMR8wHQYDVQQDDBZHRU0uS09NUC1DQTEgVEVTVC1PTkxZMTIwMAYDVQQLDClLb21wb25lbnRlbi1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDELMAkGA1UEBhMCREUwggEgMAsGCSqGSIb3DQEBAQOCAQ8AMIIBCgKCAQEAl3AsWQ2qITmuVOF86oomZLwu4AlXzOeDp/JOj70UK+bDOX5HKAXkP/5DaqVHsmzxyLI0iZyWLZHd9m+52ca+MpRaqN9fRwyYTdWP173VP7GYBo2lreVst3g+VNkZy0CcKRh9vIAbX+wSAzKrtdaymGjB6t1OQz9P8SSniRbF9O96PIphzz6FPUSNbKJkJNBjqBox3u7oKTmyhDuKHg0OQSNDOToj03dMkWsNfOMt839fyRQDlmYdg+D3+binkBv4/WWdNHQxI/veixMv72uTsKGB2XY7yHIBlboPFWK2Ht+nQj9gQR2wnIC3QaYv0tJm+oKX2a8EPKQ9cBO02KPyuQIDAQABo4HKMIHHMB0GA1UdDgQWBBRPzt6NONiw2gXFuujQ9TfIhi02vDAfBgNVHSMEGDAWgBSlsScdgCYTCMJqOD+r5Rd5uxe4lzBKBggrBgEFBQcBAQQ+MDwwOgYIKwYBBQUHMAGGLmh0dHA6Ly9vY3NwLXRlc3RyZWYucm9vdC1jYS50aS1kaWVuc3RlLmRlL29jc3AwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAQYwFQYDVR0gBA4wDDAKBggqghQATASBIzANBgkqhkiG9w0BAQsFAAOCAQEAtF3RPJUk+Sk2XlMcu6HsKNWr9IxOrsnqfM6xkA3vLVNOWTWZChHvmc2hZI7/5pAki8fEzdX4Cf4gW8yWoVa55X9jMu4kkdDsiqLpgPMymAdCFMZaGGPp7y6tiokaptGoEkZk+fp5kZZ7NyjuEr0gdDCdRHHirQAkXdC/qZAN+ySZjhZliqlT+MdoLdToZYplKMynl5uwhOLg1cVeSLs1B3VCzSiyknvByfle6zGeS7c1lC5cbMqqK/llGE+mWto759vfrpP10kqDQ+Dfb6B+paEIcYHt/892BEWqAyK8bSHdHHDGHoUXmS1jiluw0SyvdsPxBpFLKiMa7nwdeww9EA==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/revoked</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-07-24T22:00:23.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.169</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_fd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.156</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_c</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.157</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.82</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smkt_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.80</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_nk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.113</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_sak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.79</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_ak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=GEM.KOMP-CA2 TEST-ONLY, OU=Komponenten-CA der Telematikinfrastruktur, O=gematik GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIETDCCAzSgAwIBAgIBDTANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDA3MjQxMTUyNTZaFw0yMjA3MjIxMTUyNTZaMIGDMQswCQYDVQQGEwJERTEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDEyMDAGA1UECwwpS29tcG9uZW50ZW4tQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxHzAdBgNVBAMMFkdFTS5LT01QLUNBMiBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCXcCxZDaohOa5U4XzqiiZkvC7gCVfM54On8k6PvRQr5sM5fkcoBeQ//kNqpUeybPHIsjSJnJYtkd32b7nZxr4ylFqo319HDJhN1Y/XvdU/sZgGjaWt5Wy3eD5U2RnLQJwpGH28gBtf7BIDMqu11rKYaMHq3U5DP0/xJKeJFsX073o8imHPPoU9RI1somQk0GOoGjHe7ugpObKEO4oeDQ5BI0M5OiPTd0yRaw184y3zf1/JFAOWZh2D4Pf5uKeQG/j9ZZ00dDEj+96LEy/va5OwoYHZdjvIcgGVug8VYrYe36dCP2BBHbCcgLdBpi/S0mb6gpfZrwQ8pD1wE7TYo/K5AgMBAAGjgcowgccwHQYDVR0OBBYEFB2PGeuZtBwbQgCLXOgtfnO6X3LzMB8GA1UdIwQYMBaAFKWxJx2AJhMIwmo4P6vlF3m7F7iXMEoGCCsGAQUFBwEBBD4wPDA6BggrBgEFBQcwAYYuaHR0cDovL29jc3AtdGVzdHJlZi5yb290LWNhLnRpLWRpZW5zdGUuZGUvb2NzcDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA0GCSqGSIb3DQEBCwUAA4IBAQDCY+sP+YXS79ko7RljAJz44vcOk3gNSmKFqHQ0xFyKxinQyXd3zeb1RcOZHK18b2/GvZAwWEGnKUS6ReQsALYXVN3eiT3XaLZt+ye+QRTH+ytORc+V/qYYg/unt6FYuX8G8dywxQZPxWT58Bi4+O33raHp0k5Ul87HLkaP+tuh3Q/fgpJran3ESyV0Q1FS2qJQ89Rt3H7Fv4vxzrAjtvkfntFBrCCFySn5pUgt1JzAdai4Zbz250NyFa8o7YODFKVIWlCLDIRPTMtuIyksrvaiTZBhVBh+8Y5qR7Jz84p0OqrFGFBtwdMl6z2eLcmLaN682ONmP8dqW3Vm8yyLy4pT</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/revoked</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-04T22:00:07.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.169</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_fd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.156</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_c</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.157</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.82</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smkt_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.80</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_nk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.113</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_sak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.79</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_ak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=GEM.KOMP-CA3 TEST-ONLY, OU=Komponenten-CA der Telematikinfrastruktur, O=gematik GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIETDCCAzSgAwIBAgIBEzANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDA4MDEwODU0NDNaFw0yMjA3MzAwODU0NDNaMIGDMQswCQYDVQQGEwJERTEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDEyMDAGA1UECwwpS29tcG9uZW50ZW4tQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxHzAdBgNVBAMMFkdFTS5LT01QLUNBMyBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCkxc2k1Lu7wC7AY3JE6Bkjs3EHmydhCqb4alOcdO8KA/L4xPl0GQcPTN6V4u4NH9viciD2lESA9MCmDMPSviba+T83WaEw4Dl1dJtjeY+ofV/3N6pf8seD6s8mreUZbNFqB/jm26ZYdQF3fLD8YPuFuK+Gg3jF6jk5DiosfoTwCb4kGZbNfO6hX3xmfUsXIlXpE1C3kNHMqnISHEC/CJl6fhniWG+nPmWEk6KO9U1hkWW3xq7sEGilfhNxuxGIYxincHOKv9aszWf9zkuJ/8Sq4HeCK1xgufObZV9yROGkIUpFW/PmgVlOvIUI84GKXpqY1kRlRi7wPtEKSrnM0RVTAgMBAAGjgcowgccwHQYDVR0OBBYEFHIRdByayNsIuClTLl5QE6oM5VBUMB8GA1UdIwQYMBaAFKWxJx2AJhMIwmo4P6vlF3m7F7iXMEoGCCsGAQUFBwEBBD4wPDA6BggrBgEFBQcwAYYuaHR0cDovL29jc3AtdGVzdHJlZi5yb290LWNhLnRpLWRpZW5zdGUuZGUvb2NzcDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA0GCSqGSIb3DQEBCwUAA4IBAQA73NQ8Rvc1RtqGXORDfaD3l4bpjSuMwCHWweJNb49uyh0bZM5/gkQJaF0Ny8myyR8wek8IBzLoreHjhCwSaxQ1RQbfU6OqW1mQq1tceauuPTxSpRGcWzqwzxMWVpNIWWyfTILTAkyPWrq6QwAKRAIpQNtpGL73rRy3GgZZ7c/bI1aDqsJOggB1Ihw4OvXQKk8FAiok1dt5PAero903e6HKilxDnrPtWJgXiLSAM2Mt67rWOwvjsdO9G0pULhf3shAUlgb+8i+IGRqG5JllFIlBfvHqY4bxjJcvbGMT2PWp30RD7r4mBXe8K9tgUh0asCfsB0ZDqq3414mel/iLZroI</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-04T22:00:45.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.169</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_fd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.156</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_c</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.157</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_zd_tls_s</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.82</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smkt_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.80</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_nk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.113</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_sak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.79</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_ak_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=DE, O=gematik GmbH NOT-VALID, OU=VPN-Zugangsdienst-CA der Telematikinfrastruktur, CN=GEM.VPNK-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEUDCCAzigAwIBAgIBBjANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDAyMjExNjQwNTBaFw0yMjAyMTkxNjQwNTBaMIGJMR8wHQYDVQQDDBZHRU0uVlBOSy1DQTEgVEVTVC1PTkxZMTgwNgYDVQQLDC9WUE4tWnVnYW5nc2RpZW5zdC1DQSBkZXIgVGVsZW1hdGlraW5mcmFzdHJ1a3R1cjEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDELMAkGA1UEBhMCREUwggEgMAsGCSqGSIb3DQEBAQOCAQ8AMIIBCgKCAQEAmgfj0QNu7BfxaP7SdZK9B6YP19z8+oZIchh50PpHxKRBTeGGbY/PVz4j6p+Jxm54x+OUsGMepky7z7AMusEE9llOpLZNogYdvLqn9UBrJopSt6Wkn7XOgE/Whkd/5iMnBX8xU9dKJVECGrcKZmer3Uhd9HIAYJE7TPNiJefijYKCxFVU6FYkCtrdtuoIGR0JZYVyqK2dwwKwiWQAKsdT8nRRFBzGD1njT1dYKnIy/Th/Yt008HAX514A2x+JByRfEiIMboBn//euMB3o4AZieiBXm4SxM+ZSwRVqL0Wd7mbH92qQj0pg0iHDRR2Ro8rza4oerDGwxg50PmPjHEKbpQIDAQABo4HKMIHHMB0GA1UdDgQWBBQCzrLj1ybFgDDLsEz6l1S6luzqizAfBgNVHSMEGDAWgBSlsScdgCYTCMJqOD+r5Rd5uxe4lzBKBggrBgEFBQcBAQQ+MDwwOgYIKwYBBQUHMAGGLmh0dHA6Ly9vY3NwLXRlc3RyZWYucm9vdC1jYS50aS1kaWVuc3RlLmRlL29jc3AwEgYDVR0TAQH/BAgwBgEB/wIBADAOBgNVHQ8BAf8EBAMCAQYwFQYDVR0gBA4wDDAKBggqghQATASBIzANBgkqhkiG9w0BAQsFAAOCAQEAThtbZ3bPT//+nwvwDfwVNF/vkm7JFYIWe5pSvGFetxOw6BfB1LgyafWi8LgWVu0saFn9eKVI8anjYCVHJ1wV7BBkS83EdAOXLbTjTam8OESfS+ExHEboZvfO4iya6AhObkASy4yWbUt35LThscww/ain+JBb7B6IN7y76G5wARxRsEhmUZpndyYyYr1DNv8fQyxcq8+VUGBW8gkTHQ59zllIv+LwxOZHBksqNtBma7wLUx1u/ldavn+ZOEj4AATGDkC7q4JrWpErquavRhDsSOvTaGHC7PYY4qH2aICWt2eIs8Wv0spWX8TxcHfMCV+djpH9iDHVoKUei3lWCgnzqw==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/revoked</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-07-24T22:00:49.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.165</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn_sis</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.81</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=GEM.VPNK-CA2 TEST-ONLY, OU=VPN-Zugangsdienst-CA der Telematikinfrastruktur, O=gematik GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEUjCCAzqgAwIBAgIBDzANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDA3MjQxMTUzNDRaFw0yMjA3MjIxMTUzNDRaMIGJMQswCQYDVQQGEwJERTEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDE4MDYGA1UECwwvVlBOLVp1Z2FuZ3NkaWVuc3QtQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxHzAdBgNVBAMMFkdFTS5WUE5LLUNBMiBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCaB+PRA27sF/Fo/tJ1kr0Hpg/X3Pz6hkhyGHnQ+kfEpEFN4YZtj89XPiPqn4nGbnjH45SwYx6mTLvPsAy6wQT2WU6ktk2iBh28uqf1QGsmilK3paSftc6AT9aGR3/mIycFfzFT10olUQIatwpmZ6vdSF30cgBgkTtM82Il5+KNgoLEVVToViQK2t226ggZHQllhXKorZ3DArCJZAAqx1PydFEUHMYPWeNPV1gqcjL9OH9i3TTwcBfnXgDbH4kHJF8SIgxugGf/964wHejgBmJ6IFebhLEz5lLBFWovRZ3uZsf3apCPSmDSIcNFHZGjyvNrih6sMbDGDnQ+Y+McQpulAgMBAAGjgcowgccwHQYDVR0OBBYEFA3QwDOfHbT9o9t75hPfS/a3aBtqMB8GA1UdIwQYMBaAFKWxJx2AJhMIwmo4P6vlF3m7F7iXMEoGCCsGAQUFBwEBBD4wPDA6BggrBgEFBQcwAYYuaHR0cDovL29jc3AtdGVzdHJlZi5yb290LWNhLnRpLWRpZW5zdGUuZGUvb2NzcDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA0GCSqGSIb3DQEBCwUAA4IBAQBOV5QVk6yZo0LR36uWMK2GMm4Bb2gxrlfBpeEoBly1FcV9gyYXNVYNlZMuhqSNORNoIRUiUp5j2/0Vzz87PAe3LglWrFZXD0p8ptyI1DMWK0H3IBzzDox6ShvicWefC7ctm8cQU44f2osOKg5j4BQG57hflMVkaYFcL0LBnWYokiRvhGG4YR9JZy3HuCHnCgHP34gxejkgwNgkokOSIZw+brKo1c3UyU47A/5tZEea4yYK1FWFckIDYH/XkOP1WxnPkhbHTL4ek2gR2djf339SUr9nljMPNt2bGeOYTWYgomT1GMSdP7QTbh4bdqvUJEhzmwBLahPPPfiFC59EEp3L</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/revoked</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-04T22:00:29.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.165</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn_sis</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.81</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=GEM.VPNK-CA3 TEST-ONLY, OU=VPN-Zugangsdienst-CA der Telematikinfrastruktur, O=gematik GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEUjCCAzqgAwIBAgIBFTANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDA4MDQwOTIzNDdaFw0yMjA4MDIwOTIzNDdaMIGJMQswCQYDVQQGEwJERTEfMB0GA1UECgwWZ2VtYXRpayBHbWJIIE5PVC1WQUxJRDE4MDYGA1UECwwvVlBOLVp1Z2FuZ3NkaWVuc3QtQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxHzAdBgNVBAMMFkdFTS5WUE5LLUNBMyBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDdCFJ6/8ExIoXLSod3SsgF8XMrsX/ioM/GmAxw0nBswNwqsEvH+Zc4zMCCBRW4ziJV2Z3+bluVyw3ouN1F6bCxKWciy2gX/sxtAvWNmyLUTQHz0hCzZir0U4hQwiOyO4KkZd7wS+F+TsGT3PPKhz0oRGwcKEmuzbHE+TJTao1zEZndF+2gTJ1E8HCTdy+ut4R1jaYTOZyKlmwDQhCqPv19RpKxMSB6L91X1juIXle8QEpq1LLB0YHK5IS4AZ3an4bL9k2A8RxAy2Nqc9bQZWHmU/wPP9qYMdKY/4ODfK7aleYFkWCukqoennbud2v/3KdwDfULlmIyLzmL+ZRrtyvZAgMBAAGjgcowgccwHQYDVR0OBBYEFBe4KL0izxYUMKF8Ot5QFCPFBvG2MB8GA1UdIwQYMBaAFKWxJx2AJhMIwmo4P6vlF3m7F7iXMEoGCCsGAQUFBwEBBD4wPDA6BggrBgEFBQcwAYYuaHR0cDovL29jc3AtdGVzdHJlZi5yb290LWNhLnRpLWRpZW5zdGUuZGUvb2NzcDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA0GCSqGSIb3DQEBCwUAA4IBAQBNO2kx8QqWUil7u4caBoUHDICUF13I+EiyvnMZTJWjX2H9ZW9ubZVB/3Q6n11AwudpG4X4Oz0ivOKuCSXYwlktHA8qUbTpdBIz7XMeiiBAMAnBSn4x0U6bV/JNgii/4Mkkq4XQdXzEcWO8jcY6U6xH/z6ErWMlQBxUf6Z/ITWmugmSizCc121EWVdUbCbTkR3qpE47rzsBZx0YwudKBZv2RcZEqTknQ15g3kGGKltBaguFPo8QCQ5Vp6acfzxJQqeZ9Y7dd9lBx0I+RCkCUbQ8BzRqzxiWgSQVVL0hcchRZhix6++8EcMG3Gn9fgh2ZEqVnh1AXiorf9d145Ipb3uT</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-04T22:00:27.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.165</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn_sis</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.81</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=Atos Origin eGK-Test-CA 2, OU=Trustcenter, O=Atos Origin GmbH, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIID9DCCAtygAwIBAgIBADANBgkqhkiG9w0BAQsFADBiMQswCQYDVQQGEwJERTEZMBcGA1UECgwQQXRvcyBPcmlnaW4gR21iSDEUMBIGA1UECwwLVHJ1c3RjZW50ZXIxIjAgBgNVBAMMGUF0b3MgT3JpZ2luIGVHSy1UZXN0LUNBIDIwHhcNMDcwOTA0MDk0OTIyWhcNMTcwOTAzMDk0OTIyWjBiMQswCQYDVQQGEwJERTEZMBcGA1UECgwQQXRvcyBPcmlnaW4gR21iSDEUMBIGA1UECwwLVHJ1c3RjZW50ZXIxIjAgBgNVBAMMGUF0b3MgT3JpZ2luIGVHSy1UZXN0LUNBIDIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCZbkOGTztg7YfVfg8I80tUcwFwrV466VuooNPXyGUoIoBh9fi8iuyDSk1hTYyA70utj8P8LfBMLyyN7QFwesiSgcLZVgrvFqClxiOMSOUMBjZ4BveoJkA1UcdSx6BAKmIsAsosMyhnFCi4k4NiaLXbN3SVFK4tP/wRyumY68Y+OMzqZMTO+Wkuph9CYW3RHyShfhV4cpSzEG4vsJA3CFkGZW9nv/EQbdvsvaN8a2zwW4UNXL1VKP6gdVgOt6/wUSphn4OZJe21GwipxYiTSUdADDzsU2NP3jip4+KV7YWPa5V+pbrrjnmvxqFrFFr5aI02488Xl4mwnsIRkTP8ND8LAgMBAAGjgbQwgbEwHQYDVR0OBBYEFFpQSGnPp2zF49lYOWy2DDS3nueoMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMDcGA1UdIAQwMC4wLAYFKyQFAgEwIzAhBggrBgEFBQcCARYVaHR0cDovL3d3dy5nZW1hdGlrLmRlMDYGCCsGAQUFBwEBBCowKDAmBggrBgEFBQcwAYYaaHR0cDovL2Vnay10c3Aua2toLmRlOjI1NjAwDQYJKoZIhvcNAQELBQADggEBAA5aw4284QiIROiLJF7HZr/s6gbOcLV/edfhPoMI3I61bZz4mLHX/1us9PC9uq0Loz3dRekdAb1Xu1T1Rjhuj9iVBrNfso5mrvd80ziXnb4fkHx8bZoC2dnM9kkMRkk7jjCUJJaq9ooFosfAA/klMMowVMs+Qm3BKN6QjDUi7trNN21b2gu6y//72jZRWovceVF9cT53u7hmKebj2pt+/OZNt4bcW++lDHunOd60OdLIk3/+YkGRlwIC/Y2qKj+37BtaIGetm7qcz8e9U19CELnLBlUYqfzTuCi47eg2db98ovkChgy1eE0f1hDjUwQjF1L3y49k5AJ3GRSt4WK2EKs=</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2007-11-20T23:00:05.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.71</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_autn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.70</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.69</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_encv</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.67</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_sig</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.68</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=Atos Origin eGK-Test-CA 5, OU=Trustcenter, O=Atos Origin GmbH, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIID/zCCAuegAwIBAgIDD0JAMA0GCSqGSIb3DQEBCwUAMGIxCzAJBgNVBAYTAkRFMRkwFwYDVQQKDBBBdG9zIE9yaWdpbiBHbWJIMRQwEgYDVQQLDAtUcnVzdGNlbnRlcjEiMCAGA1UEAwwZQXRvcyBPcmlnaW4gZUdLLVRlc3QtQ0EgNTAeFw0wOTA5MTUwOTEwMThaFw0xOTA5MTUwOTEwMThaMGIxCzAJBgNVBAYTAkRFMRkwFwYDVQQKDBBBdG9zIE9yaWdpbiBHbWJIMRQwEgYDVQQLDAtUcnVzdGNlbnRlcjEiMCAGA1UEAwwZQXRvcyBPcmlnaW4gZUdLLVRlc3QtQ0EgNTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJluQ4ZPO2Dth9V+DwjzS1RzAXCtXjrpW6ig09fIZSgigGH1+LyK7INKTWFNjIDvS62Pw/wt8EwvLI3tAXB6yJKBwtlWCu8WoKXGI4xI5QwGNngG96gmQDVRx1LHoEAqYiwCyiwzKGcUKLiTg2Jotds3dJUUri0//BHK6Zjrxj44zOpkxM75aS6mH0JhbdEfJKF+FXhylLMQbi+wkDcIWQZlb2e/8RBt2+y9o3xrbPBbhQ1cvVUo/qB1WA63r/BRKmGfg5kl7bUbCKnFiJNJR0AMPOxTY0/eOKnj4pXthY9rlX6luuuOea/GoWsUWvlojTbjzxeXibCewhGRM/w0PwsCAwEAAaOBvTCBujAdBgNVHQ4EFgQUWlBIac+nbMXj2Vg5bLYMNLee56gwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwOQYDVR0gBDIwMDAuBgcqghQATARwMCMwIQYIKwYBBQUHAgEWFWh0dHA6Ly93d3cuZ2VtYXRpay5kZTA9BggrBgEFBQcBAQQxMC8wLQYIKwYBBQUHMAGGIWh0dHA6Ly9lZ2stdGVzdC10c3AuYXRvc29yaWdpbi5kZTANBgkqhkiG9w0BAQsFAAOCAQEAVTdmSI31+zNRWJ4owUU/vKP5fFAECJNfliLWLmKYcZpBFK7rEQAYe7cYwt3VItUMZQpl9oXqqSNl0u3M0mI1su1ypaw7uN2OFoD/v3bAQcZPC8adfQs5qth26lfGGlQNg6SlVHV1qsvEBRHkbRmcz7JUvJDboCm/wEFR3M5cV0UceGwUCOByVFyu8LHLSXUb16ydRSXI0rob43TiuEDLkq7XwHrvzm5DFmICvqG/xBt5cfBfHoI7idz43wKZH2zSKCs+A7OpkdQy8qx3OB5Otp5QbwbfiHR2IPVikcV4IiYqcgCkgMONvd21cRuX7bEHE8iCN0CIVkzIV7rtT3cJnw==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2009-09-14T22:00:30.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.71</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_autn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.70</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.69</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_encv</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.67</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_sig</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.68</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=ATOS.EGK-CA2 TEST-ONLY, OU=Elektronische Gesundheitskarte-CA der Telematikinfrastruktur, O=Atos Information Technology GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEjzCCA3egAwIBAgIDD0JAMA0GCSqGSIb3DQEBCwUAMIGqMQswCQYDVQQGEwJERTEzMDEGA1UECgwqQXRvcyBJbmZvcm1hdGlvbiBUZWNobm9sb2d5IEdtYkggTk9ULVZBTElEMUUwQwYDVQQLDDxFbGVrdHJvbmlzY2hlIEdlc3VuZGhlaXRza2FydGUtQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxHzAdBgNVBAMMFkFUT1MuRUdLLUNBMiBURVNULU9OTFkwHhcNMTQwMzI1MTUyODQwWhcNMjIwMzI1MTUyODQwWjCBqjELMAkGA1UEBhMCREUxMzAxBgNVBAoMKkF0b3MgSW5mb3JtYXRpb24gVGVjaG5vbG9neSBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8RWxla3Ryb25pc2NoZSBHZXN1bmRoZWl0c2thcnRlLUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQDDBZBVE9TLkVHSy1DQTIgVEVTVC1PTkxZMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiWTeMUjG1AcnEQYRWHOfglD+Jx5FhHmsm9YrE8IoGknL9Ss1RttAjxegshd+C9HeQ/oXG1zrwpLbbF/gwLZ8u4BNiwWf4JNT0BKTU/vLh3ITmEVkvbtwOpBqIIy6ccs0TueF/f3O1OvmhHYUtYA+t7AGQ5J1yhScXRMbxOD1aNPn3MUFP9FDS9AuV7BgcTGXGpBt9qRjONHH5TViJLgXE6mk/NK9Jascq0oRV16hvD+DBhZmdu4bovblUNNrFpVbj01ULdszUtPni8MSAoJ/U9iox5lO9fvQjX6/zDzOv2ueRZaXEEEFFdTvBsTEXUreOX81TIFzVbJc8cYxCUWwiQIDAQABo4G7MIG4MB0GA1UdDgQWBBReGSsT8Vy1AEx/rS+UU3xVnC7A5jASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjA6BgNVHSAEMzAxMC8GCCqCFABMBIEjMCMwIQYIKwYBBQUHAgEWFWh0dHA6Ly93d3cuZ2VtYXRpay5kZTA3BggrBgEFBQcBAQQrMCkwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vY3NwLmVnay10ZXN0LXRzcC5kZTANBgkqhkiG9w0BAQsFAAOCAQEATv+2vxT6yuY6s0JYGsc7Cyws3cihzdSCVCMgC+rGfScElZksfV3ofwpU+kJPaGcB9MiQOhnoh+0SkUvRN6y9na4HiiAB2GDwPG79FMKmYd/wueKxThzFWV1nbBe6Qk8dLxJHKU0IMVE9Jpwsz7JJPPy+1sfjpr0XSmNBBx5Le/8jO88zd234VpEX/Z8E4kGbk2X6OIvqqDrpaB/h32smbc8qGK86liaXOHz080M2gKepCTbXb7iWxSzif0b4PIHCGGigqKGFmvee/jFV0L9njkQiiYDLt+c1nv3nbUdVLGC8D6gK6epg4pZ4hsHJMx+oXiaiUK0Kf9O4yQvdkxJIYQ==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-09-24T22:00:02.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.71</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_autn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.70</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.69</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_encv</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.67</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_sig</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.68</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_egk_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=TSYSI.SMCB-CA1 TEST-ONLY, OU=Institution des Gesundheitswesens-CA der Telematikinfrastruktur, O=T-Systems International GmbH - G2 Los 3 NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEfzCCA2egAwIBAgIBCzANBgkqhkiG9w0BAQsFADCBgTEbMBkGA1UEAwwSR0VNLlJDQTEgVEVTVC1PTkxZMTQwMgYDVQQLDCtaZW50cmFsZSBSb290LUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMR8wHQYDVQQKDBZnZW1hdGlrIEdtYkggTk9ULVZBTElEMQswCQYDVQQGEwJERTAeFw0xNDA1MjAxMDA1MDNaFw0yMjA1MTgxMDA1MDNaMIG2MQswCQYDVQQGEwJERTE6MDgGA1UECgwxVC1TeXN0ZW1zIEludGVybmF0aW9uYWwgR21iSCAtIEcyIExvcyAzIE5PVC1WQUxJRDFIMEYGA1UECww/SW5zdGl0dXRpb24gZGVzIEdlc3VuZGhlaXRzd2VzZW5zLUNBIGRlciBUZWxlbWF0aWtpbmZyYXN0cnVrdHVyMSEwHwYDVQQDDBhUU1lTSS5TTUNCLUNBMSBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDAeyQ3DeFLIc7UA2mCoP133ZgJxcOlu5yuVpG2Q+FLCVltsJGzzta/z4rFcYvHqcD0Ci61fXD5+Zge3eNG3e7jacydM4441VTVP/k+zxjeFt7xW9Wst0lwkRy5H810rwRg+r/c1gmJAu23jd0euITS0XdFbkbXaBmRVdk3H3I/ycRfteQIIFBIlvnHUhEs5k8oMWAlNQ7v4hy1OjXzSzAP4X9jnNkBXqWFNRSaPh3e/kUpcVYt87SeWucp+0k/90rhl5H1Qw7JIdPX9sn7ph5+F1N9hrXAbyDTCjAQPbeD/hI4GFCcUUBqOx4Vr2NASeKJtMUDyiN5U54VeGMqh/DtAgMBAAGjgcowgccwHQYDVR0OBBYEFKtUyLw4LkdyiycWjw9EMzN03ZBgMB8GA1UdIwQYMBaAFKWxJx2AJhMIwmo4P6vlF3m7F7iXMEoGCCsGAQUFBwEBBD4wPDA6BggrBgEFBQcwAYYuaHR0cDovL29jc3AtdGVzdHJlZi5yb290LWNhLnRpLWRpZW5zdGUuZGUvb2NzcDASBgNVHRMBAf8ECDAGAQH/AgEAMA4GA1UdDwEB/wQEAwIBBjAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA0GCSqGSIb3DQEBCwUAA4IBAQBwrONyvUU3SkXsGy4QC09cXl1QohzLQpHZJBbMJOfmRcOOrLquks4bvfAIhN0AnrkEm6DWnRaMrsAc8w+N89tf9gBPeK6PbQCuYOTHD7yELKxosj0Idfi9yLDagEWdJxAxSqanRrZ13xa9JoBuk83rXEC4DcRNvIjklG1+ZC/nMC65nywmKR2QTYwhbXcZZlPNbtOs5ieEsxEjypKIthIhbxqr3hzvn8bJpYRONMIGIQQZQwnXIhGyxoPGfB2/OEVwLHbhNjhBpqhtcaP8tLV1ANjv4WAQY4vhsrPjP2E0A3vDksRFt1bZT14Zq1kphnCBxbM/oGnZwxP6tMaRr9+N</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-25T22:00:58.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.76</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_enc</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.77</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_aut</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.78</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_smc_b_osig</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=TSYSI.HBA-qCA1:PN TEST-ONLY, OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung, O=T-Systems International GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEyzCCA7OgAwIBAgIBAjANBgkqhkiG9w0BAQsFADCBrDELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMUUwQwYDVQQLDDxIQkEtcUNBIC0gVEkgZGVyIEdlc3VuZGhlaXRza2FydGUgbWl0IEFuYmlldGVyYWtrcmVkaXRpZXJ1bmcxJTAjBgNVBAMMHFRTWVNJLkhCQS1xUkNBMTpQTiBURVNULU9OTFkwHhcNMTQwNzIyMTIyNzU2WhcNMTkwNzIyMjM1OTU5WjCBqzELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMUUwQwYDVQQLDDxIQkEtcUNBIC0gVEkgZGVyIEdlc3VuZGhlaXRza2FydGUgbWl0IEFuYmlldGVyYWtrcmVkaXRpZXJ1bmcxJDAiBgNVBAMMG1RTWVNJLkhCQS1xQ0ExOlBOIFRFU1QtT05MWTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL4LRG04IPXqXXE7IUGanJfxLSj902w+vfU/L5kHzZ/IdIT3OYAOk4T6SO8S29f+8mE2rTuPNq64Yi2HLBDSi/pUH71Tdahkv+iGwyZceNHhmPPOrrwfAFeiXrkx/VDUndJIOOIxf5F3emBEfZyUzwCO2vfytkrewLVOd91b4F6BAJ0Hqds5ZYl+Re0ZhHBZnVsQs5uDBvSqDBZXnwpeeKNv43hVt+Px5WkR6sRPwR3WEz9WwGVB5QoO7mkbHCi3kS7sWKDcLL4M3mPgtTZGMQ9SwSWUMFdSztyiir3pYb6ijHke8ALgzEq4dAy2gRmCg+PJqZHliBOkpcvf/0DVFNkCAwEAAaOB9jCB8zAOBgNVHQ8BAf8EBAMCAgQwHQYDVR0OBBYEFOhEua9qWp1Q3v2S9WcAtOXFrcohMBIGA1UdEwEB/wQIMAYBAf8CAQAwEgYDVR0gBAswCTAHBgUrJAgBATAYBggrBgEFBQcBAwQMMAowCAYGBACORgEBMBsGCSsGAQQBwG0DBQQOMAwGCisGAQQBwG0DBQEwHwYDVR0jBBgwFoAUf7bTGSBP6Q2ib3IP2JvcC/SuL6gwQgYIKwYBBQUHAQEENjA0MDIGCCsGAQUFBzABhiZodHRwOi8vcW9jc3AuaGJhLnRlc3QudGVsZXNlYy5kZS9vY3NwcjANBgkqhkiG9w0BAQsFAAOCAQEATDntWkaXpe59p9vcN2CeRLHkbb34mxHH96CxmsGhhrjaBEMPIZhbUo8+CmOA+mzCLvosLgS1vD6nfK7RCCs1GnT8jGkdaqt8mG1b7NTiA6ZxaTnLnATOshTX/FtemYWbEkIpUaV/BVuAid+dfDxNC3sPdfpOVurXIx/QSXh4Cye8cTffFlf99D+Tb1Zhtwgr7PB+3fNJZ4Wc+32ByVEKGYeN20/V/AoMAUjxNYaNRvLKFsMckCwSxWRC6ztwSvRAxf+FxHT9cFggXNNNPW0ged+psQTWTDtrlLg/qqDkeemnLMc4Yv65gdZZenYA91kWpMBcI+fO1HxLfx9ChlXqKQ==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-08-25T22:00:00.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.72</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_hba_qes</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=TSYSI.HBA-qRCA1:PN TEST-ONLY, OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung, O=T-Systems International GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIEyTCCA7GgAwIBAgIBATANBgkqhkiG9w0BAQsFADCBrDELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMUUwQwYDVQQLDDxIQkEtcUNBIC0gVEkgZGVyIEdlc3VuZGhlaXRza2FydGUgbWl0IEFuYmlldGVyYWtrcmVkaXRpZXJ1bmcxJTAjBgNVBAMMHFRTWVNJLkhCQS1xUkNBMTpQTiBURVNULU9OTFkwHhcNMTQwNzIyMTIyNjAxWhcNMTkwNzIyMjM1OTU5WjCBrDELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMUUwQwYDVQQLDDxIQkEtcUNBIC0gVEkgZGVyIEdlc3VuZGhlaXRza2FydGUgbWl0IEFuYmlldGVyYWtrcmVkaXRpZXJ1bmcxJTAjBgNVBAMMHFRTWVNJLkhCQS1xUkNBMTpQTiBURVNULU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+EZEsodWi7jzEJ2MDPSxdqG1/SmmDG+v3EJq8bA2q7QzGp+nBjPBtM+VawMRDad5uMpYqSdhCsgxOH/5jJZEpDKW0Y8WniNZj8/QwH5PCDQD/YZNo1fenw12x1ed0Gq8vAxtsFf7uS1yETqkif719SwKZ5d011aLUiuQp1wKL1dROnufUwtk0Cgo6QcpLQMIalilnUQDOflHiL6xdwakr8XOVOTQDX7kZ9HZqSq37FFzDN0BGk89X/u3x7WdPJyT55CPzATVVuQXPcBbZEvjZRaxWAgIKbklpoHaa1Oiph48QRM6X8VPn9NGC8UAgLpVuBuTXwzAqAZWoO+yqqBWvAgMBAAGjgfMwgfAwDgYDVR0PAQH/BAQDAgIEMB0GA1UdDgQWBBR/ttMZIE/pDaJvcg/Ym9wL9K4vqDAPBgNVHRMBAf8EBTADAQH/MBIGA1UdIAQLMAkwBwYFKyQIAQEwGAYIKwYBBQUHAQMEDDAKMAgGBgQAjkYBATAbBgkrBgEEAcBtAwUEDjAMBgorBgEEAcBtAwUBMEIGCCsGAQUFBwEBBDYwNDAyBggrBgEFBQcwAYYmaHR0cDovL3FvY3NwLmhiYS50ZXN0LnRlbGVzZWMuZGUvb2NzcHIwHwYDVR0jBBgwFoAUf7bTGSBP6Q2ib3IP2JvcC/SuL6gwDQYJKoZIhvcNAQELBQADggEBAAJLGjBMJLQMNXby4+ygNccNneGIit8rKIiZGpSCIhJ4uaDu1Ul45v2T5Lpdwx9Ktr3NGDoOMTgpg5aXoCwUOoYZGXQN+UbcCbG1ds07NidYl4o7TwAHH6Y+YWz2YTkJbrP4H5VJM6ML0begD1jhfQXpYt+J0qCQY1PGKag+ud00R0JHA51XOq7Jrfzl9iLp9qH/t7W0SlGifTMaxuZZg5+j3P3EmeD3z3VRKhkA/gBUdkoDsj6dVwHCTHAVTrfBwahzueToVj50bXvY3wBuhn8G2RxCtA4XTIq76FkLA0g25BL6oMvfmYqfrYmtcNcXfXx483cQTmWIwF4qTZMqivU=</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-12-15T23:00:04.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8888/ocsp_ru_tu</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.72</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_hba_qes</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=TSYS.HBA-Pseudo-QES-OCSP-Signer 1:PN TEST-ONLY, O=T-Systems International GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIErzCCA5egAwIBAgIIdz8yqUM7fJAwDQYJKoZIhvcNAQENBQAwgawxCzAJBgNVBAYTAkRFMS8wLQYDVQQKDCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFDQSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSUwIwYDVQQDDBxUU1lTSS5IQkEtcVJDQTE6UE4gVEVTVC1PTkxZMB4XDTE0MTAwMTA1MjUxOVoXDTE5MDcyMjIzNTk1OVowdzELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMTcwNQYDVQQDDC5UU1lTLkhCQS1Qc2V1ZG8tUUVTLU9DU1AtU2lnbmVyIDE6UE4gVEVTVC1PTkxZMIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQEAhoJ+nKWJFJBQkWq89yzUj/QrxW100VPUUHYCcPhx8XedO+z3looaNmbaWSiLywUcrHghct8r38cjeyes5k2H9coKwFQB3P7bBS/SskavddKu9KsaSLtvbytOrL0irxQC4IK5Jk8nuYmNtm7OyBlGlnzWXUOizOVAO3prohUvNm3/x0/k1ZRqblX8C9F4stwwAg7BAaDfv93p4gcAG1w+V1MeGTjuUcmeFhfpPdeYaXnblC6poW9H3bKbSiupNzCDlX0w05doNjyGXqisXxxVsHzpLXg8kSvxu2zgCvc8yWeQ/38cSurwwcoW8NhU0nexwTHSmbiNyvDLUCOJGQMB8QIEQAAAgaOCAQYwggECMA4GA1UdDwEB/wQEAwIGQDAdBgNVHQ4EFgQUxq2eE5UJVi2BptNHAfw5NGRwfucwEwYDVR0lBAwwCgYIKwYBBQUHAwkwGAYIKwYBBQUHAQMEDDAKMAgGBgQAjkYBATAfBgNVHSMEGDAWgBR/ttMZIE/pDaJvcg/Ym9wL9K4vqDASBgNVHSAECzAJMAcGBSskCAEBMBsGCSsGAQQBwG0DBQQOMAwGCisGAQQBwG0DBQEwDAYDVR0TAQH/BAIwADBCBggrBgEFBQcBAQQ2MDQwMgYIKwYBBQUHMAGGJmh0dHA6Ly9xb2NzcC5oYmEudGVzdC50ZWxlc2VjLmRlL29jc3ByMA0GCSqGSIb3DQEBDQUAA4IBAQAoa0QirWfqB19NqadKgE3DmwCE01Tp+tD4e/BDpom1eAMSMpWZqJuDkqSOSS6BPbrKaGksPWfT93cKokJZm1AvnURbK/Tjpm6wPCxCpjgkWNJ1TQC1RZWXiZVjZzBsirNgrPLU85+NiuL242HVIZ7ZQ2D4f0dB3a2MuwgbLCKjwyKEPPU1bbbCaAyaVs3v3Nm7v8dTkMtIPf24if9B/V5ZpwTOxhpp6FOTfYto9uuk2hEpnY5X77/78/nWNNcwqFiyncWsBisQdZxFBNCZ3rgkZpqxfPd60Lqsc2j91ccpa3BSifWTwa+EE3euV7nxw6bs8gaQ6mRQAAgmRe+ZA00F</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-12-15T23:00:36.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://ocsp00.gematik.invalid/not-used</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.124</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_tsl_placeholder</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">CN=TSYS.HBA-Pseudo-QES-OCSP-Signer 2:PN TEST-ONLY, O=T-Systems International GmbH NOT-VALID, C=DE</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIErzCCA5egAwIBAgIIZROfJm+3liIwDQYJKoZIhvcNAQENBQAwgawxCzAJBgNVBAYTAkRFMS8wLQYDVQQKDCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFDQSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSUwIwYDVQQDDBxUU1lTSS5IQkEtcVJDQTE6UE4gVEVTVC1PTkxZMB4XDTE0MTAwMTA1MzEwN1oXDTE5MDcyMjIzNTk1OVowdzELMAkGA1UEBhMCREUxLzAtBgNVBAoMJlQtU3lzdGVtcyBJbnRlcm5hdGlvbmFsIEdtYkggTk9ULVZBTElEMTcwNQYDVQQDDC5UU1lTLkhCQS1Qc2V1ZG8tUUVTLU9DU1AtU2lnbmVyIDI6UE4gVEVTVC1PTkxZMIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQEAmTSt45goL9axLFzOVhxh1DxnngJA98y32FGsxTtCAJnmYBrFGv9WZbJv1X4Rnr5OWC4HrOE/YmLU+WDdQSL+KaR9V/L0GTs15Uf2BpkNB8Expb/3+iqRntpQhUhcUMfRCDYM/7Jlk+LL+ERamlRRPwYfECWlG09KVnWRhI/d8QiwnPXyHD2gLziXeHkx0SlQpD+6eVG+Wj/nJg0Vkf5cyHcYMRGWtIjLY3yLjWF4RXKzv7OWHYrUTMV/jIbMBD0rZZ31RAw1Ky6K8USi/yi4aTKr4205I2txN+a6Up5WniXRTSn7INL2rSTMbXAufsryU0fZL7Mq1PDVWY4pbV2tKwIEQAAAgaOCAQYwggECMA4GA1UdDwEB/wQEAwIGQDAdBgNVHQ4EFgQUBFwaMCXpI9PdfctP0L2gxI7TTa0wEwYDVR0lBAwwCgYIKwYBBQUHAwkwGAYIKwYBBQUHAQMEDDAKMAgGBgQAjkYBATAfBgNVHSMEGDAWgBR/ttMZIE/pDaJvcg/Ym9wL9K4vqDASBgNVHSAECzAJMAcGBSskCAEBMBsGCSsGAQQBwG0DBQQOMAwGCisGAQQBwG0DBQEwDAYDVR0TAQH/BAIwADBCBggrBgEFBQcBAQQ2MDQwMgYIKwYBBQUHMAGGJmh0dHA6Ly9xb2NzcC5oYmEudGVzdC50ZWxlc2VjLmRlL29jc3ByMA0GCSqGSIb3DQEBDQUAA4IBAQCJU8WgOKnkrrAZL+EMCo+SclGCTKXDGOTl0PSUgSC4YWuzJF2l3nsWAJn0Ct2KzznuC2lM0D75RuDCJvoVvH4XEc9e8NST+j6LrsZWlH9pLT9U0lEohwRzQBj61xzuoa/SA1TIXFGobvfoC55Cs5Y1DbWgTVy7MXVjn7Tw5CR16mxD98dIORqPxfkRYw0on2vCw9Pibt6+EVnzFGXVTqbgaIZfz1aMAzrVyQa40kETIP3w7EjKDjJh35ZoRJAh8Z/8S2YZ+o0kbjbzE6B1W75KdO7XE8u25WhTqvAQCnOtsHQx8fo09IXWFyWXnDj9ky/GnzE/lwccUB6XQNjWxkSp</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-12-15T23:00:08.000Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://ocsp00.gematik.invalid/not-used</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.124</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_tsl_placeholder</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+				<ns3:TSPService>
+					<ns3:ServiceInformation>
+						<ns3:ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ns3:ServiceTypeIdentifier>
+						<ns3:ServiceName>
+							<ns3:Name xml:lang="DE">C=DE, O=CGM AG NOT-VALID, OU=VPN-Zugangsdienst-CA der Telematikinfrastruktur, CN=C.CGM.VPNK-CA1 TEST-ONLY</ns3:Name>
+						</ns3:ServiceName>
+						<ns3:ServiceDigitalIdentity>
+							<ns3:DigitalId>
+								<ns3:X509Certificate>MIIECDCCAvCgAwIBAgIIIRcKuAv9dykwDQYJKoZIhvcNAQELBQAwgYUxITAfBgNVBAMMGEMuQ0dNLlZQTkstQ0ExIFRFU1QtT05MWTE4MDYGA1UECwwvVlBOLVp1Z2FuZ3NkaWVuc3QtQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxGTAXBgNVBAoMEENHTSBBRyBOT1QtVkFMSUQxCzAJBgNVBAYTAkRFMB4XDTE1MDIyNzA5NTUxOFoXDTI1MDIyNjA5NTUxOFowgYUxITAfBgNVBAMMGEMuQ0dNLlZQTkstQ0ExIFRFU1QtT05MWTE4MDYGA1UECwwvVlBOLVp1Z2FuZ3NkaWVuc3QtQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxGTAXBgNVBAoMEENHTSBBRyBOT1QtVkFMSUQxCzAJBgNVBAYTAkRFMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApi/DAGkvrGaqWTwRbcIDlD6oD1FbABZBKA6V1GjnxCDVzL9qNxMjsTXzvxurdxcdo2XgOA5AG1hCtQf0B7OyfaRlQh3KdxXiib9YTr9WlW8HqtgqHAdZk3MtoOebuUolw3AIdsF7PUI+FvsekI5D8U/nJtJhpQiXkL7gayg3mnai7NMIlfnV9/7FGXHFzqDVlagGqUwUEPp1plYjZuYqz0WAjjb/r4VJKywb+2GOu7SzScsckAGEqVBD2G7tUpbwjsgc2pkhskLvo63voAh5Sxl4yo4hl7bNwgp20cUJkMyrppKlKBEY6EoklwocQIJfHDhNNhZ4j9B12E1ZGV2pbwIDAQABo3oweDAdBgNVHQ4EFgQUAuMkvxtZTRTICdRSysigdYUK1YwwDwYDVR0TAQH/BAUwAwEB/zAfBgNVHSMEGDAWgBQC4yS/G1lNFMgJ1FLKyKB1hQrVjDAVBgNVHSAEDjAMMAoGCCqCFABMBIEjMA4GA1UdDwEB/wQEAwIBhjANBgkqhkiG9w0BAQsFAAOCAQEAda2rTtMUA/Ld3o18Ud21EgSPmCSzxP7ulQ3qV2FDZO5kQMyXjEnOp6IO/SJ/+ToknT0OSE0eQq6k7H7fuJdawSkqSiS9RoCNHx+mOllhUkXGbrp2WgZRnsaO2X1bKQ0XDmzwVXpY1kikCOZCH7k28enH3LNkn8hlE44xPYWR4K1L8OuFIwMX3iP8SSLCdvhR9zGEd0INeqwsi4/UQmzDpDrac3+XY1uqu8GLdWCm0HWtkagNEWZcYJIoVorUqcFHBaxUJmxmJKbN7Jww9a8VAt57EJr3knjExF7Z/YJ5Y7j/11BaaTJA9QBwLYZ9sgA1/eE1yMeJp3W4/DNjlY4+Gw==</ns3:X509Certificate>
+							</ns3:DigitalId>
+						</ns3:ServiceDigitalIdentity>
+						<ns3:ServiceStatus>http://uri.etsi.org/TrstSvc/Svcstatus/inaccord</ns3:ServiceStatus>
+						<ns3:StatusStartingTime>2014-05-20T13:21:44.369Z</ns3:StatusStartingTime>
+						<ns3:ServiceSupplyPoints>
+							<ns3:ServiceSupplyPoint>http://pki-test.ti-kern.telematik-lab:8080/crl/vpnk-ca1.crl</ns3:ServiceSupplyPoint>
+						</ns3:ServiceSupplyPoints>
+						<ns3:ServiceInformationExtensions>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.81</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn</ns3:ExtensionValue>
+							</ns3:Extension>
+							<ns3:Extension Critical="true">
+								<ns3:ExtensionOID>1.2.276.0.76.4.165</ns3:ExtensionOID>
+								<ns3:ExtensionValue>oid_vpnk_vpn_sis</ns3:ExtensionValue>
+							</ns3:Extension>
+						</ns3:ServiceInformationExtensions>
+					</ns3:ServiceInformation>
+				</ns3:TSPService>
+			</ns3:TSPServices>
+		</ns3:TrustServiceProvider>
+	</ns3:TrustServiceProviderList>
+	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-1432128105646">
+		<ds:SignedInfo>
+			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+			<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+			<ds:Reference Id="Ref-1432128105591" URI="">
+				<ds:Transforms>
+					<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+					<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+				<ds:DigestValue>9ZxU1fVhxUnj/0nrOUM8uOciIaLFG4MvMDA/9CcOjog=</ds:DigestValue>
+			</ds:Reference>
+			<ds:Reference Id="Ref-SignedProperties-1432128105646" Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-1432128105646">
+				<ds:Transforms>
+					<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+				<ds:DigestValue>b5zWYeprEVEbA+7KWo+wItRb8xJHDFhVWIfUh2Ju2gA=</ds:DigestValue>
+			</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue>DOvOfNICNiCAUUSB8CCnrsLqHSeXPOKmi6+b987mMGCL0ElaSaO15yP3evrJzyXiiY/S5zf7v0YNQfhF4r9gG4BouvH78qlpW9GUsM1XMabWtCA5ZLeidon8CZrgwQaBJZGVLZrfdObz6ocDErB8Ch/Kblbw4wIVQttrcAyFnDaRA43KD5IhbUk/+5guZVL9TixXRBc5OOuvrucyxHIrVQePenIhsmln0dL+Sq/9uVXtq2JVIBlzxYwD8seajNgAruowzpqyr1iOojiYfG694Eo1RYiCxhJ5XzSuaJ1GrQJems5oK2YQwYTrIdt8toNXRaXps4vhdX/HcWXrg3AyXg==</ds:SignatureValue>
+		<ds:KeyInfo>
+			<ds:X509Data>
+				<ds:X509Certificate>MIIEYjCCA0qgAwIBAgIIdGNtF0Qqb/kwDQYJKoZIhvcNAQELBQAwejEgMB4GA1UEAwwXQy5DR00uVFNMLUNBMSBURVNULU9OTFkxMTAvBgNVBAsMKFRTTC1TaWduZXItQ0EgZGVyIFRlbGVtYXRpa2luZnJhc3RydWt0dXIxFjAUBgNVBAoMDUNHTSBOT1QtVkFMSUQxCzAJBgNVBAYTAmRlMB4XDTE0MDcwNzE3MjAxNFoXDTE5MDcwNzE3MjAxNFowTDElMCMGA1UEAwwcVFNMIFNpZ25pbmcgVW5pdCAxIFRFU1QtT05MWTEWMBQGA1UECgwNQ0dNIE5PVC1WQUxJRDELMAkGA1UEBhMCREUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCKLxmME06oOsM6zdY8uRpP/Z+IAO3SMhhHocdTqzNOSpmW9asoCGml50/YrxdwuPgrsEMQ0GNjmGZl5uNZU1rR9l92Rij9st41jmIevx+OH6/vq6iVAtJxa3R9uH08XTDF0bbLJrWWIJrK+utslcTID6JMQ3fXtffYz0obqCo41Pw/HYqPNSKPV0w00Y3BfpYn9vkymaogCWPgb+SmJWctIJiHIJvM5LYnvJHodhMyO+FJW6XL/mfZUeIZ41PYW3mDjw8t9QIBteEL0aZsLcFCcrgI1pLeX9STdz7e/4fJmpXfqB5EZ3xJ19B7iPQLqQD1F/82uO1gzU7MdHqbzRKdAgMBAAGjggEYMIIBFDBQBggrBgEFBQcBAQREMEIwQAYIKwYBBQUHMAGGNGh0dHA6Ly9vY3NwLmVoZXguZGU6MjU2MC9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3AwHQYDVR0OBBYEFN5w0l/AlaPB+O9DvU1Sd7aRlJJ5MAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUl0aA+kn2hCdTn0BdSSpbUQV867QwTwYDVR0gBEgwRjBEBggqghQATASBIzA4MDYGCCsGAQUFBwICMCoeKABvAGkAZABfAHAAbwBsAGkAYwB5AF8AZwBlAG0AXwBvAHIAXwBjAHAwDgYDVR0PAQH/BAQDAgZAMBEGA1UdJQQKMAgGBgQAkTcDADANBgkqhkiG9w0BAQsFAAOCAQEABgGhf8h+BTKCkhE+cusUgKnh8ope4kdmYb4tO47CRgion3hT5EtNF4Lq1rhLjULJfIMwrYMUE5+CRNzA8EfITNE2Zl8gAlfUSKTofZQtHO23N+8rTV50JMsteE6t+2lD7J471r5IFGEurkLDpPY8j2V/Wk5ptnxseR6N8SShjyXLq+sqUTKetEwtVRhe4n79lYuufFuqOojpUzhhzvLXsPiXr1usDHOKpQFp087yJEvEWSj4fCQNKYxlqdxNl7/77r3r91kdvEP9G96k9+yVbRs4+oGhPrCi0nZ3X931RoG/f5SvV+aGpoFdQQMLreVWrA+C6lsnZAl93nsgdNq3Vw==</ds:X509Certificate>
+			</ds:X509Data>
+		</ds:KeyInfo>
+		<ds:Object>
+			<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature-1432128105646">
+				<xades:SignedProperties Id="SignedProperties-1432128105646">
+					<xades:SignedSignatureProperties>
+						<xades:SigningTime>2015-05-20T15:21:45.646Z</xades:SigningTime>
+						<xades:SigningCertificate>
+							<xades:Cert>
+								<xades:CertDigest>
+									<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+									<ds:DigestValue>bApB4CqAvF77vEYycHomDVvXkpoDHeoUyTTs1L4JAYU=</ds:DigestValue>
+								</xades:CertDigest>
+								<xades:IssuerSerial>
+									<ds:X509IssuerName>C=de,O=CGM NOT-VALID,OU=TSL-Signer-CA der Telematikinfrastruktur,CN=C.CGM.TSL-CA1 TEST-ONLY</ds:X509IssuerName>
+									<ds:X509SerialNumber>8386666877789302777</ds:X509SerialNumber>
+								</xades:IssuerSerial>
+							</xades:Cert>
+						</xades:SigningCertificate>
+					</xades:SignedSignatureProperties>
+					<xades:SignedDataObjectProperties>
+						<xades:DataObjectFormat ObjectReference="#Ref-1432128105591">
+							<xades:MimeType>text/xml</xades:MimeType>
+						</xades:DataObjectFormat>
+					</xades:SignedDataObjectProperties>
+				</xades:SignedProperties>
+			</xades:QualifyingProperties>
+		</ds:Object>
+	</ds:Signature>
+</ns3:TrustServiceStatusList>

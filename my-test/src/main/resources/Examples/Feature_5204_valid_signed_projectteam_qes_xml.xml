@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><qesteam>
+  <projectname>KoCoConnector-QES</projectname>
+  <member>
+    <name>Albert Holtmüller</name>
+    <function>Boss</function>
+    <email>albert.holtmueller@n-design.de</email>
+  </member>
+  <member>
+    <name>Sven Wieben</name>
+    <function>Tester</function>
+    <email>sven.wieben@n-design.de</email>
+  </member>
+  <member>
+    <name>Alexander Krumeich</name>
+    <function>Tester</function>
+    <email>alexander.krumeich@n-design.de</email>
+  </member>
+  <member>
+    <name>Simone Lücke</name>
+    <function>tester</function>
+    <email>simone.luecke@n-design.de</email>
+  </member>
+  <member>
+    <name>Stephan Hoffmann-Emden</name>
+    <function>Tester</function>
+    <email>stephan.hoffmann-emden@n-design.de</email>
+  </member>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-a8c098d7-6523-4a42-8452-fbb385e3400c">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-eba34ec5-69fd-4148-839b-546fd53db85d" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>0UYIEgr/6hfpXOhOXk7wvO9fcDiOZxS9MluVahLjYD8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+n1ISA4U6ROZeleIkWk2zf3PtJqjKnPZvIdl5vv3k40w6Jtx00CjGFoYcCVZ9g3jfIb8zjMboFQfo
+aT5yytHc5qgqI8x6MV8M6gmdIBF9b5U4a7Bu9d05foCpTkNGSoBqdamptpNFm4rHrwBDnEx9kBW/
+UIk3MYPqJ7/zKj3GncYhh9NHADOrVrj43eDMXL4Iz3+THLe1x+aaMLJCxjmHNYGv5t1iX1zGVFWT
+/GaeF87DFgu+Tj7iCjkA/JGc31+V9dR+sVeo8hG/LdCRZvxEhxUu8q2dfmD0KxqlaH1Xi3FTzncw
+WvgffDZ2B8I40UMH9RTCJyV5KuFszDOaqZ2YZQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFKzCCBBOgAwIBAgICAakwDQYJKoZIhvcNAQELBQAwgasxCzAJBgNVBAYTAkRFMS8wLQYDVQQK
+DCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFD
+QSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSQw
+IgYDVQQDDBtUU1lTSS5IQkEtcUNBMTpQTiBURVNULU9OTFkwHhcNMTQxMDE1MDkxOTI4WhcNMTkx
+MDE1MjM1OTU5WjBmMQswCQYDVQQGEwJERTFXMAsGA1UEBAwEUm90aDALBgNVBCoMBFJvc2EwGwYD
+VQQFExQ4MDI3Njg4MzU4MDAwMDAwMDYyNTAeBgNVBAMMF0hlcnIgUm9zYSBSb3RoVEVTVC1PTkxZ
+MIIBIzANBgkqhkiG9w0BAQEFAAOCARAAMIIBCwKCAQEAsArruw5PvpHY0XRKoquCUxO6ZYIziMVF
+5HM2U1H0Ysz1gtHb8c2C7xkq9Kgh9YtpPaSBRpcBr2LGGWsoPkfNZX3WicKpHAvjBY5KukOTIa7Q
+nax7kjBhl5N8VgK4cesBWrQl6V7LP+WBetmowOALIwMY8Kd1XZ+fgyQMHS1YsBy9gpnMDDBkKjta
+oMX9JC+Wf8l11YESbpwe/8mYSArTUwXrbuF9h9pSD8ZVMG/AWsBO5Dh/QUWJpxyzDP0lHLdCIN/m
+2QneypoeUpoQJhT2kYpmEOWRz8QZFmRI5qdiUY0yCEh9vtHzl3QZuJ3NsZPFFzcSeoBvqWcK44km
+Ni1CmwIEQAAAgaOCAZowggGWMB8GA1UdIwQYMBaAFOhEua9qWp1Q3v2S9WcAtOXFrcohMB0GA1Ud
+DgQWBBQJ0VftWRLT7xa0uwdFRzLJp7DVoDAOBgNVHQ8BAf8EBAMCBkAwegYDVR0gBHMwcTBNBggq
+ghQATASBETBBMD8GCCsGAQUFBwIBFjNodHRwOi8vd3d3LmUtYXJ6dGF1c3dlaXMuZGUvcG9saWNp
+ZXMvRUVfcG9saWN5Lmh0bWwwCQYHKoIUAEwESDAHBgUrJAgBATAMBgorBgEEAYLNMwEBMAwGA1Ud
+EwEB/wQCMAAwPwYFKyQIAwMENjA0pA8wDTELMAkGA1UEBhMCREUwITAfMB0wGzAODAzDhHJ6dGlu
+L0FyenQwCQYHKoIUAEwEHjAbBgkrBgEEAcBtAwUEDjAMBgorBgEEAcBtAwUBMEIGCCsGAQUFBwEB
+BDYwNDAyBggrBgEFBQcwAYYmaHR0cDovL3FvY3NwLmhiYS50ZXN0LnRlbGVzZWMuZGUvb2NzcHIw
+GAYIKwYBBQUHAQMEDDAKMAgGBgQAjkYBATANBgkqhkiG9w0BAQsFAAOCAQEAKzfihDiSfMmFb+nX
+f9Lzfa1peAQGYNYoVYO6mTIjjFNAXzFoGstA7kIbeAYl473h2waWyDgcw+XuS5rZRQ2Fpbt2HATr
+DUoks/sZIXSvBJ2hCV7SdS9ZTLfEPqGP0h+1fxjeqzEnVQlUZnd1PKKEsZSEAQNxoxsCl14Yq/on
+9yyKOQwvK7pAoKscXDR1V8Cbrm40lbfZWDSaxLsfKqjIM5tP9AMOAGn7hHflwCSuKfzljS8woSYc
+/fWbR1hjK6/coPvUgxXUMDlT04UoXFlm9nbQsOoVj+VUl9FhLUfKDNyzhn0ioFSGMPh5XtVAxv71
+jfYxOSSr0YaugWK70nMi9w==
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+sArruw5PvpHY0XRKoquCUxO6ZYIziMVF5HM2U1H0Ysz1gtHb8c2C7xkq9Kgh9YtpPaSBRpcBr2LG
+GWsoPkfNZX3WicKpHAvjBY5KukOTIa7Qnax7kjBhl5N8VgK4cesBWrQl6V7LP+WBetmowOALIwMY
+8Kd1XZ+fgyQMHS1YsBy9gpnMDDBkKjtaoMX9JC+Wf8l11YESbpwe/8mYSArTUwXrbuF9h9pSD8ZV
+MG/AWsBO5Dh/QUWJpxyzDP0lHLdCIN/m2QneypoeUpoQJhT2kYpmEOWRz8QZFmRI5qdiUY0yCEh9
+vtHzl3QZuJ3NsZPFFzcSeoBvqWcK44kmNi1Cmw==
+</ds:Modulus>
+<ds:Exponent>QAAAgQ==</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-a8c098d7-6523-4a42-8452-fbb385e3400c" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-cb140bac-a5f8-4731-8baf-0978a662ca0c"><xades:SignedSignatureProperties><xades:SigningTime>2015-05-13T18:10:31.082+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>ecCzNchXm1EFWm2Ew5eNkuCpZX8Y1+C0toxgHYZF+JQ=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.HBA-qCA1:PN TEST-ONLY,OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung,O=T-Systems International GmbH NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>425</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-eba34ec5-69fd-4148-839b-546fd53db85d"><xades:Description>SUPER-SIGN-XML</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></qesteam>
