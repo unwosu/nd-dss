@@ -24,11 +24,11 @@ public class Test2 {
 
 	public static void main(String[] args) {
 
-		File tslSigningCertificateFile = new File("C:\\git\\dss4.5RC2\\my-test\\src\\main\\resources\\Examples\\tsl.crt");
+		File tslSigningCertificateFile = new File("src\\main\\resources\\Examples\\tsl.crt");
 		final CertificateToken tslSigningCertificateToken = DSSUtils.loadCertificate(tslSigningCertificateFile);
 
 
-		File signatureFileToValidate = new File("C:\\git\\dss4.5RC2\\my-test\\src\\main\\resources\\testdata\\TIP1-A_5447_TF_25_nonQES_Signed.pdf");
+		File signatureFileToValidate = new File("src\\main\\resources\\testdata\\TIP1-A_5447_TF_25_nonQES_Signed.pdf");
 		DSSDocument signatureToValidate = new FileDocument(signatureFileToValidate);
 
 		SignedDocumentValidator validator = SignedDocumentValidator.fromDocument(signatureToValidate);
@@ -38,11 +38,12 @@ public class Test2 {
 		validationSources.setOcspSource(new OnlineOCSPSource());
 
 		NDesignTrustedListsCertificateSource tslSource = new NDesignTrustedListsCertificateSource();
+		tslSource.setDataLoader(new FileDataLoader());
 		tslSource.setCheckSignature(false);
 
 		List<CertificateToken> signingCertificateList = new ArrayList<CertificateToken>();
 		signingCertificateList.add(tslSigningCertificateToken);
-		tslSource.loadTSL("file:///C:/git/dss4.5RC2/my-test/src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
+		tslSource.loadTSL("src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
 
 
 		validationSources.setTrustedCertSource(tslSource);
