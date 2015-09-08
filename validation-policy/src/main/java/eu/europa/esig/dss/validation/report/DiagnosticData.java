@@ -604,7 +604,7 @@ public class DiagnosticData extends XmlDom {
 
 		final String condition = "contains('" + TSLConstant.QC_WITH_SSCD + "', '" + TSLConstant.QC_WITH_SSCD_119612 + "')";
 		final String qualification = getValue("/DiagnosticData/UsedCertificates/Certificate[@Id='%s']/TrustedServiceProvider/Qualifiers/Qualifier[" + condition + "]/text()",
-				dssCertificateId);
+			  dssCertificateId);
 		return !qualification.isEmpty();
 	}
 
@@ -678,7 +678,7 @@ public class DiagnosticData extends XmlDom {
 
 		List<String> tspServiceQualifiers = new ArrayList<String>();
 		final List<XmlDom> TSPServiceQualifiers = getElements("/DiagnosticData/UsedCertificates/Certificate[@Id='%s']/TrustedServiceProvider/Qualifiers/Qualifier",
-				dssCertificateId);
+			  dssCertificateId);
 
 		for (XmlDom tspServiceQualifier : TSPServiceQualifiers) {
 			tspServiceQualifiers.add(tspServiceQualifier.getText());
@@ -755,4 +755,15 @@ public class DiagnosticData extends XmlDom {
 		return trueQcStatements;
 	}
 
+	public String getSignedInfoC14NMethod(final String signatureId) {
+
+		final String signedInfoC14NMethod = getValue("/DiagnosticData/Signature[@Id='%s']/SignedInfoC14NMethod/text()", signatureId);
+		return signedInfoC14NMethod;
+	}
+
+	public String getMimeType(final String signatureId) {
+
+		final String signedInfoC14NMethod = getValue("/DiagnosticData/Signature[@Id='%s']/MimeType/text()", signatureId);
+		return signedInfoC14NMethod;
+	}
 }

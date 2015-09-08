@@ -6,7 +6,8 @@
 			</pattern>
 		</encoder>
 	</appender>
-	
+
+	<logger name="org.apache.xml.security.utils" level="WARN"/>
 	<logger name="eu.europa.esig.dss" level="TRACE"/>
 	<logger name="org.apache.pdfbox" level="ERROR"/>
 

@@ -63,7 +63,7 @@ public class CertificateExpirationConstraint extends Constraint {
 	 */
 	public CertificateExpirationConstraint(final String level) {
 
-		super(level);
+		super(level, null);
 	}
 
 	public Date getNotAfter() {

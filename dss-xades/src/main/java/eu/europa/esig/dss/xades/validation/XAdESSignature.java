@@ -1994,6 +1994,17 @@ public class XAdESSignature extends DefaultAdvancedSignature {
 		return validated;
 	}
 
+	@Override
+	public String getSignedInfoC14NMethod() {
+
+		final Node signedInfoC14NMethod = DSSXMLUtils.getNode(signatureElement, xPathQueryHolder.XPATH_SI_C14N_METHOD);
+		if (signedInfoC14NMethod == null) {
+			return null;
+		}
+		final String text = signedInfoC14NMethod.getTextContent().trim();
+		return text;
+	}
+
 	/**
 	 * This method returns the last timestamp validation data for an archive timestamp.
 	 *

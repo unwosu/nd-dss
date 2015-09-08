@@ -64,7 +64,7 @@ public class SignaturePolicyConstraint extends Constraint {
 	 */
 	public SignaturePolicyConstraint(final String level) {
 
-		super(level);
+		super(level, null);
 	}
 
 	public String getIdentifier() {

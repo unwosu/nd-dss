@@ -30,7 +30,7 @@
 			<TSLValidity Level="WARN"/>
 			<TSLStatus Level="WARN"/>
 			<TSLStatusAndValidity Level="FAIL"/>
-			<Qualification Level="WARN"/>
+			<Qualification Level="FAIL">false</Qualification>
 			<SupportedBySSCD Level="INFORM"/>
 			<IssuedToLegalPerson Level="INFORM"/>
 			<Cryptographic Level="FAIL">
@@ -102,7 +102,10 @@
                 <MessageImprintDataFound Level="FAIL" />
                 <MessageImprintDataIntact Level="FAIL" />
             </ContentTimeStamp>
-			<!--<ContentType Level="FAIL">1.2.840.113549.1.7.1</ContentType>-->
+			<MimeType Level="FAIL" Circumstance="IF_EXISTS">image/tiff</MimeType>
+			<ContentType Level="FAIL" Circumstance="IF_EXISTS">1.2.840.113549.1.7.1</ContentType>
+			<ContentHints Level="FAIL" Circumstance="IF_EXISTS">*</ContentHints>
+
 		</MandatedSignedQProperties>
         <MandatedUnsignedQProperties>
             <CounterSignature>

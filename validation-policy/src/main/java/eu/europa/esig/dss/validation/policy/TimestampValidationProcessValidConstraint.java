@@ -40,7 +40,7 @@ public class TimestampValidationProcessValidConstraint extends Constraint {
 	 */
 	public TimestampValidationProcessValidConstraint(final String level) {
 
-		super(level);
+		super(level, null);
 	}
 
 	/**

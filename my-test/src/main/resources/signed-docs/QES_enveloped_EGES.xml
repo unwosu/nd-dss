@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><p:anlage_hvv xmlns:p="urn::kvno-org/kvabrechnung" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" gesamtaufstellung-typ="arzt" version="1.00" xsi:schemaLocation="urn::kvno-org/kvabrechnung ../../../../de.koco.konnektor.ndesign.ak.signservice.core/src/main/resources/fa/sak/eges/schemas/gesamtaufstellung_arzt.xsd ">
+  <p:header>
+    <p:empfaenger V="Kassenärztliche Vereinigung Nordrhein, Bezirksstelle"/>
+    <p:absender>
+      <p:bsnr V="247110815"/>
+      <p:praxisinhaber>
+        <p:arzt>
+          <p:vorname V="Hans"/>
+          <p:nachname V="Häusler"/>
+        </p:arzt>
+      </p:praxisinhaber>
+      <p:praxisadresse>
+        <p:strasse V="Suchweg 5"/>
+        <p:plz V="12345"/>
+        <p:ort V="Nirgendwo"/>
+      </p:praxisadresse>
+    </p:absender>
+    <p:abrechnungsquartal V="2015-1"/>
+    <p:erstellungsdatum V="2015-04-01"/>
+  </p:header>
+  <p:body>
+    <p:anzahl_faelle>
+      <p:arbeitsgebiet_b V="0"/>
+      <p:arbeitsgebiet_h V="0"/>
+      <p:arbeitsgebiet_i V="0"/>
+      <p:gesamt V="0"/>
+    </p:anzahl_faelle>
+    <p:assistenten>
+      <p:assistent>
+        <p:anrede V="Frau"/>
+        <p:name V="Assistentin"/>
+        <p:datum_von V="2013-01-01"/>
+        <p:datum_bis V="2016-09-01"/>
+      </p:assistent>
+    </p:assistenten>
+    <p:vertreter>
+      <p:vertretung>
+        <p:anrede V="Frau"/>
+        <p:name V="Helferlein"/>
+        <p:datum_von V="2009-01-01"/>
+        <p:datum_bis V="2015-04-01"/>
+      </p:vertretung>
+    </p:vertreter>
+    <p:notfalldienst>
+      <p:datum V="2015-03-30"/>
+    </p:notfalldienst>
+    <p:ankreuzfeld_2 V="true">
+      <p:datentraegerabr Anzahl="0" V="true"/>
+    </p:ankreuzfeld_2>
+    <p:ankreuzfeld_3 V="true"/>
+    <p:ankreuzfeld_4 V="true"/>
+    <p:ankreuzfeld_5 V="true"/>
+    <p:ankreuzfeld_6 V="true"/>
+    <p:ankreuzfeld_9 V="true"/>
+    <p:ankreuzfeld_10 V="true"/>
+    <p:ankreuzfeld_11 V="true"/>
+    <p:ankreuzfeld_12 V="true"/>
+  </p:body>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-79aa47af-ab09-4c9b-aee9-fe89a5504a5b">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-2c504ba6-a3b3-42a4-bb07-7db7969a3f48" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>/n311QpGxe5POzQFrFDAExrjeNJA+yTE81vnjJOGKqE=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-c009b61d-35b7-45f5-b3a0-307ad2512e6c">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>Q8LCa/TqkT2Ob1OeM3oN/GI3H0qdd4WDVuMP3VzKHX0=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+YTU3cXTZh6vy96SiXurOK7sX8bbdxRHij13hKBeD9usrqeTBNbq79LtSZKrYt2BPJbbnCl/ZLYae
+bFawe8kDArzB67Bsl5JOvJhJpS6WzgY6u0PZ/QsCt6A1byBD/CClaLXucEkW4ILSfMnajp1qxWSp
+LYUi0D3Rd99P4C2JTWNMWY41qgqNDwo6yGsLeD57nWCltgLlNeHIzhvYjuyPdcIH1Fe3DUCt6XdW
+3B9/7d8ySCxLCFXx0voTjIBAkh9vtLOMxo6UcV8LVKWiEpLu7MjRmjSF2SAwVyH8HYtM1ZWcrhjo
+SiWCnLCvD/5jFa4/Pv4n1YZGegY2DsRQ2mIfhA==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFLzCCBBegAwIBAgICCzUwDQYJKoZIhvcNAQELBQAwgasxCzAJBgNVBAYTAkRFMS8wLQYDVQQK
+DCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFD
+QSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSQw
+IgYDVQQDDBtUU1lTSS5IQkEtcUNBMTpQTiBURVNULU9OTFkwHhcNMTUwMzA5MTUxNzU4WhcNMjAw
+MzA5MjM1OTU5WjBrMQswCQYDVQQGEwJERTFcMA0GA1UEBAwGSsOkZ2VyMA4GA1UEKgwHSsO8cmdl
+bjAbBgNVBAUTFDgwMjc2ODgzNTgwMDAwMDAxNjU0MB4GA1UEAwwXSsO8cmdlbiBKw6RnZXJURVNU
+LU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCLI/JrtGhDi7yd/i4h2YqstNxz
+Fazlv514u/695CLb39WgSwCkuKHfxomdpGrF0aOtm74KhTbj5Tj8dai3XrIK3Br5vt9ZkZn9TjDD
+JIsAay1DNc/u0wcfUiZav6YmBKWLF6nC86rWCczDhBTqHk6gAAbr5VgLN5Uqu4U9RU8nrszW7NvJ
+DCdigWh9GXlmt33N8BpFosqZFq4Mmmy7WhUBvtWeqxvM9j6oIjJRQkeAEMub7MG9C08XFQ0XOs/N
+EH9Q5CczZfI9Dy7rexnwLZSxx7e5ICD7u4LAENlWwuWoGBdVELqUBvRF9ByXgyEicuH7q79pa+XT
+dh9f+ah5C2rVAgMBAAGjggGaMIIBljAfBgNVHSMEGDAWgBToRLmvalqdUN79kvVnALTlxa3KITAd
+BgNVHQ4EFgQUz8ILPYMrSs2c5PlifXUSdYaKwwswDgYDVR0PAQH/BAQDAgZAMHoGA1UdIARzMHEw
+TQYIKoIUAEwEgREwQTA/BggrBgEFBQcCARYzaHR0cDovL3d3dy5lLWFyenRhdXN3ZWlzLmRlL3Bv
+bGljaWVzL0VFX3BvbGljeS5odG1sMAkGByqCFABMBEgwBwYFKyQIAQEwDAYKKwYBBAGCzTMBATAM
+BgNVHRMBAf8EAjAAMD8GBSskCAMDBDYwNKQPMA0xCzAJBgNVBAYTAkRFMCEwHzAdMBswDgwMw4Ry
+enRpbi9Bcnp0MAkGByqCFABMBB4wGwYJKwYBBAHAbQMFBA4wDAYKKwYBBAHAbQMFATBCBggrBgEF
+BQcBAQQ2MDQwMgYIKwYBBQUHMAGGJmh0dHA6Ly9xb2NzcC5oYmEudGVzdC50ZWxlc2VjLmRlL29j
+c3ByMBgGCCsGAQUFBwEDBAwwCjAIBgYEAI5GAQEwDQYJKoZIhvcNAQELBQADggEBAEOT5l6RfnSR
+sXbthCVaHjZVx//kdosNyC4LADJKobleelTmUeDO7S5cW69yEd7R7+KpTUiD5YKa/1/99swhEXYx
+aUYy2etFxzVdYy/XYc2O7SLnITQH+agHd9Lw9Pw2c9UWZbe2zen3wXy8IQlocuxa2i8o5sORus4B
+zsLfUCVizMpk47ytzk4hjkEUwt6J6NWIoUdljaQ0NxXgzNyyeVgQvcpsI2kNa6DVMARiwSlcI3rA
+RfS+ckHFG6+jpte85cGDD160V/Bsif3A4HrP19Y5WODsJ1vZFogyp2gc747zV/GFz9hQtFtXXTCG
+QKla5Y096qOwog9h1tsUDNsbwGE=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-79aa47af-ab09-4c9b-aee9-fe89a5504a5b" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-c009b61d-35b7-45f5-b3a0-307ad2512e6c"><xades:SignedSignatureProperties><xades:SigningTime>2015-09-08T13:26:53.065+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>joYds+mC9GI2feSnJuntQZ4c4oc2aDbT+s9whtQ+2bo=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.HBA-qCA1:PN TEST-ONLY,OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung,O=T-Systems International GmbH NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>2869</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyId><xades:SigPolicyId><xades:Identifier>urn:gematik:fa:sak:eges:r1:v1</xades:Identifier></xades:SigPolicyId><xades:SigPolicyHash><ds:DigestMethod Algorithm=""/><ds:DigestValue/></xades:SigPolicyHash></xades:SignaturePolicyId></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-2c504ba6-a3b3-42a4-bb07-7db7969a3f48"><xades:Description>EGES: Hans Häusler, 2015-1</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></p:anlage_hvv>

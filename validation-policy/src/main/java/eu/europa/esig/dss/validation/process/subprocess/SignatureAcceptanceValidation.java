@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -191,6 +191,11 @@ public class SignatureAcceptanceValidation {
 			return conclusion;
 		}
 
+		// mime-type
+		if (!checkMimeTypeConstraint(conclusion)) {
+			return conclusion;
+		}
+
 		// content-type
 		if (!checkContentTypeConstraint(conclusion)) {
 			return conclusion;
@@ -322,7 +327,8 @@ public class SignatureAcceptanceValidation {
 
 				constraintNode.addChild(NodeName.STATUS, NodeValue.KO);
 				conclusion.setIndication(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE);
-				conclusion.addError(MessageTag.BBB_SAV_ICERRM_ANS).setAttribute(AttributeName.CERTIFIED_ROLES, certifiedRolesString).setAttribute(AttributeName.REQUESTED_ROLES, requestedCertifiedRolesString);
+				conclusion.addError(MessageTag.BBB_SAV_ICERRM_ANS).setAttribute(AttributeName.CERTIFIED_ROLES, certifiedRolesString)
+					  .setAttribute(AttributeName.REQUESTED_ROLES, requestedCertifiedRolesString);
 				return conclusion;
 			}
 			constraintNode.addChild(NodeName.STATUS, NodeValue.OK);
@@ -395,9 +401,30 @@ public class SignatureAcceptanceValidation {
 			return true;
 		}
 		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPSTP);
-		final String signingTime = signatureContext.getValue("./DateTime/text()");
+		final String signingTime = signatureContext.getValueOrNull("./DateTime/text()");
 		constraint.setValue(StringUtils.isNotBlank(signingTime));
 		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPSTP_ANS);
+		constraint.setConclusionReceiver(conclusion);
+
+		return constraint.check();
+	}
+
+	/**
+	 * Check of mime-type (signed property)
+	 *
+	 * @param conclusion the conclusion to use to add the result of the check.
+	 * @return false if the check failed and the process should stop, true otherwise.
+	 */
+	private boolean checkMimeTypeConstraint(final Conclusion conclusion) {
+
+		final Constraint constraint = constraintData.getMimeTypeConstraint();
+		if (constraint == null) {
+			return true;
+		}
+		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPMTP);
+		final String contentType = signatureContext.getValueOrNull("./MimeType/text()");
+		constraint.setValue(contentType);
+		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPMTP_ANS);
 		constraint.setConclusionReceiver(conclusion);
 
 		return constraint.check();
@@ -416,7 +443,7 @@ public class SignatureAcceptanceValidation {
 			return true;
 		}
 		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPCTP);
-		final String contentType = signatureContext.getValue("./ContentType/text()");
+		final String contentType = signatureContext.getValueOrNull("./ContentType/text()");
 		constraint.setValue(contentType);
 		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPCTP_ANS);
 		constraint.setConclusionReceiver(conclusion);
@@ -437,7 +464,7 @@ public class SignatureAcceptanceValidation {
 			return true;
 		}
 		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPCHP);
-		final String contentHints = signatureContext.getValue("./ContentHints/text()");
+		final String contentHints = signatureContext.getValueOrNull("./ContentHints/text()");
 		constraint.setValue(contentHints);
 		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPCHP_ANS);
 		constraint.setConclusionReceiver(conclusion);
@@ -458,7 +485,7 @@ public class SignatureAcceptanceValidation {
 			return true;
 		}
 		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPCIP);
-		final String contentIdentifier = signatureContext.getValue("./ContentIdentifier/text()");
+		final String contentIdentifier = signatureContext.getValueOrNull("./ContentIdentifier/text()");
 		constraint.setValue(contentIdentifier);
 		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPCIP_ANS);
 		//constraint.setAttribute()
@@ -481,7 +508,7 @@ public class SignatureAcceptanceValidation {
 		}
 		constraint.create(subProcessNode, MessageTag.BBB_SAV_ISQPXTIP);
 		// TODO: A set of commitments must be checked
-		final String commitmentTypeIndicationIdentifier = signatureContext.getValue("./CommitmentTypeIndication/Identifier[1]/text()");
+		final String commitmentTypeIndicationIdentifier = signatureContext.getValueOrNull("./CommitmentTypeIndication/Identifier[1]/text()");
 		constraint.setValue(commitmentTypeIndicationIdentifier);
 		constraint.setIndications(Indication.INVALID, SubIndication.SIG_CONSTRAINTS_FAILURE, MessageTag.BBB_SAV_ISQPXTIP_ANS);
 		constraint.setConclusionReceiver(conclusion);
