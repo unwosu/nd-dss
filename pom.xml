@@ -14,7 +14,7 @@
 		<module>dss-document</module>
 		<module>dss-service</module>
 		<module>dss-spi</module>
-		<!--<module>dss-test</module>-->
+		<module>dss-test</module>
 		<!--<module>sscd-mocca-adapter</module>-->
 		<module>dss-webservices</module>
 		<module>dss-webservices-client</module>
