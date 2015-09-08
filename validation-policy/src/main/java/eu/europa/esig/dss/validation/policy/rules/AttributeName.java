@@ -44,4 +44,5 @@ public interface AttributeName {
 	String TIMESTAMP_TYPE = "Type";
 	String PARENT_ID = "ParentId";
 
+	String SCOPE = "scope";
 }

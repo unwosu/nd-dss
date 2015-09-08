@@ -196,7 +196,7 @@ public class Test1 {
 		validationSources.setOcspSource(new OnlineOCSPSource());
 
 		NDesignTrustedListsCertificateSource tslSource = new NDesignTrustedListsCertificateSource();
-		tslSource.setCheckSignature(false);
+		//		tslSource.setCheckSignature(false);
 		tslSource.setDataLoader(new FileDataLoader());
 
 		List<CertificateToken> signingCertificateList = new ArrayList<CertificateToken>();
