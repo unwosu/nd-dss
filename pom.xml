@@ -16,11 +16,11 @@
 		<module>dss-spi</module>
 		<module>dss-test</module>
 		<!--<module>sscd-mocca-adapter</module>-->
-		<module>dss-webservices</module>
-		<module>dss-webservices-client</module>
+		<!--<module>dss-webservices</module>-->
+		<!--<module>dss-webservices-client</module>-->
 		<!--<module>dss-demo-applet</module>-->
 		<!--<module>dss-demo-applet-package</module>-->
-		<module>dss-demo-webapp</module>
+		<!--<module>dss-demo-webapp</module>-->
 		<!--<module>dss-demo-bundle</module>-->
 		<module>dss-tsl-jaxb</module>
 		<module>dss-diagnostic-jaxb</module>
@@ -103,61 +103,6 @@
 							<goal>merge</goal>
 							<goal>report-integration</goal>
 						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<!-- Default test configuration -->
-					<skipTests>true</skipTests>
-					<systemProperties>
-						<java.util.logging.config.file>../logging.properties</java.util.logging.config.file>
-					</systemProperties>
-				</configuration>
-				<executions>
-					<execution>
-						<id>non-regression</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<skipTests>false</skipTests>
-							<testFailureIgnore>false</testFailureIgnore>		
-							<includes>
-								<include>eu/**/*Test.java</include>	
-							</includes>
-						</configuration>
-					</execution>
-					<execution>
-						<id>plugtests</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<skipTests>false</skipTests>
-							<testFailureIgnore>true</testFailureIgnore>		
-							<includes>
-								<include>plugtests/**/*Test.java</include>	
-							</includes>
-						</configuration>
-					</execution>
-					<execution>
-						<id>known-issues</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<configuration>
-							<skipTests>false</skipTests>
-							<testFailureIgnore>true</testFailureIgnore>						
-							<includes>
-								<include>known/issues/**/*Test.java</include>	
-							</includes>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -308,12 +253,12 @@
 				<artifactId>dss-document</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!--<dependency>-->
-				<!--<groupId>eu.europa.ec.joinup.sd-dss</groupId>-->
-				<!--<artifactId>dss-document</artifactId>-->
-				<!--<type>test-jar</type>-->
-				<!--<version>${project.version}</version>-->
-			<!--</dependency>-->
+			<dependency>
+				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
+				<artifactId>dss-document</artifactId>
+				<type>test-jar</type>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 				<artifactId>dss-webservices</artifactId>
@@ -606,57 +551,4 @@
 			<url>dav:https://joinup.ec.europa.eu/webdav/sd-dss/www</url>
 		</site>
 	</distributionManagement>
-
-	<profiles>
-		<profile>
-			<id>delivery</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<skip>true</skip>
-						</configuration>
-					</plugin>
-					<plugin>
-						<artifactId>maven-compiler-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>default-testCompile</id>
-								<phase>test-compile</phase>
-								<goals>
-									<goal>testCompile</goal>
-								</goals>
-								<configuration>
-									<skip>true</skip>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>owasp</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.owasp</groupId>
-						<artifactId>dependency-check-maven</artifactId>
-						<version>1.2.10</version>
-						<configuration>
-							<failBuildOnCVSS>6</failBuildOnCVSS>
-						</configuration>
-						<executions>
-							<execution>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
