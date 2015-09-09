@@ -16,11 +16,11 @@
 		<module>dss-spi</module>
 		<module>dss-test</module>
 		<!--<module>sscd-mocca-adapter</module>-->
-		<module>dss-webservices</module>
-		<module>dss-webservices-client</module>
+		<!--<module>dss-webservices</module>-->
+		<!--<module>dss-webservices-client</module>-->
 		<!--<module>dss-demo-applet</module>-->
 		<!--<module>dss-demo-applet-package</module>-->
-		<module>dss-demo-webapp</module>
+		<!--<module>dss-demo-webapp</module>-->
 		<!--<module>dss-demo-bundle</module>-->
 		<module>dss-tsl-jaxb</module>
 		<module>dss-diagnostic-jaxb</module>
@@ -253,12 +253,12 @@
 				<artifactId>dss-document</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			<!--<dependency>-->
-				<!--<groupId>eu.europa.ec.joinup.sd-dss</groupId>-->
-				<!--<artifactId>dss-document</artifactId>-->
-				<!--<type>test-jar</type>-->
-				<!--<version>${project.version}</version>-->
-			<!--</dependency>-->
+			<dependency>
+				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
+				<artifactId>dss-document</artifactId>
+				<type>test-jar</type>
+				<version>${project.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 				<artifactId>dss-webservices</artifactId>
