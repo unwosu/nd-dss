@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import eu.europa.esig.dss.DSSDocument;
@@ -36,6 +37,8 @@ public class Test1 {
 		tslSigningCertificateToken = DSSUtils.loadCertificate(tslSigningCertificateFile);
 	}
 
+	private static CertificateVerifier validationSources = null;
+
 	@Test
 	public void test_4624_TF_02_default_signed_pdf() {
 
@@ -47,7 +50,6 @@ public class Test1 {
 
 		final Reports reports = validator.validateDocument();
 		reports.print();
-
 	}
 
 	@Test
@@ -65,6 +67,7 @@ public class Test1 {
 	}
 
 	@Test
+	@Ignore
 	public void test_Feature_5000_SignDoc_PDF_A_nonQES_with_xTV_pdf() {
 
 		File signatureFileToValidate = new File("src\\main\\resources\\testdata\\Feature_5000_SignDoc_PDF_A_nonQES_with_xTV.pdf");
@@ -73,17 +76,17 @@ public class Test1 {
 		SignedDocumentValidator validator = SignedDocumentValidator.fromDocument(signatureToValidate);
 		validator.setCertificateVerifier(getValidationSources(tslSigningCertificateToken));
 
-		File policyFile = new File("src\\main\\resources\\policy\\constraint-qualified.xml");
+		File policyFile = new File("src\\main\\resources\\policy\\constraint-non-qualified.xml");
 		Reports reports = validator.validateDocument(policyFile);
-		//		reports.print();
+		reports.print();
 
 		SimpleReport simpleReport = reports.getSimpleReport();
 		String signatureId = getFirstSignatureId(simpleReport);
 		String indication = simpleReport.getIndication(signatureId);
 
-		assert Indication.INVALID.equals(indication);
+		assert Indication.INDETERMINATE.equals(indication);
 		final String subIndication = simpleReport.getSubIndication(signatureId);
-		assert SubIndication.CHAIN_CONSTRAINTS_FAILURE.equals(subIndication);
+		assert SubIndication.NO_CERTIFICATE_CHAIN_FOUND.equals(subIndication);
 
 		reports = validator.validateDocument();
 		//		reports.print();
@@ -95,6 +98,7 @@ public class Test1 {
 	}
 
 	@Test
+	@Ignore
 	public void test_Feature_5000_SignDoc_PDF_A_QES_with_xTV_HBA_signed_pdf() {
 
 		File signatureFileToValidate = new File("src\\main\\resources\\testdata\\Feature_5000_SignDoc_PDF_A_QES_with_xTV_HBA_signed.pdf");
@@ -109,6 +113,7 @@ public class Test1 {
 	}
 
 	@Test
+	@Ignore
 	public void test_PDF_A_vier_seiten_signed_pdf() {
 
 		File signatureFileToValidate = new File("src\\main\\resources\\testdata\\PDF_A_vier_seiten_signed.pdf");
@@ -190,20 +195,22 @@ public class Test1 {
 
 	private static CertificateVerifier getValidationSources(CertificateToken tslSigningCertificateToken) {
 
-		CertificateVerifier validationSources = new CommonCertificateVerifier();
-
+		if (validationSources != null) {
+			return validationSources;
+		}
+		validationSources = new CommonCertificateVerifier();
 		validationSources.setCrlSource(new OnlineCRLSource());
 		validationSources.setOcspSource(new OnlineOCSPSource());
 
 		NDesignTrustedListsCertificateSource tslSource = new NDesignTrustedListsCertificateSource();
-		//		tslSource.setCheckSignature(false);
+		tslSource.setCheckSignature(false);
 		tslSource.setDataLoader(new FileDataLoader());
 
 		List<CertificateToken> signingCertificateList = new ArrayList<CertificateToken>();
 		signingCertificateList.add(tslSigningCertificateToken);
-		//		tslSource.loadTSL("file:///C:/git/dss4.5RC2/my-test/src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
-		//		tslSource.loadTSL("file:///C:/git/dss4.5RC2/my-test/src/main/resources/Examples/TSL_LU_9_ab20052015-critical-removed.xml", signingCertificateList);
-		//		tslSource.loadTSL("file:///C:/git/dss4.5RC2/my-test/src/main/resources/Examples/TSL_RU_20150623_441.xml", signingCertificateList);
+		//		tslSource.loadTSL("src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
+		tslSource.loadTSL("src/main/resources/Examples/TSL_LU_9_ab20052015-critical-removed.xml", signingCertificateList);
+		tslSource.loadTSL("src/main/resources/Examples/TSL_RU_20150623_441.xml", signingCertificateList);
 		tslSource.loadTSL("src/main/resources/Examples/TSL-testref_469.xml", signingCertificateList);
 
 

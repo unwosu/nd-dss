@@ -1,4 +1,4 @@
-<ConstraintsParameters Name="ND" xmlns="http://dss.esig.europa.eu/validation/diagnostic">
+<ConstraintsParameters Name="ND-Q-CMS" xmlns="http://dss.esig.europa.eu/validation/diagnostic">
 	<Description>ND-Gematik</Description>
 	<MainSignature>
 		<!--<StructuralValidation Level="FAIL"/>-->
@@ -15,7 +15,7 @@
 			<DigestValuePresent Level="FAIL"/>
 			<DigestValueMatch Level="FAIL">true</DigestValueMatch>
 			<IssuerSerialMatch Level="FAIL">true</IssuerSerialMatch>
-			<Signed Level="FAIL" />
+			<Signed Level="FAIL"/>
 			<Signature Level="FAIL"/>
 			<Expiration Level="FAIL"/>
 			<RevocationDataAvailable Level="FAIL"/>
@@ -30,7 +30,7 @@
 			<TSLValidity Level="WARN"/>
 			<TSLStatus Level="WARN"/>
 			<TSLStatusAndValidity Level="FAIL"/>
-			<Qualification Level="FAIL">false</Qualification>
+			<Qualification Level="FAIL"/>
 			<SupportedBySSCD Level="INFORM"/>
 			<IssuedToLegalPerson Level="INFORM"/>
 			<Cryptographic Level="FAIL">
@@ -41,7 +41,7 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
 					<Algo Size="192">ECDSA</Algo>
 					<Algo Size="1024">RSASSA_PSS</Algo>
@@ -71,9 +71,9 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
-	                <Algo Size="192">ECDSA</Algo>
+					<Algo Size="192">ECDSA</Algo>
 				</MiniPublicKeySize>
 				<AcceptableDigestAlgo>
 					<Algo>SHA1</Algo>
@@ -98,22 +98,22 @@
 		</Cryptographic>
 		<MandatedSignedQProperties>
 			<SigningTime Level="FAIL"/>
-            <ContentTimeStamp>
-                <MessageImprintDataFound Level="FAIL" />
-                <MessageImprintDataIntact Level="FAIL" />
-            </ContentTimeStamp>
-			<MimeType Level="FAIL" Circumstance="IF_EXISTS">image/tiff</MimeType>
-			<ContentType Level="FAIL" Circumstance="IF_EXISTS">1.2.840.113549.1.7.1</ContentType>
-			<ContentHints Level="FAIL" Circumstance="IF_EXISTS">*</ContentHints>
+			<ContentTimeStamp>
+				<MessageImprintDataFound Level="FAIL"/>
+				<MessageImprintDataIntact Level="FAIL"/>
+			</ContentTimeStamp>
+			<MimeType Level="FAIL">image/tiff</MimeType>
+			<ContentType Level="FAIL">1.2.840.113549.1.7.1</ContentType>
+			<ContentHints Level="FAIL">1.2.840.113549.1.7.1 [Ein ODT-Dokument]</ContentHints>
 
 		</MandatedSignedQProperties>
-        <MandatedUnsignedQProperties>
-            <CounterSignature>
-                <ReferenceDataExistence Level="FAIL" />
-                <ReferenceDataIntact Level="FAIL" />
-                <SignatureIntact Level="FAIL" />
-            </CounterSignature>
-        </MandatedUnsignedQProperties>
+		<MandatedUnsignedQProperties>
+			<CounterSignature>
+				<ReferenceDataExistence Level="FAIL"/>
+				<ReferenceDataIntact Level="FAIL"/>
+				<SignatureIntact Level="FAIL"/>
+			</CounterSignature>
+		</MandatedUnsignedQProperties>
 	</MainSignature>
 	<Timestamp>
 		<TimestampDelay Unit="DAYS">0</TimestampDelay>
@@ -143,7 +143,7 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
 					<Algo Size="192">ECDSA</Algo>
 				</MiniPublicKeySize>
@@ -172,7 +172,7 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
 					<Algo Size="192">ECDSA</Algo>
 				</MiniPublicKeySize>
@@ -204,7 +204,7 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
 					<Algo Size="192">ECDSA</Algo>
 					<Algo Size="1024">RSASSA_PSS</Algo>
@@ -234,7 +234,7 @@
 					<Algo>RSASSA_PSS</Algo>
 				</AcceptableEncryptionAlgo>
 				<MiniPublicKeySize>
-	                <Algo Size="128">DSA</Algo>
+					<Algo Size="128">DSA</Algo>
 					<Algo Size="1024">RSA</Algo>
 					<Algo Size="192">ECDSA</Algo>
 				</MiniPublicKeySize>
@@ -249,25 +249,25 @@
 			</Cryptographic>
 		</CACertificate>
 	</Revocation>
-	<Cryptographic /> 
-<!--
-	<Cryptographic> 
-			<AlgoExpirationDate Format="yyyy-MM-dd">
-			<Algo Date="2017-02-24">SHA1</Algo>
-			<Algo Date="2035-02-24">SHA224</Algo>
-			<Algo Date="2035-02-24">SHA256</Algo>
-			<Algo Date="2035-02-24">SHA384</Algo>
-			<Algo Date="2035-02-24">SHA512</Algo>
-			<Algo Date="2017-02-24">RIPEMD160</Algo>
-			<Algo Date="2017-02-24">DSA128</Algo>
-			<Algo Date="2015-02-24">RSA1024</Algo>
-			<Algo Date="2015-02-24">RSA1536</Algo>
-			<Algo Date="2020-02-24">RSA2048</Algo>
-			<Algo Date="2020-02-24">RSA3072</Algo>
-			<Algo Date="2035-02-24">RSA4096</Algo>
-			<Algo Date="2035-02-24">ECDSA192</Algo>
-			<Algo Date="2035-02-24">ECDSA256</Algo>
-		</AlgoExpirationDate> 
-	</Cryptographic>	
--->
+	<Cryptographic/>
+	<!--
+		<Cryptographic>
+				<AlgoExpirationDate Format="yyyy-MM-dd">
+				<Algo Date="2017-02-24">SHA1</Algo>
+				<Algo Date="2035-02-24">SHA224</Algo>
+				<Algo Date="2035-02-24">SHA256</Algo>
+				<Algo Date="2035-02-24">SHA384</Algo>
+				<Algo Date="2035-02-24">SHA512</Algo>
+				<Algo Date="2017-02-24">RIPEMD160</Algo>
+				<Algo Date="2017-02-24">DSA128</Algo>
+				<Algo Date="2015-02-24">RSA1024</Algo>
+				<Algo Date="2015-02-24">RSA1536</Algo>
+				<Algo Date="2020-02-24">RSA2048</Algo>
+				<Algo Date="2020-02-24">RSA3072</Algo>
+				<Algo Date="2035-02-24">RSA4096</Algo>
+				<Algo Date="2035-02-24">ECDSA192</Algo>
+				<Algo Date="2035-02-24">ECDSA256</Algo>
+			</AlgoExpirationDate>
+		</Cryptographic>
+	-->
 </ConstraintsParameters>
