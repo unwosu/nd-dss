@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><anlage_hvv Id="RootReference" gesamtaufstellung-typ="arzt" version="1.00">
+	<header><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-be8c6f47-fd3b-45dd-8e34-efd0eb04a75e">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-27ba7c47-ee13-491a-bf3d-b916ae8001b8" URI="#SignableReference">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>cHcr3piuebK8JJ3qRigdudc/1cHREPnz61/iGx4FGG0=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-a72f5ecc-89f5-4aa7-aaa2-aa57454d86aa">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>qagMXE1aqjV2zgLdnfeyUB4gHC6sC5q1o0ETh4nMO1Y=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+ZQnsAYCUvEpyBPZEpYDVVwghk3Ke9bRtE2+zZZmyPYAguHma1BJDos8d8O9nk/LVTvZ+/TZOhI9v
+s1leFAJvszcEocm92Gs081UvJDu9MTWg5DYMEv8Lqjm0ZOpxnWNMO2uKDciXZDzhZtZvG0MVUkDH
+dXTAeQdqI06GnrnhyfvrnaO8b41kqD8amuVjCThrnjQmxsFkSdqrERPUPUz/yV2slcrR8xTIyBem
+sJSyB59KtpCdSFMTfRXFXeJZb2GKiWWXKb6cnqxtermECZORpGtIjFn7h/lBLmKjBo/79j044SdB
+0horyJt0fj+1epx+Mt+3FBlO5SxhOXg6ifS0OQ==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIG9TCCBd2gAwIBAgICA9gwDQYJKoZIhvcNAQELBQAwgbYxCzAJBgNVBAYTAkRFMTowOAYDVQQK
+DDFULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIC0gRzIgTG9zIDMgTk9ULVZBTElEMUgwRgYD
+VQQLDD9JbnN0aXR1dGlvbiBkZXMgR2VzdW5kaGVpdHN3ZXNlbnMtQ0EgZGVyIFRlbGVtYXRpa2lu
+ZnJhc3RydWt0dXIxITAfBgNVBAMMGFRTWVNJLlNNQ0ItQ0ExIFRFU1QtT05MWTAeFw0xNDEwMTUw
+OTEwMTVaFw0xOTEwMTUyMzU5NTlaMIGeMQswCQYDVQQGEwJERTE3MDUGA1UECgwuS3Jhbmtlbmhh
+dXMgT2JlcnN0w6RkdGNoZW4gTWl0dGUtU8O8ZE5PVC1WQUxJRDEdMBsGA1UEBRMUODAyNzY4ODM1
+ODAwMDAwMDAwMzUxNzA1BgNVBAMMLktyYW5rZW5oYXVzIE9iZXJzdMOkZHRjaGVuIE1pdHRlLVPD
+vGRURVNULU9OTFkwggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAQCYx9dp0yeiQBzvNTtr
+xQ1MsYV+UjYiy+7luQdoSvusR+rOkDP9Nhqp0N9gO1oduN0DJjBbfaCG3BB7p6uQmpv+u03iZjy7
+e+SAAMH7/OivNV7Fp+7tWNrng6OwNbcmyonn6WJsgzRQAzqJ3MipgkS1HyqeUZ46ja2OuQlTB9cH
+jCJeYwKTFFEeTCBvJhePxerGG/hHMwveYq2GwdwYjUp9FT9h7jW3YjGb1OqowyCH3MSgNElF8LKX
+yybG4R5J3PAZl2xso/V3/BB6vedmmv4N3yI+iBYCKBt+99cE6kk+k3YbXUwZheKdvmVMxSK7ZO8e
+PtMxx4my3S+j8TmqYWYHAgRAAACBo4IDIDCCAxwwHwYDVR0jBBgwFoAUq1TIvDguR3KLJxaPD0Qz
+M3TdkGAwHQYDVR0OBBYEFBHwv1W2X/9dQhvVj2dVtoQvofinMA4GA1UdDwEB/wQEAwIGQDByBgNV
+HSAEazBpMFAGCCqCFABMBIEjMEQwQgYIKwYBBQUHAgEWNmh0dHA6Ly93d3cuaGJhLXRlc3QudGVs
+ZXNlYy5kZS9wb2xpY2llcy9FRV9wb2xpY3kuaHRtbDAJBgcqghQATAROMAoGCCqCFABMBIEqMAwG
+A1UdEwEB/wQCMAAwggGwBgNVHR8EggGnMIIBozCBuqCBt6CBtIaBsWxkYXA6Ly9sZGFwLWhiYS10
+ZXN0LnRlbGVzZWMuZGUvQ049VC1TeXN0ZW1zJTIwU01DJTIwVGVzdC1DQSUyMDEsT1U9VHJ1c3Ql
+MjBDZW50ZXIlMjBEZXV0c2NoZSUyMFRlbGVrb20sTz1ULVN5c3RlbXMlMjBFbnRlcnByaXNlJTIw
+U2VydmljZXMlMjBHbWJILEM9REU/Q2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdDCB46CB4KCB3YaB
+2mh0dHA6Ly9oYmEtdGVzdC50ZWxlc2VjLmRlL2hiYS9kb3dubG9hZC9kb3dubG9hZC5jcmw/cGF0
+aD1DTiUzRFQtU3lzdGVtcyUyMFNNQyUyMFRlc3QtQ0ElMjAxJTJDT1UlM0RUcnVzdCUyMENlbnRl
+ciUyMERldXRzY2hlJTIwVGVsZWtvbSUyQ08lM0RULVN5c3RlbXMlMjBFbnRlcnByaXNlJTIwU2Vy
+dmljZXMlMjBHbWJIJTJDQyUzRERFJTNGQ2VydGZpY2F0ZVJldm9jYXRpb25MaXN0MEIGCCsGAQUF
+BwEBBDYwNDAyBggrBgEFBQcwAYYmaHR0cDovL29jc3Auc21jYi50ZXN0LnRlbGVzZWMuZGUvb2Nz
+cHIwUAYFKyQIAwMERzBFMEMwQTA/MD0wDQwLS3JhbmtlbmhhdXMwCQYHKoIUAEwENRMhNS1TTUMt
+Qi1UZXN0a2FydGUtODgzNTgwMDAwMDAwMDM1MA0GCSqGSIb3DQEBCwUAA4IBAQCA3mCiJchmzoir
+Mk9G2wja5YGiLEcCE1F4Bm+cbETTt5djygSY/EfAFF5+aV/wbt1PbPEgKHyQ6+mlU0tU2lh3x+6k
+6wB9Oq+kfPC3AsGtQJAa3HKUePAAmaSQpNffscjdtmhGBIKNXDRa5j6IiF6h1O7rwzzUecHH8tdw
+Txn23bT8oTx88eC5SywjsAp+e4wR6p59DfCwOyY+Uxvw0SoUTBmUVZbgcTaZ5Y2ajhvVw9JWUbqq
+VCKQFGhTX1UQ6TMEFg6DYraf/UULKdjKdbNoYDmZejvDQYuQD0mEZ125ccSuUgCsOeKwgnvk4u6l
+O031zM7f3jXXhcw42YxYE3h3
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-be8c6f47-fd3b-45dd-8e34-efd0eb04a75e" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-a72f5ecc-89f5-4aa7-aaa2-aa57454d86aa"><xades:SignedSignatureProperties><xades:SigningTime>2015-09-07T19:56:09.038+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>o+fbIa0kbqjsfgvjfmNDL5PkhAFjbF5Un0foQkReKjk=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.SMCB-CA1 TEST-ONLY,OU=Institution des Gesundheitswesens-CA der Telematikinfrastruktur,O=T-Systems International GmbH - G2 Los 3 NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>984</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-27ba7c47-ee13-491a-bf3d-b916ae8001b8"><xades:Description>SUPER-XML</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature><empfaenger V="Kassenärztliche Vereinigung Nordrhein, Bezirksstelle"/>
+		<absender Id="SignableReference">
+			<bsnr V="308154711"/>
+			<praxisinhaber>
+				<arzt>
+					<vorname V="Tim"/>
+					<nachname V="Testdoc"/>
+				</arzt>
+			</praxisinhaber>
+			<praxisadresse>
+				<strasse V="Dortstr. 1"/>
+				<plz V="54321"/>
+				<ort V="Dort"/>
+			</praxisadresse>
+		</absender>
+		<abrechnungsquartal V="2014-4"/>
+		<erstellungsdatum V="2001-01-01"/>
+	
+		</header>
+	<body>
+		<anzahl_faelle>
+			<arbeitsgebiet_b V="0"/>
+			<arbeitsgebiet_h V="0"/>
+			<arbeitsgebiet_i V="0"/>
+			<gesamt V="0"/>
+		</anzahl_faelle>
+		<ankreuzfeld_2 V="true">
+			<datentraegerabr Anzahl="0" V="true"/>
+		</ankreuzfeld_2>
+		<ankreuzfeld_3 V="true"/>
+		<ankreuzfeld_4 V="true"/>
+		<ankreuzfeld_5 V="true"/>
+		<ankreuzfeld_6 V="true"/>
+		<ankreuzfeld_9 V="true"/>
+		<ankreuzfeld_10 V="true"/>
+		<ankreuzfeld_11 V="true"/>
+		<ankreuzfeld_12 V="true"/>
+	</body>
+</anlage_hvv>

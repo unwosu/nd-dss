@@ -125,7 +125,7 @@ public class SignatureCryptographicConstraint extends Constraint {
 	 */
 	public SignatureCryptographicConstraint(final String level, final String context, final String subContext) {
 
-		super(level);
+		super(level, null);
 		this.context = context;
 		this.subContext = subContext;
 	}

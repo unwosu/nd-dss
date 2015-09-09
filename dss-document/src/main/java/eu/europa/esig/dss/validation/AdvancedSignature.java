@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -271,7 +271,7 @@ public interface AdvancedSignature extends Serializable {
 	 * element), the signature time-stamp(s) present in the AdES-T form, the certification path references and the
 	 * revocation status references.
 	 *
-	 * @param timestampToken {@code TimestampToken} or null during the creation process
+	 * @param timestampToken         {@code TimestampToken} or null during the creation process
 	 * @param canonicalizationMethod canonicalization method
 	 * @return {@code byte} array representing the canonicalized data to be timestamped
 	 */
@@ -304,7 +304,7 @@ public interface AdvancedSignature extends Serializable {
 	 * Archive timestamp seals the data of the signature in a specific order. We need to retrieve the data for each
 	 * timestamp.
 	 *
-	 * @param timestampToken null when adding a new archive timestamp
+	 * @param timestampToken         null when adding a new archive timestamp
 	 * @param canonicalizationMethod
 	 * @return {@code byte} array representing the canonicalized data to be timestamped
 	 */
@@ -380,4 +380,18 @@ public interface AdvancedSignature extends Serializable {
 	 * @return null if the validation does not apply, true if the structure is valid otherwise false
 	 */
 	String validateStructure();
+
+	/**
+	 * This method returns the algorithm used to canonicalized the SignedInfo. It only apply to XML signature.
+	 *
+	 * @return string representation of the canonicalization method
+	 */
+	String getSignedInfoC14NMethod();
+
+	/**
+	 * This method returns the mime-type of the signed data (applies only for CMS signature)
+	 *
+	 * @return {@code String} representing the mime-type of signed data
+	 */
+	String getMimeType();
 }

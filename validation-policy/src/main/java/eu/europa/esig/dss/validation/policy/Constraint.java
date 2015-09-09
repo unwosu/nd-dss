@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -77,20 +77,27 @@ public class Constraint {
 	protected Map<String, String> messageAttributes = new HashMap<String, String>();
 	protected Conclusion conclusion;
 
-	public static enum Level {IGNORE, INFORM, WARN, FAIL}
+	public enum Level {IGNORE, INFORM, WARN, FAIL}
+
+	public enum Circumstance {IF_EXISTS}
 
 	private Level level;
+	private Circumstance circumstance;
 
 	/**
 	 * This is the default constructor. It takes a level of the constraint as parameter. The string representing the level is trimmed and capitalized. If there is no corresponding
 	 * {@code Level} then the {@code DSSException} is raised.
 	 *
-	 * @param level the constraint level string.
+	 * @param level        the constraint level string.
+	 * @param circumstance
 	 */
-	public Constraint(final String level) throws DSSException {
+	public Constraint(final String level, String circumstance) throws DSSException {
 
 		try {
 			this.level = Level.valueOf(level.trim().toUpperCase());
+			if (circumstance != null) {
+				this.circumstance = Circumstance.valueOf(circumstance.trim().toUpperCase());
+			}
 		} catch (IllegalArgumentException e) {
 
 			throw new DSSException("The validation policy configuration file should be checked: " + e.getMessage(), e);
@@ -203,7 +210,7 @@ public class Constraint {
 			node.addChild(NodeName.INFO, null, messageAttributes).setAttribute(AttributeName.EXPECTED_VALUE, expectedValue).setAttribute(AttributeName.CONSTRAINT_VALUE, value);
 			return true;
 		}
-		boolean error = value.isEmpty();
+		boolean error = value == null || value.isEmpty();
 		if (!error) {
 
 			if (!"*".equals(expectedValue)) {
@@ -211,7 +218,9 @@ public class Constraint {
 				error = (expectedValue != null) && !expectedValue.equals(value);
 			}
 		}
-		if (error) {
+		if (Circumstance.IF_EXISTS.equals(circumstance) && value == null) {
+
+		} else if (error) {
 
 			if (warn()) {
 
@@ -246,6 +255,7 @@ public class Constraint {
 	 *
 	 * @return true if the constraint is met, false otherwise.
 	 */
+
 	public boolean checkInList() {
 
 		if (ignore()) {
@@ -256,7 +266,7 @@ public class Constraint {
 		if (inform()) {
 
 			node.addChild(NodeName.STATUS, NodeValue.INFORMATION);
-			node.addChild(NodeName.INFO, null, messageAttributes).setAttribute("ExpectedValue", expectedValue).setAttribute("ConstraintValue", value);
+			node.addChild(NodeName.INFO, null, messageAttributes).setAttribute(AttributeName.EXPECTED_VALUE, expectedValue).setAttribute(AttributeName.CONSTRAINT_VALUE, value);
 			return true;
 		}
 		final boolean contains;
@@ -273,7 +283,8 @@ public class Constraint {
 			if (warn()) {
 
 				node.addChild(NodeName.STATUS, NodeValue.WARN);
-				node.addChild(NodeName.WARNING, failureMessageTag, messageAttributes).setAttribute(AttributeName.EXPECTED_VALUE, expectedValue).setAttribute(AttributeName.CONSTRAINT_VALUE, value);
+				node.addChild(NodeName.WARNING, failureMessageTag, messageAttributes).setAttribute(AttributeName.EXPECTED_VALUE, expectedValue)
+					  .setAttribute(AttributeName.CONSTRAINT_VALUE, value);
 				conclusion.addWarning(failureMessageTag, messageAttributes);
 				return true;
 			}

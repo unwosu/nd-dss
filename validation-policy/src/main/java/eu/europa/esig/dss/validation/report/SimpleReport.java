@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -31,11 +31,11 @@ import org.w3c.dom.Node;
 
 import eu.europa.esig.dss.XmlDom;
 import eu.europa.esig.dss.validation.policy.SignatureType;
+import eu.europa.esig.dss.validation.policy.rules.AttributeName;
 import eu.europa.esig.dss.validation.policy.rules.Indication;
 
 /**
  * A SimpleReport holder to fetch properties from a XmlDom simpleReport.
- *
  */
 public class SimpleReport extends XmlDom {
 
@@ -186,4 +186,20 @@ public class SimpleReport extends XmlDom {
 		return indication;
 	}
 
+	/**
+	 * This method returns the {@code List} of name of the scopes related to the given signature.
+	 *
+	 * @param signatureId
+	 * @return {@code List} of name of the scopes
+	 */
+	public List<String> getSignatureScope(final String signatureId) {
+
+		final List<XmlDom> elementList = getElements("/SimpleReport/Signature[@Id='%s']/SignatureScopes/SignatureScope", signatureId);
+		final List<String> signatureScopeList = new ArrayList<String>();
+		for (final XmlDom xmlDom : elementList) {
+
+			signatureScopeList.add(xmlDom.getAttribute(AttributeName.SCOPE));
+		}
+		return signatureScopeList;
+	}
 }

@@ -39,7 +39,7 @@ public class BasicValidationProcessValidConstraint extends Constraint {
 	 */
 	public BasicValidationProcessValidConstraint(final String level) {
 
-		super(level);
+		super(level, null);
 	}
 
 	/**

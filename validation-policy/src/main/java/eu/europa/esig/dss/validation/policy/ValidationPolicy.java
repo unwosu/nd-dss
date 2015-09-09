@@ -83,6 +83,13 @@ public abstract class ValidationPolicy extends XmlDom {
 	public abstract Constraint getSigningTimeConstraint();
 
 	/**
+	 * Indicates if the signed property: mime-type should be checked. If MimeType element is absent within the constraint file then null is returned.
+	 *
+	 * @return {@code Constraint} if MimeType element is present in the constraint file, null otherwise.
+	 */
+	public abstract Constraint getMimeTypeConstraint();
+
+	/**
 	 * Indicates if the signed property: content-type should be checked. If ContentType element is absent within the constraint file then null is returned.
 	 *
 	 * @return {@code Constraint} if ContentType element is present in the constraint file, null otherwise.

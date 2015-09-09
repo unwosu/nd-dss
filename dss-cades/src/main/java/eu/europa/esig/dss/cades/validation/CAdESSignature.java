@@ -1,43 +1,24 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 package eu.europa.esig.dss.cades.validation;
-
-import static eu.europa.esig.dss.OID.id_aa_ets_archiveTimestampV2;
-import static eu.europa.esig.dss.OID.id_aa_ets_archiveTimestampV3;
-import static eu.europa.esig.dss.x509.ArchiveTimestampType.CAdES_V2;
-import static eu.europa.esig.dss.x509.ArchiveTimestampType.CAdES_v3;
-import static eu.europa.esig.dss.x509.TimestampType.ARCHIVE_TIMESTAMP;
-import static eu.europa.esig.dss.x509.TimestampType.CONTENT_TIMESTAMP;
-import static eu.europa.esig.dss.x509.TimestampType.SIGNATURE_TIMESTAMP;
-import static eu.europa.esig.dss.x509.TimestampType.VALIDATION_DATA_REFSONLY_TIMESTAMP;
-import static eu.europa.esig.dss.x509.TimestampType.VALIDATION_DATA_TIMESTAMP;
-import static org.bouncycastle.asn1.cms.CMSObjectIdentifiers.id_ri_ocsp_response;
-import static org.bouncycastle.asn1.ocsp.OCSPObjectIdentifiers.id_pkix_ocsp_basic;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_certCRLTimestamp;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_certificateRefs;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_contentTimestamp;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_escTimeStamp;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signatureTimeStampToken;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signingCertificate;
-import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signingCertificateV2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -164,6 +145,25 @@ import eu.europa.esig.dss.x509.TimestampType;
 import eu.europa.esig.dss.x509.crl.OfflineCRLSource;
 import eu.europa.esig.dss.x509.ocsp.OfflineOCSPSource;
 
+import static eu.europa.esig.dss.OID.id_aa_ets_archiveTimestampV2;
+import static eu.europa.esig.dss.OID.id_aa_ets_archiveTimestampV3;
+import static eu.europa.esig.dss.x509.ArchiveTimestampType.CAdES_V2;
+import static eu.europa.esig.dss.x509.ArchiveTimestampType.CAdES_v3;
+import static eu.europa.esig.dss.x509.TimestampType.ARCHIVE_TIMESTAMP;
+import static eu.europa.esig.dss.x509.TimestampType.CONTENT_TIMESTAMP;
+import static eu.europa.esig.dss.x509.TimestampType.SIGNATURE_TIMESTAMP;
+import static eu.europa.esig.dss.x509.TimestampType.VALIDATION_DATA_REFSONLY_TIMESTAMP;
+import static eu.europa.esig.dss.x509.TimestampType.VALIDATION_DATA_TIMESTAMP;
+import static org.bouncycastle.asn1.cms.CMSObjectIdentifiers.id_ri_ocsp_response;
+import static org.bouncycastle.asn1.ocsp.OCSPObjectIdentifiers.id_pkix_ocsp_basic;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_certCRLTimestamp;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_certificateRefs;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_contentTimestamp;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_ets_escTimeStamp;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signatureTimeStampToken;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signingCertificate;
+import static org.bouncycastle.asn1.pkcs.PKCSObjectIdentifiers.id_aa_signingCertificateV2;
+
 /**
  * CAdES Signature class helper
  */
@@ -212,8 +212,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	private List<TimestampReference> signingCertificateTimestampReferences;
 
 	/**
-	 * @param data
-	 *            byte array representing CMSSignedData
+	 * @param data byte array representing CMSSignedData
 	 * @throws org.bouncycastle.cms.CMSException
 	 */
 	public CAdESSignature(final byte[] data) throws CMSException {
@@ -222,10 +221,8 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	}
 
 	/**
-	 * @param data
-	 *            byte array representing CMSSignedData
-	 * @param certPool
-	 *            can be null
+	 * @param data     byte array representing CMSSignedData
+	 * @param certPool can be null
 	 * @throws org.bouncycastle.cms.CMSException
 	 */
 	public CAdESSignature(final byte[] data, final CertificatePool certPool) throws CMSException {
@@ -236,10 +233,8 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	/**
 	 * The default constructor for CAdESSignature.
 	 *
-	 * @param cms
-	 *            CMSSignedData
-	 * @param certPool
-	 *            can be null
+	 * @param cms      CMSSignedData
+	 * @param certPool can be null
 	 */
 	public CAdESSignature(final CMSSignedData cms, final CertificatePool certPool) {
 
@@ -247,10 +242,8 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	}
 
 	/**
-	 * @param cmsSignedData
-	 *            CMSSignedData
-	 * @param signerInformation
-	 *            an expanded SignerInfo block from a CMS Signed message
+	 * @param cmsSignedData     CMSSignedData
+	 * @param signerInformation an expanded SignerInfo block from a CMS Signed message
 	 */
 	public CAdESSignature(final CMSSignedData cmsSignedData, final SignerInformation signerInformation) {
 		this(cmsSignedData, signerInformation, new CertificatePool());
@@ -259,12 +252,9 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	/**
 	 * The default constructor for CAdESSignature.
 	 *
-	 * @param cmsSignedData
-	 *            CMSSignedData
-	 * @param signerInformation
-	 *            an expanded SignerInfo block from a CMS Signed message
-	 * @param certPool
-	 *            can be null
+	 * @param cmsSignedData     CMSSignedData
+	 * @param signerInformation an expanded SignerInfo block from a CMS Signed message
+	 * @param certPool          can be null
 	 */
 	public CAdESSignature(final CMSSignedData cmsSignedData, final SignerInformation signerInformation, final CertificatePool certPool) {
 
@@ -276,8 +266,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	/**
 	 * This is convenience method. To be used only internally!
 	 *
-	 * @param padesSigningTime
-	 *            PAdES signing time
+	 * @param padesSigningTime PAdES signing time
 	 */
 	public void setPadesSigningTime(final Date padesSigningTime) {
 		this.padesSigningTime = padesSigningTime;
@@ -286,8 +275,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	/**
 	 * Returns the first {@code SignerInformation} extracted from {@code CMSSignedData}.
 	 *
-	 * @param cms
-	 *            CMSSignedData
+	 * @param cms CMSSignedData
 	 * @return returns {@code SignerInformation}
 	 */
 	private static SignerInformation getFirstSignerInformation(final CMSSignedData cms) {
@@ -494,7 +482,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	}
 
 	private boolean verifySigningCertificateReferences(final BigInteger signingTokenSerialNumber, final GeneralNames signingTokenIssuerName, final byte[] signingTokenCertHash,
-			final byte[] certHash, final IssuerSerial issuerSerial) {
+	                                                   final byte[] certHash, final IssuerSerial issuerSerial) {
 
 		signingCertificateValidity.setDigest(Base64.encodeBase64String(signingTokenCertHash));
 		final boolean hashEqual = Arrays.equals(certHash, signingTokenCertHash);
@@ -688,8 +676,8 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 				// must be ASN1UTCTime
 				if (!(attrValue instanceof ASN1UTCTime)) {
 					LOG.error(
-							"RFC 3852 states that dates between January 1, 1950 and December 31, 2049 (inclusive) must be encoded as UTCTime. Any dates with year values before 1950 or after 2049 must be encoded as GeneralizedTime. Date found is {} encoded as {}",
-							signingDate.toString(), attrValue.getClass());
+						  "RFC 3852 states that dates between January 1, 1950 and December 31, 2049 (inclusive) must be encoded as UTCTime. Any dates with year values before 1950 or after 2049 must be encoded as GeneralizedTime. Date found is {} encoded as {}",
+						  signingDate.toString(), attrValue.getClass());
 					return null;
 				}
 			}
@@ -1048,7 +1036,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 				final Attribute attribute = (Attribute) allAttributes.get(ii);
 				final ASN1Set attrValues = attribute.getAttrValues();
 				for (final ASN1Encodable value : attrValues.toArray()) {
-					if (value instanceof DEROctetString){
+					if (value instanceof DEROctetString) {
 						LOG.warn("Illegal content for timestamp (OID : " + attrType + ") : OCTET STRING is not allowed !");
 					} else {
 						try {
@@ -1311,6 +1299,23 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	public void checkSigningCertificate() {
 
 		// TODO-Bob (13/07/2014):
+	}
+
+
+	@Override
+	public String getMimeType() {
+
+		final AttributeTable signedAttributes = signerInformation.getSignedAttributes();
+		if (signedAttributes == null) {
+			return null;
+		}
+		final Attribute mimeTypeAttribute = signedAttributes.get(new ASN1ObjectIdentifier("0.4.0.1733.2.1"));
+		if (mimeTypeAttribute == null) {
+			return null;
+		}
+		final DERUTF8String derUTF8String = (DERUTF8String) mimeTypeAttribute.getAttrValues().getObjectAt(0);
+		final String mimeType = derUTF8String.getString();
+		return mimeType;
 	}
 
 	@Override
@@ -1618,8 +1623,7 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 	}
 
 	/**
-	 * @param cmsTypedData
-	 *            {@code CMSTypedData} cannot be null
+	 * @param cmsTypedData {@code CMSTypedData} cannot be null
 	 * @return the signed content extracted from {@code CMSTypedData}
 	 */
 	public static byte[] getSignedContent(final CMSTypedData cmsTypedData) {
@@ -1946,9 +1950,6 @@ public class CAdESSignature extends DefaultAdvancedSignature {
 
 	@Override
 	public SignatureLevel[] getSignatureLevels() {
-		return new SignatureLevel[] {
-				SignatureLevel.CMS_NOT_ETSI, SignatureLevel.CAdES_BASELINE_B, SignatureLevel.CAdES_BASELINE_T, SignatureLevel.CAdES_101733_C, SignatureLevel.CAdES_101733_X,
-				SignatureLevel.CAdES_BASELINE_LT, SignatureLevel.CAdES_101733_A, SignatureLevel.CAdES_BASELINE_LTA
-		};
+		return new SignatureLevel[]{SignatureLevel.CMS_NOT_ETSI, SignatureLevel.CAdES_BASELINE_B, SignatureLevel.CAdES_BASELINE_T, SignatureLevel.CAdES_101733_C, SignatureLevel.CAdES_101733_X, SignatureLevel.CAdES_BASELINE_LT, SignatureLevel.CAdES_101733_A, SignatureLevel.CAdES_BASELINE_LTA};
 	}
 }

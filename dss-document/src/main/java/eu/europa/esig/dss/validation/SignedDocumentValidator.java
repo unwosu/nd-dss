@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -112,7 +112,7 @@ import eu.europa.esig.dss.x509.ocsp.ListOCSPSource;
 
 /**
  * Validate the signed document. The content of the document is determined automatically. It can be: XML, CAdES(p7m), PDF or ASiC(zip).
- *
+ * <p/>
  * SignatureScopeFinder can be set using the appropriate setter (ex. setCadesSignatureScopeFinder). By default, this class will use the
  * default SignatureScopeFinder as defined by eu.europa.esig.dss.validation.scope.SignatureScopeFinderFactory
  */
@@ -196,8 +196,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 
 	private static void registerDocumentValidator(String type, String clazzToFind) {
 		try {
-			@SuppressWarnings("unchecked")
-			Class<SignedDocumentValidator> documentValidator = (Class<SignedDocumentValidator>) Class.forName(clazzToFind);
+			@SuppressWarnings("unchecked") Class<SignedDocumentValidator> documentValidator = (Class<SignedDocumentValidator>) Class.forName(clazzToFind);
 			registredDocumentValidators.add(documentValidator);
 			LOG.info("Validator '" + documentValidator.getName() + "' is registered");
 		} catch (ClassNotFoundException e) {
@@ -868,7 +867,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 			xmlCert.getDigestAlgAndValue().add(xmlDigestAlgAndValue);
 		}
 		TokenIdentifier issuerTokenDSSId = certToken.getIssuerTokenDSSId();
-		if(issuerTokenDSSId != null) {
+		if (issuerTokenDSSId != null) {
 			xmlCert.setIssuerCertificate(issuerTokenDSSId.asXmlId());
 		}
 		xmlCert.setNotAfter(DSSXMLUtils.createXMLGregorianCalendar(certToken.getNotAfter()));
@@ -1187,8 +1186,8 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 			if (!signPolicyHashAlgFromPolicy.equals(signPolicyHashAlgFromSignature)) {
 
 				xmlPolicy.setProcessingError(
-						"The digest algorithm indicated in the SignPolicyHashAlg from the resulting document (" + signPolicyHashAlgFromPolicy + ") is not equal to the digest " +
-								"algorithm (" + signPolicyHashAlgFromSignature + ").");
+					  "The digest algorithm indicated in the SignPolicyHashAlg from the resulting document (" + signPolicyHashAlgFromPolicy + ") is not equal to the digest " +
+							"algorithm (" + signPolicyHashAlgFromSignature + ").");
 				xmlPolicy.setDigestAlgorithmsEqual(false);
 				xmlPolicy.setStatus(false);
 				return;
@@ -1200,7 +1199,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 			if (!equal) {
 
 				xmlPolicy.setProcessingError(
-						"The policy digest value (" + policyDigestValueFromSignature + ") does not match the re-calculated digest value (" + recalculatedDigestHexValue + ").");
+					  "The policy digest value (" + policyDigestValueFromSignature + ") does not match the re-calculated digest value (" + recalculatedDigestHexValue + ").");
 				return;
 			}
 			equal = policyDigestValueFromSignature.equals(policyDigestHexValueFromPolicy);
@@ -1208,7 +1207,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 			if (!equal) {
 
 				xmlPolicy.setProcessingError(
-						"The policy digest value (" + policyDigestValueFromSignature + ") does not match the digest value from the policy file (" + policyDigestHexValueFromPolicy + ").");
+					  "The policy digest value (" + policyDigestValueFromSignature + ") does not match the digest value from the policy file (" + policyDigestHexValueFromPolicy + ").");
 			}
 		} catch (RuntimeException e) {
 			// When any error (communication) we just set the status to false
@@ -1248,6 +1247,9 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 
 		dealWithClaimedRole(signature, xmlSignature);
 
+		final String mimeType = signature.getMimeType();
+		xmlSignature.setMimeType(mimeType);
+
 		final String contentType = signature.getContentType();
 		xmlSignature.setContentType(contentType);
 
@@ -1281,7 +1283,7 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 	private void performStructuralValidation(final AdvancedSignature signature, final XmlSignature xmlSignature) {
 
 		final ValidationPolicy validationPolicy = processExecutor.getValidationPolicy();
-		if (( validationPolicy == null ) || ( validationPolicy.getStructuralValidationConstraint() == null )) {
+		if ((validationPolicy == null) || (validationPolicy.getStructuralValidationConstraint() == null)) {
 			return;
 		}
 		final String structureValid = signature.validateStructure();
@@ -1409,6 +1411,10 @@ public abstract class SignedDocumentValidator implements DocumentValidator {
 	private void performSignatureCryptographicValidation(final AdvancedSignature signature, final XmlSignature xmlSignature) {
 
 		final SignatureCryptographicVerification scv = signature.checkSignatureIntegrity();
+		final String signedInfoC14NMethod = signature.getSignedInfoC14NMethod();
+		if (signedInfoC14NMethod != null) {
+			xmlSignature.setSignedInfoC14NMethod(signedInfoC14NMethod);
+		}
 		final XmlBasicSignatureType xmlBasicSignature = getXmlBasicSignatureType(xmlSignature);
 		xmlBasicSignature.setReferenceDataFound(scv.isReferenceDataFound());
 		xmlBasicSignature.setReferenceDataIntact(scv.isReferenceDataIntact());

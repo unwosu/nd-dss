@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><anlage_hvv Id="RootReference" gesamtaufstellung-typ="arzt" version="1.00">
+	<header>
+		<empfaenger V="Kassenärztliche Vereinigung Nordrhein, Bezirksstelle"/>
+		<absender Id="SignableReference">
+			<bsnr V="308154711"/>
+			<praxisinhaber>
+				<arzt>
+					<vorname V="Tim"/>
+					<nachname V="Testdoc"/>
+				</arzt>
+			</praxisinhaber>
+			<praxisadresse>
+				<strasse V="Dortstr. 1"/>
+				<plz V="54321"/>
+				<ort V="Dort"/>
+			</praxisadresse>
+		</absender>
+		<abrechnungsquartal V="2014-4"/>
+		<erstellungsdatum V="2001-01-01"/>
+	</header>
+	<body>
+		<anzahl_faelle>
+			<arbeitsgebiet_b V="0"/>
+			<arbeitsgebiet_h V="0"/>
+			<arbeitsgebiet_i V="0"/>
+			<gesamt V="0"/>
+		</anzahl_faelle>
+		<ankreuzfeld_2 V="true">
+			<datentraegerabr Anzahl="0" V="true"/>
+		</ankreuzfeld_2>
+		<ankreuzfeld_3 V="true"/>
+		<ankreuzfeld_4 V="true"/>
+		<ankreuzfeld_5 V="true"/>
+		<ankreuzfeld_6 V="true"/>
+		<ankreuzfeld_9 V="true"/>
+		<ankreuzfeld_10 V="true"/>
+		<ankreuzfeld_11 V="true"/>
+		<ankreuzfeld_12 V="true"/>
+	</body>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-b566d66c-f76b-4c82-8fa7-0623f17f2137">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2007/05/xmldsig-more#sha256-rsa-MGF1"/>
+<ds:Reference Id="Reference-Document-2e7b1d12-aa7b-4ea8-b3ac-717c21d0f467" URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>Lj7LXI5u0sv79sKBijoloLVZ7id/ZgzySu5muq9K43s=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-ae9c954f-c4b7-4080-a072-09a6d13655ee">
+<ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<ds:DigestValue>XOCoS6bE37baO7nT2/ZCMUx9jZitXTLjZvA+zqH9dYs=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>
+QZjHH+pT6l0ClGIZO8yOGPYikyKfbP7cpfdVMTI/I1izlsBIRxpys7I+rrIe4bJoduQ4niniIH3N
+aJ2ImRJ7taSTtF5MUiq585tzuZwTIVHyi8YKEDMP+0wqOY8mlSRkO85cnfm+Z9oSUyJytEq4qsDD
+TdS2o1dMbiJMMrRLRpAoqDge6pcnd9NnTKrfbEr0IQ7EDgv8FTHkM5C3cYrcmMVNRwldodWU8N01
+eZWf9zWlulJejmol7xBlSUA6+uVmmN7CWMhQbgcdgmW7Xw403QF1QS8Pv2gj+IT43kuhk3JV3s/f
+bm40fBJwF3S8lidr2O9iR7xIUF8pjSlY+S0Brw==
+</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIFLzCCBBegAwIBAgICCzUwDQYJKoZIhvcNAQELBQAwgasxCzAJBgNVBAYTAkRFMS8wLQYDVQQK
+DCZULVN5c3RlbXMgSW50ZXJuYXRpb25hbCBHbWJIIE5PVC1WQUxJRDFFMEMGA1UECww8SEJBLXFD
+QSAtIFRJIGRlciBHZXN1bmRoZWl0c2thcnRlIG1pdCBBbmJpZXRlcmFra3JlZGl0aWVydW5nMSQw
+IgYDVQQDDBtUU1lTSS5IQkEtcUNBMTpQTiBURVNULU9OTFkwHhcNMTUwMzA5MTUxNzU4WhcNMjAw
+MzA5MjM1OTU5WjBrMQswCQYDVQQGEwJERTFcMA0GA1UEBAwGSsOkZ2VyMA4GA1UEKgwHSsO8cmdl
+bjAbBgNVBAUTFDgwMjc2ODgzNTgwMDAwMDAxNjU0MB4GA1UEAwwXSsO8cmdlbiBKw6RnZXJURVNU
+LU9OTFkwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCLI/JrtGhDi7yd/i4h2YqstNxz
+Fazlv514u/695CLb39WgSwCkuKHfxomdpGrF0aOtm74KhTbj5Tj8dai3XrIK3Br5vt9ZkZn9TjDD
+JIsAay1DNc/u0wcfUiZav6YmBKWLF6nC86rWCczDhBTqHk6gAAbr5VgLN5Uqu4U9RU8nrszW7NvJ
+DCdigWh9GXlmt33N8BpFosqZFq4Mmmy7WhUBvtWeqxvM9j6oIjJRQkeAEMub7MG9C08XFQ0XOs/N
+EH9Q5CczZfI9Dy7rexnwLZSxx7e5ICD7u4LAENlWwuWoGBdVELqUBvRF9ByXgyEicuH7q79pa+XT
+dh9f+ah5C2rVAgMBAAGjggGaMIIBljAfBgNVHSMEGDAWgBToRLmvalqdUN79kvVnALTlxa3KITAd
+BgNVHQ4EFgQUz8ILPYMrSs2c5PlifXUSdYaKwwswDgYDVR0PAQH/BAQDAgZAMHoGA1UdIARzMHEw
+TQYIKoIUAEwEgREwQTA/BggrBgEFBQcCARYzaHR0cDovL3d3dy5lLWFyenRhdXN3ZWlzLmRlL3Bv
+bGljaWVzL0VFX3BvbGljeS5odG1sMAkGByqCFABMBEgwBwYFKyQIAQEwDAYKKwYBBAGCzTMBATAM
+BgNVHRMBAf8EAjAAMD8GBSskCAMDBDYwNKQPMA0xCzAJBgNVBAYTAkRFMCEwHzAdMBswDgwMw4Ry
+enRpbi9Bcnp0MAkGByqCFABMBB4wGwYJKwYBBAHAbQMFBA4wDAYKKwYBBAHAbQMFATBCBggrBgEF
+BQcBAQQ2MDQwMgYIKwYBBQUHMAGGJmh0dHA6Ly9xb2NzcC5oYmEudGVzdC50ZWxlc2VjLmRlL29j
+c3ByMBgGCCsGAQUFBwEDBAwwCjAIBgYEAI5GAQEwDQYJKoZIhvcNAQELBQADggEBAEOT5l6RfnSR
+sXbthCVaHjZVx//kdosNyC4LADJKobleelTmUeDO7S5cW69yEd7R7+KpTUiD5YKa/1/99swhEXYx
+aUYy2etFxzVdYy/XYc2O7SLnITQH+agHd9Lw9Pw2c9UWZbe2zen3wXy8IQlocuxa2i8o5sORus4B
+zsLfUCVizMpk47ytzk4hjkEUwt6J6NWIoUdljaQ0NxXgzNyyeVgQvcpsI2kNa6DVMARiwSlcI3rA
+RfS+ckHFG6+jpte85cGDD160V/Bsif3A4HrP19Y5WODsJ1vZFogyp2gc747zV/GFz9hQtFtXXTCG
+QKla5Y096qOwog9h1tsUDNsbwGE=
+</ds:X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties Target="#Signature-b566d66c-f76b-4c82-8fa7-0623f17f2137" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#"><xades:SignedProperties Id="SignedProperties-ae9c954f-c4b7-4080-a072-09a6d13655ee"><xades:SignedSignatureProperties><xades:SigningTime>2015-09-08T13:11:08.157+02:00</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>joYds+mC9GI2feSnJuntQZ4c4oc2aDbT+s9whtQ+2bo=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSYSI.HBA-qCA1:PN TEST-ONLY,OU=HBA-qCA - TI der Gesundheitskarte mit Anbieterakkreditierung,O=T-Systems International GmbH NOT-VALID,C=DE</ds:X509IssuerName><ds:X509SerialNumber>2869</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-Document-2e7b1d12-aa7b-4ea8-b3ac-717c21d0f467"><xades:Description>SUPER-XML</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object>
+</ds:Signature></anlage_hvv>

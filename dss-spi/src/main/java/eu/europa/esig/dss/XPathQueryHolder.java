@@ -71,6 +71,7 @@ public class XPathQueryHolder implements Serializable {
 	public final String XPATH_SIGNATURE_METHOD = XPATH_SIGNED_INFO + "/ds:SignatureMethod";
 	public final String XPATH_SIGNATURE_VALUE = "./ds:SignatureValue";
 	public final String XPATH_REFERENCE = XPATH_SIGNED_INFO + "/ds:Reference";
+	public final String XPATH_SI_C14N_METHOD = XPATH_SIGNED_INFO + "/ds:CanonicalizationMethod/@Algorithm";
 	public final String XPATH_KEY_INFO = "./ds:KeyInfo";
 	public final String XPATH_X509_DATA = XPATH_KEY_INFO + "/ds:X509Data";
 	public final String XPATH__ALL_DATA_OBJECTS_TIMESTAMP = "xades:AllDataObjectsTimeStamp";

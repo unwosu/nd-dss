@@ -1,19 +1,19 @@
 /**
  * DSS - Digital Signature Services
  * Copyright (C) 2015 European Commission, provided under the CEF programme
- *
+ * <p/>
  * This file is part of the "DSS - Digital Signature Services" project.
- *
+ * <p/>
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- *
+ * <p/>
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- *
+ * <p/>
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
@@ -154,6 +154,13 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	}
 
 	@Override
+	public Constraint getMimeTypeConstraint() {
+
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/MimeType";
+		return getBasicConstraint(XP_ROOT, true);
+	}
+
+	@Override
 	public Constraint getContentTypeConstraint() {
 
 		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ContentType";
@@ -178,10 +185,12 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getCommitmentTypeIndicationConstraint() {
 
-		final String level = getValue("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/CommitmentTypeIndication/@Level");
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/CommitmentTypeIndication";
+		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT);
+			final Constraint constraint = new Constraint(level, circumstance);
 			final List<XmlDom> commitmentTypeIndications = getElements("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/CommitmentTypeIndication/Identifier");
 			final List<String> identifierList = XmlDom.convertToStringList(commitmentTypeIndications);
 			constraint.setExpectedValue(identifierList.toString());
@@ -194,10 +203,12 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getSignerLocationConstraint() {
 
-		final String level = getValue("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/SignerLocation/@Level");
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/SignerLocation";
+		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT);
+			final Constraint constraint = new Constraint(level, circumstance);
 			return constraint;
 		}
 		return null;
@@ -206,10 +217,12 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getContentTimestampPresenceConstraint() {
 
-		final String level = getValue("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ContentTimestamp/@Level");
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ContentTimestamp";
+		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT);
+			final Constraint constraint = new Constraint(level, circumstance);
 			return constraint;
 		}
 		return null;
@@ -218,10 +231,12 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getClaimedRoleConstraint() {
 
-		final String level = getValue("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ClaimedRoles/@Level");
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ClaimedRoles";
+		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT);
+			final Constraint constraint = new Constraint(level, circumstance);
 			final List<XmlDom> claimedRoles = getElements("/ConstraintsParameters/MainSignature/MandatedSignedQProperties/ClaimedRoles/Role");
 			final List<String> claimedRoleList = XmlDom.convertToStringList(claimedRoles);
 			constraint.setExpectedValue(claimedRoleList.toString());
@@ -338,10 +353,12 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getSigningCertificateKeyUsageConstraint(final String context) {
 
-		final String level = getValue("/ConstraintsParameters/%s/SigningCertificate/KeyUsage/@Level", context);
+		final String XP_ROOT = "/ConstraintsParameters/%s/SigningCertificate/KeyUsage";
+		final String level = getValue(XP_ROOT + "/@Level", context);
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT, context);
+			final Constraint constraint = new Constraint(level, circumstance);
 			final List<XmlDom> keyUsages = getElements("/ConstraintsParameters/%s/SigningCertificate/KeyUsage/Identifier", context);
 			final List<String> identifierList = XmlDom.convertToStringList(keyUsages);
 			constraint.setExpectedValue(identifierList.toString());
@@ -443,10 +460,11 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 	@Override
 	public Constraint getChainConstraint() {
 
-		final String level = getValue("/ConstraintsParameters/MainSignature/CertificateChain/@Level");
+		final String XP_ROOT = "/ConstraintsParameters/MainSignature/CertificateChain";
+		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final Constraint constraint = new Constraint(level, null);
 			return constraint;
 		}
 		return null;
@@ -542,7 +560,8 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 		final String level = getValue(XP_ROOT + "/@Level");
 		if (StringUtils.isNotBlank(level)) {
 
-			final Constraint constraint = new Constraint(level);
+			final String circumstance = getCircumstance(XP_ROOT);
+			final Constraint constraint = new Constraint(level, circumstance);
 			String expectedValue = getValue(XP_ROOT + "/text()");
 			if (StringUtils.isBlank(expectedValue)) {
 				expectedValue = defaultExpectedValue ? TRUE : FALSE;
@@ -551,6 +570,15 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 			return constraint;
 		}
 		return null;
+	}
+
+	private String getCircumstance(final String XP_ROOT, Object... context) {
+
+		String circumstance = getValue(XP_ROOT + "/@Circumstance", context);
+		if (StringUtils.isBlank(circumstance)) {
+			circumstance = null;
+		}
+		return circumstance;
 	}
 
 	@Override
@@ -625,7 +653,7 @@ public class EtsiValidationPolicy extends ValidationPolicy {
 		final Long timestampDelay = getTimestampDelayTime();
 		if ((timestampDelay != null) && (timestampDelay > 0)) {
 
-			final Constraint constraint = new Constraint("FAIL");
+			final Constraint constraint = new Constraint("FAIL", null);
 			constraint.setExpectedValue(TRUE);
 			return constraint;
 		}
