@@ -22,10 +22,10 @@
 			<artifactId>dss-demo-webapp</artifactId>
 			<type>war</type>
 		</dependency>
-		<dependency>
-			<groupId>eu.europa.ec.joinup.sd-dss</groupId>
-			<artifactId>sscd-mocca-adapter</artifactId>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>eu.europa.ec.joinup.sd-dss</groupId>-->
+			<!--<artifactId>sscd-mocca-adapter</artifactId>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>jre-win32</artifactId>

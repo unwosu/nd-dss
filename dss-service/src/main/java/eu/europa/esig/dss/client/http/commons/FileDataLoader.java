@@ -1,6 +1,7 @@
-package tests;
+package eu.europa.esig.dss.client.http.commons;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 import eu.europa.esig.dss.DSSUtils;
@@ -16,9 +17,17 @@ public class FileDataLoader implements DataLoader {
 	@Override
 	public byte[] get(String url) {
 
-		File file = new File(url);
-		final byte[] bytes = DSSUtils.toByteArray(file);
-		return bytes;
+		if (url.toLowerCase().startsWith("classpath://")) {
+
+			final String lotlCertificate_ = url.substring("classpath://".length() - 1);
+			InputStream inputStream = getClass().getResourceAsStream(lotlCertificate_);
+			final byte[] bytes = DSSUtils.toByteArray(inputStream);
+			return bytes;
+		} else {
+			File file = new File(url);
+			final byte[] bytes = DSSUtils.toByteArray(file);
+			return bytes;
+		}
 	}
 
 	@Override

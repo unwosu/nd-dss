@@ -12,7 +12,9 @@ import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.FileDocument;
 import eu.europa.esig.dss.SignatureLevel;
 import eu.europa.esig.dss.client.crl.OnlineCRLSource;
+import eu.europa.esig.dss.client.http.commons.FileDataLoader;
 import eu.europa.esig.dss.client.ocsp.OnlineOCSPSource;
+import eu.europa.esig.dss.tsl.NDesignTrustedListsCertificateSource;
 import eu.europa.esig.dss.validation.CertificateVerifier;
 import eu.europa.esig.dss.validation.CommonCertificateVerifier;
 import eu.europa.esig.dss.validation.SignedDocumentValidator;
@@ -208,10 +210,10 @@ public class Test1 {
 
 		List<CertificateToken> signingCertificateList = new ArrayList<CertificateToken>();
 		signingCertificateList.add(tslSigningCertificateToken);
-		//		tslSource.loadTSL("src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
-		tslSource.loadTSL("src/main/resources/Examples/TSL_LU_9_ab20052015-critical-removed.xml", signingCertificateList);
-		tslSource.loadTSL("src/main/resources/Examples/TSL_RU_20150623_441.xml", signingCertificateList);
-		tslSource.loadTSL("src/main/resources/Examples/TSL-testref_469.xml", signingCertificateList);
+		//		tslSource.loadTsl("src/main/resources/Examples/TSL_LU_9_ab20052015.xml", signingCertificateList);
+		tslSource.loadTsl("src/main/resources/Examples/TSL_LU_9_ab20052015-critical-removed.xml", signingCertificateList);
+		tslSource.loadTsl("src/main/resources/Examples/TSL_RU_20150623_441.xml", signingCertificateList);
+		tslSource.loadTsl("src/main/resources/Examples/TSL-testref_469.xml", signingCertificateList);
 
 
 		validationSources.setTrustedCertSource(tslSource);

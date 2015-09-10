@@ -44,8 +44,8 @@ public class AdministrationController {
 	/**
 	 * @see eu.europa.esig.dss.tsl.ReloadableTrustedListCertificateSource
 	 */
-	@Autowired
-	private ReloadableTrustedListCertificateSource reloadableTrustedListCertificateSource;
+//	@Autowired
+//	private ReloadableTrustedListCertificateSource reloadableTrustedListCertificateSource;
 
 	/**
 	 * @see ProxyPreferenceManager
@@ -83,18 +83,18 @@ public class AdministrationController {
 		return "admin-proxy-list";
 	}
 
-	/**
-	 * @param model
-	 *            The model attributes
-	 * @return a view name
-	 */
-	@RequestMapping(value = "/tsl-info", method = RequestMethod.GET)
-	public String showSignature(final Model model) {
-
-		final List<CertificateToken> certificates = reloadableTrustedListCertificateSource.getCertificates();
-		model.addAttribute("certs", certificates);
-		model.addAttribute("tsls", reloadableTrustedListCertificateSource.getDiagnosticInfo().entrySet());
-		return "admin-tsl-info";
-	}
+//	/**
+//	 * @param model
+//	 *            The model attributes
+//	 * @return a view name
+//	 */
+//	@RequestMapping(value = "/tsl-info", method = RequestMethod.GET)
+//	public String showSignature(final Model model) {
+//
+//		final List<CertificateToken> certificates = reloadableTrustedListCertificateSource.getCertificates();
+//		model.addAttribute("certs", certificates);
+//		model.addAttribute("tsls", reloadableTrustedListCertificateSource.getDiagnosticInfo().entrySet());
+//		return "admin-tsl-info";
+//	}
 
 }

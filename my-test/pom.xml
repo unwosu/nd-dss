@@ -36,6 +36,10 @@
 			<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 			<artifactId>dss-document</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>eu.europa.ec.joinup.sd-dss</groupId>
+			<artifactId>dss-webservices-client</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>eu.europa.ec.joinup.sd-dss</groupId>
@@ -59,6 +63,12 @@
 		<dependency>
 			<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 			<artifactId>dss-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.2</version>
 			<scope>test</scope>
 		</dependency>
 

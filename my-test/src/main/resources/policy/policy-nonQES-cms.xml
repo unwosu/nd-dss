@@ -1,5 +1,7 @@
 <ConstraintsParameters Name="ND-NQ-CMS" xmlns="http://dss.esig.europa.eu/validation/diagnostic">
-	<Description>ND-Gematik</Description>
+	<Description>ND-Gematik: This validation policy is designed to validate a non qualified CAdES signatures. The following standards are used:
+		- ETSI TS 102 853 v
+		- ETSI </Description>
 	<MainSignature>
 		<!--<StructuralValidation Level="FAIL"/>-->
 		<AcceptablePolicies Level="FAIL">
